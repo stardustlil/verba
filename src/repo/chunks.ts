@@ -94,7 +94,7 @@ export async function softDeleteChunk(
     "SELECT lemma_key FROM chunks WHERE id = ?",
     [chunkId],
   );
-  if (!chunk) throw new Error("句块不存在");
+  if (!chunk) throw new Error("短语不存在");
   const [ignored] = await db.query<{ n: number }>(
     "SELECT COUNT(*) AS n FROM ignored_lemmas WHERE lemma_key = ?",
     [chunk.lemma_key],

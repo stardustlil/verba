@@ -1,5 +1,6 @@
 import {
   BookOpen,
+  CircleHelp,
   FileText,
   GraduationCap,
   Layers,
@@ -23,6 +24,7 @@ import BookDetailPage from "./pages/BookDetailPage";
 import BooksPage from "./pages/BooksPage";
 import ChunkDetailPage from "./pages/ChunkDetailPage";
 import ChunksPage from "./pages/ChunksPage";
+import GuidePage from "./pages/GuidePage";
 import HomePage from "./pages/HomePage";
 import ImportPage from "./pages/ImportPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -42,11 +44,11 @@ const NAV: NavItem[] = [
   { to: "/", label: "学习", icon: GraduationCap },
   { to: "/books", label: "词书", icon: BookOpen },
   { to: "/articles", label: "文章", icon: FileText, also: ["/import"] },
-  { to: "/chunks", label: "句块", icon: Layers },
+  { to: "/chunks", label: "短语", icon: Layers },
 ];
 
 const RAIL_ITEM =
-  "relative flex w-14 flex-col items-center gap-1 rounded-xl pt-2 pb-1.5 text-[11px] transition-colors " +
+  "group relative flex w-14 flex-col items-center gap-1 rounded-xl pt-2 pb-1.5 text-[11px] transition-colors duration-200 " +
   "focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent outline-none";
 
 function NavButton({ item, badge }: { item: NavItem; badge?: string }) {
@@ -67,7 +69,11 @@ function NavButton({ item, badge }: { item: NavItem; badge?: string }) {
         );
       }}
     >
-      <Icon size={20} strokeWidth={1.9} className="shrink-0" />
+      <Icon
+        size={20}
+        strokeWidth={1.9}
+        className="shrink-0 transition-transform duration-300 ease-spring group-hover:scale-110 group-active:scale-90"
+      />
       <span>{item.label}</span>
       {badge && (
         <span className="absolute top-1 right-1 rounded-full bg-accent px-1 text-[9px] leading-[14px] font-medium text-white tabular-nums dark:text-[#16121f]">
@@ -99,7 +105,12 @@ function ThemeButton() {
         void saveSettings(db, { theme: next }).catch(() => undefined);
       }}
     >
-      <Icon size={18} strokeWidth={1.9} />
+      <Icon
+        key={theme}
+        size={18}
+        strokeWidth={1.9}
+        className="animate-pop transition-transform duration-300 ease-spring group-hover:scale-110"
+      />
       <span>{THEME_LABEL[theme].slice(0, 2)}</span>
     </button>
   );
@@ -109,13 +120,7 @@ function Sidebar() {
   const { state } = useImport();
   const badge = state.step === "running" ? `${state.done}/${state.total}` : undefined;
   return (
-    <nav aria-label="主导航" className="flex w-[76px] shrink-0 flex-col items-center pt-4 pb-3">
-      <div
-        title="Verba"
-        className="mb-5 flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#8b6bff] to-[#5b36f2] font-display text-xl font-semibold text-white shadow-md shadow-accent/30"
-      >
-        V
-      </div>
+    <nav aria-label="主导航" className="flex w-[76px] shrink-0 flex-col items-center pt-5 pb-3">
       <div className="flex flex-col items-center gap-1">
         {NAV.map((item) => (
           <NavButton
@@ -126,6 +131,7 @@ function Sidebar() {
         ))}
       </div>
       <div className="mt-auto flex flex-col items-center gap-1">
+        <NavButton item={{ to: "/guide", label: "说明", icon: CircleHelp }} />
         <ThemeButton />
         <NavButton item={{ to: "/settings", label: "设置", icon: SettingsIcon }} />
       </div>
@@ -146,18 +152,21 @@ function Shell() {
           !focus && "my-2 mr-2 rounded-2xl bg-panel-muted/60 ring-1 ring-line",
         )}
       >
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/practice" element={<PracticePage />} />
-          <Route path="/books" element={<BooksPage />} />
-          <Route path="/books/:id" element={<BookDetailPage />} />
-          <Route path="/import" element={<ImportPage />} />
-          <Route path="/articles" element={<ArticlesPage />} />
-          <Route path="/articles/:id" element={<ArticleDetailPage />} />
-          <Route path="/chunks" element={<ChunksPage />} />
-          <Route path="/chunks/:id" element={<ChunkDetailPage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-        </Routes>
+        <div key={pathname} className={cx("h-full", !focus && "animate-page")}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/practice" element={<PracticePage />} />
+            <Route path="/books" element={<BooksPage />} />
+            <Route path="/books/:id" element={<BookDetailPage />} />
+            <Route path="/import" element={<ImportPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:id" element={<ArticleDetailPage />} />
+            <Route path="/chunks" element={<ChunksPage />} />
+            <Route path="/chunks/:id" element={<ChunkDetailPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/guide" element={<GuidePage />} />
+          </Routes>
+        </div>
       </main>
     </div>
   );
@@ -169,7 +178,7 @@ export default function App() {
     getSettings(db)
       .then((settings) => applyTheme(settings.theme))
       .catch(() => applyTheme("system"));
-    // 上次运行时删除、未撤销的句块，启动时彻底清除；然后写入内置词书
+    // 上次运行时删除、未撤销的短语，启动时彻底清除；然后写入内置词书
     purgeDeletedChunks(db)
       .then(() => seedBuiltinBooks(db, BUILTIN_BOOKS))
       .catch(() => undefined)

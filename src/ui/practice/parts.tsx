@@ -1,9 +1,9 @@
-/** 练习页、句块详情等处共用的展示组件 */
+/** 练习页、短语详情等处共用的展示组件 */
 import type { ReactNode } from "react";
 import type { WordMark } from "../../core/judge/diff";
 import { cx } from "../components";
 
-/** 原句：句块位置高亮，或换成别的内容（如原位打字行） */
+/** 原句：短语位置高亮，或换成别的内容（如原位打字行） */
 export function Sentence({
   text,
   start,
@@ -15,7 +15,7 @@ export function Sentence({
   text: string;
   start: number;
   length: number;
-  /** 放在句块位置上的内容；不传则高亮原文 */
+  /** 放在短语位置上的内容；不传则高亮原文 */
   slot?: ReactNode;
   tone?: "mark" | "good";
   className?: string;

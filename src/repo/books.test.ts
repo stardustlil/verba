@@ -99,6 +99,53 @@ describe("写入内置词书", () => {
     expect((await listBooks(db))[0]?.total).toBe(4);
   });
 
+  it("新版词书：没学过的换成新内容，去掉的没学过就删除，学过的保留在书末", async () => {
+    await seedBuiltinBooks(db, [VERBS, PREPS], 1000);
+    // 学过 make up one's mind
+    const mind = "book:verbs:make up one's mind";
+    await introduceChunk(db, mind, 1500, false);
+    const v2: BookData = {
+      ...VERBS,
+      version: 2,
+      entries: [
+        {
+          ...entry("take advantage of", "taking advantage of", "Stop taking advantage of me."),
+          meaning: "占便宜",
+        },
+        entry("carry out", "carried out", "They carried out a survey."),
+      ],
+    };
+    await seedBuiltinBooks(db, [v2, PREPS], 2000);
+
+    const ordered = await listChunks(db, { bookId: "verbs", sort: "book" });
+    expect(ordered.map((c) => c.lemma)).toEqual([
+      "take advantage of",
+      "carry out",
+      "make up one's mind",
+    ]);
+    const take = await chunkDetail(db, "book:verbs:take advantage of");
+    expect(take?.meaning).toBe("占便宜");
+    expect(take?.examples.map((e) => e.sentence)).toEqual(["Stop taking advantage of me."]);
+    // give up 还在介词书里：只解除和这本书的关联
+    expect(await listChunks(db, { bookId: "preps" })).toHaveLength(2);
+    const give = await db.query<{ book_id: string }>(
+      "SELECT book_id FROM book_chunks WHERE chunk_id = 'book:verbs:give up'",
+    );
+    expect(give).toEqual([{ book_id: "preps" }]);
+    expect(
+      await db.query("SELECT * FROM examples WHERE chunk_id = 'book:verbs:give up'"),
+    ).toHaveLength(1);
+    // 学过的进度不变
+    const [kept] = await db.query<{ stage: string }>("SELECT stage FROM chunks WHERE id = ?", [
+      mind,
+    ]);
+    expect(kept?.stage).toBe("cloze");
+
+    // 介词书新版去掉 give up：这时没有书收录它了，直接删除
+    await seedBuiltinBooks(db, [v2, { ...PREPS, version: 2, entries: PREPS.entries.slice(0, 1) }]);
+    expect(await db.query("SELECT * FROM chunks WHERE id = 'book:verbs:give up'")).toHaveLength(0);
+  });
+
   it("用户删过的条目不会因版本更新而复活", async () => {
     await seedBuiltinBooks(db, [VERBS], 1000);
     const [id] = await nextNewChunks(db, "verbs", 1);

@@ -1,6 +1,6 @@
 /**
- * 文章详情（需求 7.2、7.3）：原文中的句块高亮，点击查看、编辑；
- * 选中文字手动添加句块；删除文章。
+ * 文章详情（需求 7.2、7.3）：原文中的短语高亮，点击查看、编辑；
+ * 选中文字手动添加短语；删除文章。
  */
 import { openUrl } from "@tauri-apps/plugin-opener";
 import { useMemo, useRef, useState } from "react";
@@ -87,7 +87,7 @@ export default function ArticleDetailPage() {
       const summary = await runExtraction(db, ai, data.id, {
         onProgress: (done, total) => setExtracting({ done, total }),
       });
-      const parts = [`已添加 ${summary.added} 个新句块`];
+      const parts = [`已添加 ${summary.added} 个新短语`];
       if (summary.merged > 0) parts.push(`${summary.merged} 个合并为例句`);
       if (summary.failedBatches > 0)
         parts.push(`${summary.failedBatches} 批失败（${summary.firstError ?? "未知错误"}）`);
@@ -148,7 +148,7 @@ export default function ArticleDetailPage() {
               ) : (
                 <span>{data.sourceType === "file" ? data.sourceRef : "粘贴"}</span>
               )}
-              <span>{chunkCount} 个句块</span>
+              <span>{chunkCount} 个短语</span>
             </div>
           </div>
           <Button
@@ -171,12 +171,12 @@ export default function ArticleDetailPage() {
               <Notice tone="warning">
                 <div className="flex items-center justify-between gap-4">
                   <span>
-                    有 {data.unfinishedBatches} 批选中的段落还没有抽取句块
+                    有 {data.unfinishedBatches} 批选中的段落还没有抽取短语
                     {!apiKey.loading && !apiKey.data && "。在设置中填写 API key 后可以抽取"}。
                   </span>
                   {apiKey.data && (
                     <Button className="shrink-0" onClick={() => void extract()}>
-                      抽取句块
+                      抽取短语
                     </Button>
                   )}
                 </div>
@@ -184,12 +184,9 @@ export default function ArticleDetailPage() {
             )}
             {extracting && (
               <Notice>
-                正在抽取句块… {extracting.done}/{extracting.total}
+                正在抽取短语… {extracting.done}/{extracting.total}
               </Notice>
             )}
-            <p className="text-xs text-ink-soft">
-              点击高亮的句块查看、编辑；选中一段文字可以手动添加句块。
-            </p>
             <ArticleText
               detail={data}
               containerRef={textRef}
@@ -212,7 +209,7 @@ export default function ArticleDetailPage() {
                   <span className="font-display text-base font-medium">{selection.surface}</span>
                 </span>
                 <Button variant="primary" className="shrink-0" onClick={() => setAdding(selection)}>
-                  添加为句块
+                  添加为短语
                 </Button>
               </>
             ) : (
@@ -240,7 +237,7 @@ export default function ArticleDetailPage() {
             setAdding(null);
             setSelection(null);
             window.getSelection()?.removeAllRanges();
-            setMessage({ tone: "success", text: merged ? "已合并为例句。" : "已添加句块。" });
+            setMessage({ tone: "success", text: merged ? "已合并为例句。" : "已添加短语。" });
             article.reload();
           }}
         />
@@ -261,12 +258,12 @@ export default function ArticleDetailPage() {
         >
           {confirmDelete > 0 ? (
             <>
-              将同时删除 <strong>{confirmDelete}</strong> 个只属于这篇文章的句块及其学习进度。
+              将同时删除 <strong>{confirmDelete}</strong> 个只属于这篇文章的短语及其学习进度。
             </>
           ) : (
-            <>没有只属于这篇文章的句块会被删除。</>
+            <>没有只属于这篇文章的短语会被删除。</>
           )}
-          与其他文章合并过的句块会保留，只删除来自这篇文章的例句。此操作不可撤销。
+          与其他文章合并过的短语会保留，只删除来自这篇文章的例句。此操作不可撤销。
         </Dialog>
       )}
     </div>
@@ -435,7 +432,7 @@ function AddChunkModal({
   const [meaning, setMeaning] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  /** 原形与库中已有句块相同：让用户选择合并还是新建 */
+  /** 原形与库中已有短语相同：让用户选择合并还是新建 */
   const [existing, setExisting] = useState<{ key: string; chunks: SameLemmaChunk[] } | null>(null);
   const [choice, setChoice] = useState<string>("new");
 
@@ -473,7 +470,7 @@ function AddChunkModal({
   const merging = existing !== null && existing.key === lemmaKey(lemma) && choice !== "new";
 
   return (
-    <Modal title="添加句块" onClose={onClose}>
+    <Modal title="添加短语" onClose={onClose}>
       <form
         className="space-y-4"
         onSubmit={(e) => {
@@ -493,7 +490,7 @@ function AddChunkModal({
         </Field>
         {existing && existing.key === lemmaKey(lemma) && (
           <fieldset className="space-y-2 rounded-xl border border-warn/40 bg-warn-soft p-3 text-sm">
-            <legend className="px-1 font-medium">库里已有这个句块</legend>
+            <legend className="px-1 font-medium">库里已有这个短语</legend>
             {existing.chunks.map((c) => (
               <label key={c.id} className="flex items-start gap-2">
                 <input

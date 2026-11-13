@@ -7,7 +7,7 @@ import { useAsync } from "../hooks";
 import { db, errorMessage } from "../services";
 import { useState } from "react";
 
-/** 词书：内置的三本书和“我的句块”。新句块从当前词书中按顺序取。 */
+/** 词书：内置的三本书和“我的短语”。新短语从当前词书中按顺序取。 */
 export default function BooksPage() {
   const data = useAsync(async () => {
     const [books, current] = await Promise.all([listBooks(db), currentBookId(db)]);
@@ -25,14 +25,17 @@ export default function BooksPage() {
   };
 
   return (
-    <Page title="词书" description="选一本书，每天从中学习新句块；到期的复习不分书，都会出现。">
+    <Page title="词书">
       <div className="min-h-0 flex-1 overflow-y-auto pb-4">
         {(error ?? data.error) && <Notice tone="error">{error ?? data.error}</Notice>}
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="stagger grid grid-cols-1 gap-4 lg:grid-cols-2">
           {data.data?.books.map((book) => {
             const current = book.id === data.data?.current;
             return (
-              <Card key={book.id} className="flex gap-5 p-5 transition-shadow hover:shadow-float">
+              <Card
+                key={book.id}
+                className="flex gap-5 p-5 transition-[box-shadow,translate] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-float"
+              >
                 <Link to={`/books/${book.id}`} className="shrink-0">
                   <BookCover id={book.id} color={book.color} title={book.title} />
                 </Link>

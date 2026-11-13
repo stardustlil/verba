@@ -100,7 +100,7 @@ export function TypingLine({
           {showCaret && i === caretAt && <Caret />}
           <span
             className={cx(
-              "whitespace-pre transition-colors duration-75",
+              "whitespace-pre transition-colors duration-150",
               state === "done" && (tone === "good" ? "text-good" : "text-ink"),
               state === "wrong" && "text-bad underline decoration-bad decoration-2",
               state === "todo" && "text-ink-faint/70",
@@ -121,7 +121,7 @@ export function TypingLine({
     body = (
       <span
         className={cx(
-          "relative inline-block border-b-2 pb-0.5 text-left",
+          "relative inline-block border-b-2 px-1 pb-0.5 text-center",
           tone === "good" ? "border-good text-good" : "border-line-strong text-ink",
           focused && tone !== "good" && "border-accent",
         )}
@@ -146,7 +146,14 @@ export function TypingLine({
         inputRef.current?.focus();
       }}
     >
-      <span key={shakeKey} className={cx("inline-block", shakeKey > 0 && "animate-shake")}>
+      <span
+        key={`${shakeKey}:${tone}`}
+        className={cx(
+          "inline-block",
+          shakeKey > 0 && tone !== "good" && "animate-shake",
+          tone === "good" && "animate-bounce-in",
+        )}
+      >
         {body}
       </span>
       <input

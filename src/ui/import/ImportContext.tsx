@@ -21,7 +21,7 @@ export type ImportState =
   | {
       step: "preview";
       draft: Draft;
-      /** 选中要抽取句块的段落编号 */
+      /** 选中要抽取短语的段落编号 */
       selected: ReadonlySet<number>;
       error: string | null;
       saving: boolean;
@@ -49,7 +49,7 @@ interface ImportApi {
   /** 用户编辑正文后调用：重新整理正文，选中范围重置为全部 */
   setText: (text: string) => void;
   setSelected: (selected: ReadonlySet<number>) => void;
-  /** 保存文章；extract 为 true 时接着抽取句块 */
+  /** 保存文章；extract 为 true 时接着抽取短语 */
   save: (extract: boolean) => Promise<void>;
   retryFailed: () => Promise<void>;
   reset: () => void;

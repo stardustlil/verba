@@ -106,7 +106,7 @@ describe("手动添加句块", () => {
     // 同一个句子不重复添加
     await expect(
       add(1, "rained heavily", "draw widespread attention", "x", first.chunkId),
-    ).rejects.toThrow("已经是该句块的例句");
+    ).rejects.toThrow("已经是该短语的例句");
   });
 
   it("校验：必填项、选中文字与原句一致", async () => {

@@ -35,9 +35,9 @@ export function Button({
       type="button"
       {...props}
       className={cx(
-        "inline-flex shrink-0 items-center justify-center font-medium whitespace-nowrap transition-all",
+        "inline-flex shrink-0 items-center justify-center font-medium whitespace-nowrap transition-all duration-200 ease-spring",
         "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
-        "active:scale-[0.98] disabled:cursor-not-allowed disabled:active:scale-100",
+        "active:scale-[0.96] disabled:cursor-not-allowed disabled:active:scale-100",
         BUTTON_SIZES[size],
         BUTTON_STYLES[variant],
         className,
@@ -129,7 +129,7 @@ export function ProgressBar({
     <div className={cx("h-1.5 overflow-hidden rounded-full bg-ink/8", className)}>
       <div
         className={cx(
-          "h-full rounded-full transition-[width] duration-300",
+          "h-full rounded-full transition-[width] duration-700 ease-out",
           tone === "good" ? "bg-good" : "bg-accent",
         )}
         style={{ width: `${pct}%` }}
@@ -164,7 +164,7 @@ export function Notice({
 function Overlay({ children, onClose }: { children: ReactNode; onClose: () => void }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-6 backdrop-blur-[2px]"
+      className="fixed inset-0 z-50 flex animate-[rise_0.25s_ease-out_both] items-center justify-center bg-black/30 p-6 backdrop-blur-[2px]"
       onKeyDown={(e) => {
         if (e.key === "Escape" && !e.nativeEvent.isComposing) {
           e.stopPropagation();
@@ -201,7 +201,7 @@ export function Dialog({
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="w-full max-w-md animate-rise rounded-2xl bg-panel p-6 shadow-float ring-1 ring-line"
+        className="w-full max-w-md animate-pop rounded-2xl bg-panel p-6 shadow-float ring-1 ring-line"
       >
         <h2 className="text-base font-semibold text-ink">{title}</h2>
         <div className="mt-2 text-sm leading-relaxed text-ink-soft">{children}</div>
@@ -232,7 +232,7 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="max-h-full w-full max-w-lg animate-rise overflow-y-auto rounded-2xl bg-panel p-6 shadow-float ring-1 ring-line"
+        className="max-h-full w-full max-w-lg animate-pop overflow-y-auto rounded-2xl bg-panel p-6 shadow-float ring-1 ring-line"
       >
         <h2 className="mb-4 text-base font-semibold text-ink">{title}</h2>
         {children}

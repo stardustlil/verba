@@ -42,10 +42,6 @@ export default function ArticlesPage() {
               <FileText size={22} />
             </div>
             <p className="font-medium">还没有导入文章</p>
-            <p className="mt-1 max-w-sm text-sm text-ink-soft">
-              粘贴一篇英文文章、网址或拖入 txt / md
-              文件，从中抽取值得背的句块，它们会出现在“我的句块”里。
-            </p>
             <Button variant="primary" className="mt-5" onClick={() => navigate("/import")}>
               导入文章
             </Button>
@@ -69,7 +65,7 @@ export default function ArticlesPage() {
                     </div>
                   </div>
                   <div className="shrink-0 text-right text-sm tabular-nums">
-                    <div className="text-ink">{item.chunkCount} 个句块</div>
+                    <div className="text-ink">{item.chunkCount} 个短语</div>
                     <div className="text-xs text-ink-soft">
                       已学 {item.learnedCount}/{item.chunkCount}
                     </div>

@@ -9,10 +9,10 @@ const PRONOUN =
   /\b(my|your|his|her|its|our|their|myself|yourself|himself|herself|itself|ourselves|themselves|him|them|me|us)\b/i;
 
 describe("内置词书", () => {
-  it("三本书，每本约 200 条", () => {
+  it("三本书，每本至少 200 条", () => {
     expect(BUILTIN_BOOKS).toHaveLength(3);
     for (const book of BUILTIN_BOOKS) {
-      expect(book.entries.length, book.id).toBeGreaterThanOrEqual(180);
+      expect(book.entries.length, book.id).toBeGreaterThanOrEqual(200);
       expect(book.title).toMatch(CJK);
       expect(book.version).toBeGreaterThanOrEqual(1);
     }

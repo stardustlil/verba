@@ -1,1395 +1,1935 @@
 {
   "id": "writing-collocations",
   "title": "写作常用搭配",
-  "description": "play a key role in、pose a threat to、raise awareness of……议论文与考试写作中最实用的搭配。",
+  "description": "写作中组织论证、衔接上下文的表达：as a result、in terms of、give rise to、on the other hand……",
   "color": "emerald",
-  "version": 1,
+  "version": 2,
   "entries": [
     {
-      "lemma": "play a key role in",
-      "surface": "plays a key role in",
-      "meaning": "在……中起关键作用",
-      "example": "Education plays a key role in reducing poverty.",
-      "translation": "教育在减少贫困方面起着关键作用。"
+      "lemma": "for example",
+      "surface": "for example",
+      "meaning": "例如",
+      "example": "Without bee pollination, California's almond crop, for example, would be non-existent.",
+      "translation": "例如，如果没有蜜蜂授粉，加利福尼亚的杏仁作物就不复存在了。",
+      "tatoeba": 12346606
     },
     {
-      "lemma": "draw attention to",
-      "surface": "drew attention to",
-      "meaning": "引起对……的注意",
-      "example": "The report drew attention to the lack of clean water.",
-      "translation": "这份报告让人们关注到缺乏清洁用水的问题。"
+      "lemma": "as a result",
+      "surface": "as a result",
+      "meaning": "结果",
+      "example": "We have optimized the database indexing, and as a result, system efficiency has improved by 50%.",
+      "translation": "我们优化了数据库索引，结果系统效率提高了50%。",
+      "tatoeba": 2915518
     },
     {
-      "lemma": "raise awareness of",
-      "surface": "raise awareness of",
-      "meaning": "提高对……的认识",
-      "example": "The campaign aims to raise awareness of mental health.",
-      "translation": "这项活动旨在提高人们对心理健康的认识。"
+      "lemma": "as a result of",
+      "surface": "as a result of",
+      "meaning": "由于",
+      "example": "I was late as a result of the train delay.",
+      "translation": "由于火车晚点，我迟到了。",
+      "tatoeba": 259617
     },
     {
-      "lemma": "pose a threat to",
-      "surface": "poses a threat to",
-      "meaning": "对……构成威胁",
-      "example": "Plastic waste poses a threat to marine life.",
-      "translation": "塑料垃圾对海洋生物构成威胁。"
+      "lemma": "in addition to",
+      "surface": "In addition to",
+      "meaning": "除…之外",
+      "example": "In addition to a blocked nose, I'm also suffering from a high temperature.",
+      "translation": "除了鼻子不通以外，我还发着高烧。",
+      "tatoeba": 395911
     },
     {
-      "lemma": "have an impact on",
-      "surface": "has an impact on",
-      "meaning": "对……产生影响",
-      "example": "Social media has an impact on how we communicate.",
-      "translation": "社交媒体影响着我们的交流方式。"
+      "lemma": "first of all",
+      "surface": "First of all",
+      "meaning": "首先",
+      "example": "First of all, you should talk it over with your parents.",
+      "translation": "首先，你应该和你的父母谈谈。",
+      "tatoeba": 32809
     },
     {
-      "lemma": "have a negative effect on",
-      "surface": "has a negative effect on",
-      "meaning": "对……有负面影响",
-      "example": "Lack of sleep has a negative effect on memory.",
-      "translation": "睡眠不足对记忆力有负面影响。"
+      "lemma": "on the one hand",
+      "surface": "On the one hand",
+      "meaning": "一方面",
+      "example": "On the one hand, you are wrong, but on the other hand, I can't blame you for that.",
+      "translation": "一方面你错了，但另一方面，我也不能因此责怪你。",
+      "tatoeba": 27214
     },
     {
-      "lemma": "lay the foundation for",
-      "surface": "laid the foundation for",
-      "meaning": "为……打下基础",
-      "example": "His early research laid the foundation for modern genetics.",
-      "translation": "他早期的研究为现代遗传学奠定了基础。"
+      "lemma": "in that",
+      "surface": "in that",
+      "meaning": "在于，因为",
+      "example": "Human beings differ from animals in that they can think and speak.",
+      "translation": "人类与动物的不同之处在于他们能思考和说话。",
+      "tatoeba": 270280
     },
     {
-      "lemma": "shed light on",
-      "surface": "sheds light on",
-      "meaning": "阐明，揭示",
-      "example": "The study sheds light on how children learn languages.",
-      "translation": "这项研究揭示了儿童如何学习语言。"
+      "lemma": "whether or not",
+      "surface": "whether or not",
+      "meaning": "是否，无论…与否",
+      "example": "I've no way of telling whether or not what he says is true.",
+      "translation": "我无法判断他的话是真是假。",
+      "tatoeba": 792599
+    },
+    {
+      "lemma": "as to",
+      "surface": "as to",
+      "meaning": "关于，至于",
+      "example": "I haven't got a clue as to why he quit so suddenly.",
+      "translation": "我完全不知道他为什么突然辞职。",
+      "tatoeba": 432888
+    },
+    {
+      "lemma": "compared to",
+      "surface": "Compared to",
+      "meaning": "与…相比",
+      "example": "Compared to his brother, he's not so wise.",
+      "translation": "和他兄弟相比，他不够聪明。",
+      "tatoeba": 389177
+    },
+    {
+      "lemma": "contribute to",
+      "surface": "contributed to",
+      "meaning": "促成",
+      "example": "Everybody's hard work contributed to the show's success.",
+      "translation": "大家的努力促成了演出的成功。",
+      "tatoeba": 11295058
+    },
+    {
+      "lemma": "result in",
+      "surface": "resulted in",
+      "meaning": "导致",
+      "example": "This policy resulted in a great rise in prices.",
+      "translation": "这项政策导致物价大幅上涨。",
+      "tatoeba": 45959
+    },
+    {
+      "lemma": "account for",
+      "surface": "accounts for",
+      "meaning": "解释，说明",
+      "example": "That accounts for why the door was open.",
+      "translation": "这就解释了门为什么开着。",
+      "tatoeba": 43017
+    },
+    {
+      "lemma": "in addition",
+      "surface": "In addition",
+      "meaning": "另外，此外",
+      "example": "In addition, we will issue the 'employee of the month' award afterwards.",
+      "translation": "另外，稍后我们还会颁发“本月最佳员工”奖。",
+      "tatoeba": 2938697
+    },
+    {
+      "lemma": "be due to",
+      "surface": "was due to",
+      "meaning": "由于，起因于",
+      "example": "The accident was due to his careless driving.",
+      "translation": "这起事故是由于他粗心驾驶造成的。",
+      "tatoeba": 47091
+    },
+    {
+      "lemma": "in general",
+      "surface": "In general",
+      "meaning": "一般来说，通常",
+      "example": "In general, women live longer than men.",
+      "translation": "一般来说，女性比男性寿命长。",
+      "tatoeba": 4030806
+    },
+    {
+      "lemma": "regardless of",
+      "surface": "regardless of",
+      "meaning": "不管，不顾",
+      "example": "He says what he thinks regardless of other people's feelings.",
+      "translation": "他想说什么就说什么，不顾别人的感受。",
+      "tatoeba": 301080
+    },
+    {
+      "lemma": "the former",
+      "surface": "the former",
+      "meaning": "前者",
+      "example": "Either one is fine, but the former is more concise.",
+      "translation": "两者都可以，但前者更简洁。",
+      "tatoeba": 9981684
+    },
+    {
+      "lemma": "in terms of",
+      "surface": "in terms of",
+      "meaning": "在…方面，就…而言",
+      "example": "This hotel is conveniently located in terms of public transportation.",
+      "translation": "就公共交通而言，这家酒店的位置很方便。",
+      "tatoeba": 60476
+    },
+    {
+      "lemma": "a lack of",
+      "surface": "a lack of",
+      "meaning": "缺乏，缺少",
+      "example": "We failed due to a lack of preparation.",
+      "translation": "我们因准备不足而失败了。",
+      "tatoeba": 22915
+    },
+    {
+      "lemma": "but rather",
+      "surface": "but rather",
+      "meaning": "而是",
+      "example": "I do this job not for the money, but rather for my happiness.",
+      "translation": "我做这份工作不是为了钱，而是为了自己开心。",
+      "tatoeba": 10749944
+    },
+    {
+      "lemma": "for the sake of",
+      "surface": "for the sake of",
+      "meaning": "为了",
+      "example": "I gave up smoking for the sake of my health.",
+      "translation": "为了健康，我戒了烟。",
+      "tatoeba": 11149154
+    },
+    {
+      "lemma": "and yet",
+      "surface": "and yet",
+      "meaning": "然而，可是",
+      "example": "He promised to return and yet he didn't.",
+      "translation": "他答应会回来，然而却没有。",
+      "tatoeba": 295091
+    },
+    {
+      "lemma": "in the first place",
+      "surface": "In the first place",
+      "meaning": "首先",
+      "example": "In the first place, I would like to announce several new regulations.",
+      "translation": "首先，我想宣布几项新规定。",
+      "tatoeba": 2938687
+    },
+    {
+      "lemma": "nothing more than",
+      "surface": "nothing more than",
+      "meaning": "不过是",
+      "example": "He is nothing more than an egoist.",
+      "translation": "他只不过是个自私自利的人。",
+      "tatoeba": 301415
+    },
+    {
+      "lemma": "be associated with",
+      "surface": "is associated with",
+      "meaning": "与……相关",
+      "example": "For many individuals, the pentatonic scale is associated with Chinese music.",
+      "translation": "在很多人的印象中，五声音阶往往与中国音乐挂钩。",
+      "tatoeba": 5881830
+    },
+    {
+      "lemma": "on account of",
+      "surface": "on account of",
+      "meaning": "由于，因为",
+      "example": "The game was called off on account of the rain.",
+      "translation": "比赛因下雨而取消了。",
+      "tatoeba": 26750
+    },
+    {
+      "lemma": "in any case",
+      "surface": "in any case",
+      "meaning": "无论如何",
+      "example": "It may rain tomorrow, but we are going in any case.",
+      "translation": "明天可能会下雨，但无论如何我们都会去。",
+      "tatoeba": 323382
+    },
+    {
+      "lemma": "the latter",
+      "surface": "the latter",
+      "meaning": "后者",
+      "example": "Practice is as important as theory, but we are apt to value the latter and despise the former.",
+      "translation": "实践和理论同样重要，但我们倾向于重视后者而忽略前者。",
+      "tatoeba": 265270
+    },
+    {
+      "lemma": "in short",
+      "surface": "in short",
+      "meaning": "简而言之，总之",
+      "example": "The speaker didn't know his subject, nor did he speak well; in short, he was disappointing.",
+      "translation": "演讲者不熟悉自己的主题，也讲得不好；简而言之，他令人失望。",
+      "tatoeba": 241162
+    },
+    {
+      "lemma": "on the other hand",
+      "surface": "on the other hand",
+      "meaning": "另一方面",
+      "example": "It gets very humid here in the summer. In the winter, on the other hand, it gets very dry.",
+      "translation": "这里夏天非常潮湿，而冬天则非常干燥。",
+      "tatoeba": 280018
+    },
+    {
+      "lemma": "be composed of",
+      "surface": "is composed of",
+      "meaning": "由……组成",
+      "example": "The committee is composed of three men and seven women.",
+      "translation": "委员会由三男七女组成。",
+      "tatoeba": 28245
+    },
+    {
+      "lemma": "approach to",
+      "surface": "approach to",
+      "meaning": "方法，途径",
+      "example": "That's the best approach to the study of English.",
+      "translation": "那是学习英语的最佳方法。",
+      "tatoeba": 43126
+    },
+    {
+      "lemma": "in other words",
+      "surface": "in other words",
+      "meaning": "换句话说",
+      "example": "She doesn't pay attention to others; in other words, she is selfish.",
+      "translation": "她不关心别人；换句话说，她很自私。",
+      "tatoeba": 315627
+    },
+    {
+      "lemma": "on behalf of someone",
+      "surface": "On behalf of",
+      "meaning": "代表",
+      "example": "On behalf of the company, I welcome you.",
+      "translation": "我代表公司欢迎你。",
+      "tatoeba": 27447
+    },
+    {
+      "lemma": "a large number of",
+      "surface": "a large number of",
+      "meaning": "大量，许多",
+      "example": "They have provided the library with a large number of books.",
+      "translation": "他们给图书馆提供了很多书。",
+      "tatoeba": 8920071
+    },
+    {
+      "lemma": "compared with",
+      "surface": "Compared with",
+      "meaning": "与…相比",
+      "example": "Compared with yours, my car is small.",
+      "translation": "和你的车比起来，我的车很小。",
+      "tatoeba": 17084
+    },
+    {
+      "lemma": "contrary to",
+      "surface": "contrary to",
+      "meaning": "与…相反",
+      "example": "The result was contrary to our plan.",
+      "translation": "结果与我们的计划相反。",
+      "tatoeba": 238602
+    },
+    {
+      "lemma": "in turn",
+      "surface": "in turn",
+      "meaning": "依次，轮流",
+      "example": "Each man stood up in turn and introduced himself.",
+      "translation": "每位男士依次站起来做了自我介绍。",
+      "tatoeba": 27607
+    },
+    {
+      "lemma": "judging from",
+      "surface": "Judging from",
+      "meaning": "根据…判断",
+      "example": "Judging from the look of the sky, it may rain this afternoon.",
+      "translation": "从天色上判断，今天下午可能会下雨。",
+      "tatoeba": 18148
+    },
+    {
+      "lemma": "take action",
+      "surface": "took action",
+      "meaning": "采取行动",
+      "example": "We took action immediately so that things wouldn't get worse.",
+      "translation": "为了避免情况恶化，我们马上采取了行动。",
+      "tatoeba": 263769
+    },
+    {
+      "lemma": "generally speaking",
+      "surface": "Generally speaking",
+      "meaning": "一般而言，总体来说",
+      "example": "Generally speaking, the climate of Japan is mild.",
+      "translation": "总体上说，日本的气候温和。",
+      "tatoeba": 21784
+    },
+    {
+      "lemma": "not to mention",
+      "surface": "not to mention",
+      "meaning": "更不用说",
+      "example": "She speaks German and French, not to mention English.",
+      "translation": "她会说德语和法语，更不用说英语了。",
+      "tatoeba": 312680
+    },
+    {
+      "lemma": "in the meantime",
+      "surface": "in the meantime",
+      "meaning": "在此期间，与此同时",
+      "example": "Mother was busily cooking; in the meantime, I was just watching TV.",
+      "translation": "妈妈忙着做饭；与此同时，我只是在看电视。",
+      "tatoeba": 320857
     },
     {
       "lemma": "give rise to",
       "surface": "gave rise to",
       "meaning": "引起，导致",
-      "example": "The new law gave rise to heated debate.",
-      "translation": "新法律引发了激烈的争论。"
+      "example": "The factory waste gave rise to serious environmental pollution.",
+      "translation": "工厂废料导致了严重的环境污染。",
+      "tatoeba": 48009
     },
     {
-      "lemma": "lead to",
-      "surface": "lead to",
-      "meaning": "导致",
-      "example": "Too much stress can lead to illness.",
-      "translation": "压力过大可能导致疾病。"
+      "lemma": "on the whole",
+      "surface": "On the whole",
+      "meaning": "总的来说，大体上",
+      "example": "On the whole I am satisfied with the result.",
+      "translation": "总的来说，我对这个结果很满意。",
+      "tatoeba": 41216
     },
     {
-      "lemma": "result in",
-      "surface": "resulted in",
-      "meaning": "导致，造成",
-      "example": "The accident resulted in two deaths.",
-      "translation": "这起事故造成两人死亡。"
+      "lemma": "in this way",
+      "surface": "In this way",
+      "meaning": "这样",
+      "example": "In this way, we waste a lot of time.",
+      "translation": "这样一来，我们会浪费很多时间。",
+      "tatoeba": 54621
     },
     {
-      "lemma": "result from",
-      "surface": "results from",
-      "meaning": "由……引起",
-      "example": "Much of the damage results from poor planning.",
-      "translation": "大部分损失源于规划不当。"
+      "lemma": "for the purpose of",
+      "surface": "for the purpose of",
+      "meaning": "为了，目的是",
+      "example": "I came to this country for the purpose of studying music.",
+      "translation": "我来这个国家的目的是学习音乐。",
+      "tatoeba": 25399
     },
     {
-      "lemma": "contribute to",
-      "surface": "contributes to",
-      "meaning": "有助于；是……的原因之一",
-      "example": "Regular exercise contributes to good health.",
-      "translation": "经常锻炼有益于健康。"
+      "lemma": "in a sense",
+      "surface": "In a sense",
+      "meaning": "在某种意义上",
+      "example": "In a sense, I can understand his confusion.",
+      "translation": "在某种意义上，我能理解他的困惑。",
+      "tatoeba": 67187
     },
     {
-      "lemma": "be responsible for",
-      "surface": "is responsible for",
-      "meaning": "对……负责；是……的原因",
-      "example": "Who is responsible for the mistake?",
-      "translation": "谁该为这个错误负责？"
+      "lemma": "over the course of",
+      "surface": "over the course of",
+      "meaning": "在…期间，在…过程中",
+      "example": "The planning committee met six times over the course of ten months.",
+      "translation": "规划委员会在十个月里一共开了六次会。",
+      "tatoeba": 1860231
     },
     {
-      "lemma": "be aware of",
-      "surface": "are aware of",
-      "meaning": "意识到，知道",
-      "example": "Most people are aware of the risks of smoking.",
-      "translation": "大多数人都知道吸烟的危害。"
+      "lemma": "to begin with",
+      "surface": "To begin with",
+      "meaning": "首先",
+      "example": "To begin with, we must tackle the problem.",
+      "translation": "首先，我们必须解决这个问题。",
+      "tatoeba": 32762
     },
     {
-      "lemma": "be committed to",
-      "surface": "is committed to",
-      "meaning": "致力于",
-      "example": "The company is committed to reducing waste.",
-      "translation": "公司致力于减少浪费。"
+      "lemma": "take something into account",
+      "surface": "take into account",
+      "meaning": "考虑到，顾及",
+      "example": "We must take into account the wishes of all the family in planning a trip.",
+      "translation": "筹划旅行的时候，我们必须考虑到全家人的意愿。",
+      "tatoeba": 325571
     },
     {
-      "lemma": "be likely to",
-      "surface": "are likely to",
-      "meaning": "很可能",
-      "example": "Prices are likely to rise next year.",
-      "translation": "明年物价很可能上涨。"
-    },
-    {
-      "lemma": "be subject to",
-      "surface": "are subject to",
-      "meaning": "受……支配；易遭受",
-      "example": "All flights are subject to delay in bad weather.",
-      "translation": "天气不好时所有航班都可能延误。"
-    },
-    {
-      "lemma": "be associated with",
-      "surface": "is associated with",
-      "meaning": "与……有关",
-      "example": "Heavy drinking is associated with heart disease.",
-      "translation": "酗酒与心脏病有关。"
-    },
-    {
-      "lemma": "be related to",
-      "surface": "is related to",
-      "meaning": "与……相关",
-      "example": "His success is related to his hard work.",
-      "translation": "他的成功与他的努力有关。"
-    },
-    {
-      "lemma": "be based on",
-      "surface": "is based on",
-      "meaning": "以……为基础",
-      "example": "The film is based on a true story.",
-      "translation": "这部电影根据真实故事改编。"
-    },
-    {
-      "lemma": "be faced with",
-      "surface": "are faced with",
-      "meaning": "面临",
-      "example": "Many cities are faced with a housing shortage.",
-      "translation": "许多城市面临住房短缺。"
-    },
-    {
-      "lemma": "be concerned about",
-      "surface": "are concerned about",
-      "meaning": "担心，关心",
-      "example": "Parents are concerned about their children's safety online.",
-      "translation": "家长们担心孩子的上网安全。"
-    },
-    {
-      "lemma": "be involved in",
-      "surface": "was involved in",
-      "meaning": "参与，卷入",
-      "example": "She was involved in the planning of the festival.",
-      "translation": "她参与了节日活动的策划。"
-    },
-    {
-      "lemma": "be known as",
-      "surface": "is known as",
-      "meaning": "被称为",
-      "example": "The city is known as the capital of fashion.",
-      "translation": "这座城市被称为时尚之都。"
-    },
-    {
-      "lemma": "be known for",
-      "surface": "is known for",
-      "meaning": "因……而出名",
-      "example": "The region is known for its fine wine.",
-      "translation": "这个地区以出产优质葡萄酒闻名。"
-    },
-    {
-      "lemma": "be devoted to",
-      "surface": "is devoted to",
-      "meaning": "致力于，专心于",
-      "example": "The museum is devoted to modern art.",
-      "translation": "这座博物馆专门展出现代艺术。"
-    },
-    {
-      "lemma": "be capable of",
-      "surface": "is capable of",
-      "meaning": "有能力做",
-      "example": "The new robot is capable of climbing stairs.",
-      "translation": "这款新机器人能爬楼梯。"
-    },
-    {
-      "lemma": "be essential to",
-      "surface": "is essential to",
-      "meaning": "对……必不可少",
-      "example": "Water is essential to all living things.",
-      "translation": "水对一切生物都必不可少。"
-    },
-    {
-      "lemma": "be beneficial to",
-      "surface": "is beneficial to",
-      "meaning": "对……有益",
-      "example": "Reading aloud is beneficial to young children.",
-      "translation": "朗读对幼儿有益。"
-    },
-    {
-      "lemma": "be harmful to",
-      "surface": "is harmful to",
-      "meaning": "对……有害",
-      "example": "Too much sugar is harmful to your teeth.",
-      "translation": "吃太多糖对牙齿有害。"
-    },
-    {
-      "lemma": "be accustomed to",
-      "surface": "is accustomed to",
-      "meaning": "习惯于",
-      "example": "She is accustomed to working long hours.",
-      "translation": "她习惯了长时间工作。"
-    },
-    {
-      "lemma": "be bound to",
-      "surface": "is bound to",
-      "meaning": "必然会，一定会",
-      "example": "Without support, the plan is bound to fail.",
-      "translation": "没有支持，这个计划注定会失败。"
-    },
-    {
-      "lemma": "a growing number of",
-      "surface": "A growing number of",
-      "meaning": "越来越多的",
-      "example": "A growing number of people work from home.",
-      "translation": "越来越多的人在家办公。"
+      "lemma": "in the form of",
+      "surface": "in the form of",
+      "meaning": "以…的形式",
+      "example": "He expressed his feelings in the form of a painting.",
+      "translation": "他以绘画的形式表达了自己的感情。",
+      "tatoeba": 298665
     },
     {
       "lemma": "a wide range of",
       "surface": "a wide range of",
-      "meaning": "各种各样的",
-      "example": "The shop sells a wide range of products.",
-      "translation": "这家店出售各种各样的商品。"
+      "meaning": "各种各样的，广泛的",
+      "example": "We discussed a wide range of topics.",
+      "translation": "我们谈论了各种各样的话题。",
+      "tatoeba": 263015
     },
     {
-      "lemma": "a great deal of",
-      "surface": "a great deal of",
-      "meaning": "大量的",
-      "example": "The project required a great deal of time.",
-      "translation": "这个项目耗费了大量时间。"
+      "lemma": "in comparison",
+      "surface": "In comparison",
+      "meaning": "相比之下",
+      "example": "In comparison, taking the train is cheaper.",
+      "translation": "相比之下，坐火车更便宜。",
+      "tatoeba": 7819840
     },
     {
-      "lemma": "a variety of",
-      "surface": "a variety of",
-      "meaning": "各种各样的",
-      "example": "Students can choose from a variety of courses.",
-      "translation": "学生可以从各种课程中选择。"
+      "lemma": "frankly speaking",
+      "surface": "Frankly speaking",
+      "meaning": "坦白地说",
+      "example": "Frankly speaking, I don't like your haircut.",
+      "translation": "坦白地说，我不喜欢你的发型。",
+      "tatoeba": 325416
     },
     {
-      "lemma": "the vast majority of",
-      "surface": "The vast majority of",
-      "meaning": "绝大多数",
-      "example": "The vast majority of voters supported the plan.",
-      "translation": "绝大多数选民支持这项计划。"
+      "lemma": "stem from",
+      "surface": "stemmed from",
+      "meaning": "源于，起因于",
+      "example": "The accident stemmed from her negligence.",
+      "translation": "这起事故源于她的疏忽。",
+      "tatoeba": 47086
     },
     {
-      "lemma": "an increasing number of",
-      "surface": "An increasing number of",
-      "meaning": "越来越多的",
-      "example": "An increasing number of students study abroad.",
-      "translation": "越来越多的学生出国留学。"
+      "lemma": "for instance",
+      "surface": "for instance",
+      "meaning": "例如",
+      "example": "I want to go abroad, for instance, to Italy and Spain.",
+      "translation": "我想出国，比如去意大利和西班牙。",
+      "tatoeba": 262249
     },
     {
-      "lemma": "a sharp increase in",
-      "surface": "a sharp increase in",
-      "meaning": "……的急剧增长",
-      "example": "There has been a sharp increase in food prices.",
-      "translation": "食品价格急剧上涨。"
+      "lemma": "in the field of",
+      "surface": "in the field of",
+      "meaning": "在…领域",
+      "example": "He did pioneering work in the field of physical geography.",
+      "translation": "他在自然地理学领域做了开创性的工作。",
+      "tatoeba": 10540194
     },
     {
-      "lemma": "a steady decline in",
-      "surface": "a steady decline in",
-      "meaning": "……的持续下降",
-      "example": "The town has seen a steady decline in population.",
-      "translation": "这个镇的人口持续下降。"
+      "lemma": "come to the conclusion that",
+      "surface": "come to the conclusion that",
+      "meaning": "得出结论",
+      "example": "We have come to the conclusion that this plan is not feasible currently.",
+      "translation": "我们得出结论，这个计划目前不可行。",
+      "tatoeba": 2915560
     },
     {
-      "lemma": "a significant impact",
-      "surface": "a significant impact",
-      "meaning": "重大影响",
-      "example": "The new rules had a significant impact on small businesses.",
-      "translation": "新规定对小企业产生了重大影响。"
+      "lemma": "research on",
+      "surface": "research on",
+      "meaning": "研究",
+      "example": "He's doing in-depth research on ancient history.",
+      "translation": "他正在对古代历史进行深入研究。",
+      "tatoeba": 329598
     },
     {
-      "lemma": "a major concern",
-      "surface": "a major concern",
-      "meaning": "一个主要问题",
-      "example": "Air pollution is a major concern in big cities.",
-      "translation": "空气污染是大城市的一大问题。"
+      "lemma": "what is more",
+      "surface": "what is more",
+      "meaning": "而且",
+      "example": "This is a useful book and, what is more, it is not expensive.",
+      "translation": "这是一本有用的书，而且不贵。",
+      "tatoeba": 55381
     },
     {
-      "lemma": "a heated debate",
-      "surface": "a heated debate",
-      "meaning": "激烈的辩论",
-      "example": "The proposal sparked a heated debate.",
-      "translation": "这项提议引发了激烈的辩论。"
+      "lemma": "a tight schedule",
+      "surface": "a tight schedule",
+      "meaning": "日程紧，时间紧",
+      "example": "I'm traveling on a tight schedule. I don't have the time.",
+      "translation": "我行程很紧，没有时间。",
+      "tatoeba": 37754
     },
     {
-      "lemma": "a vicious circle",
-      "surface": "a vicious circle",
-      "meaning": "恶性循环",
-      "example": "Poverty and poor health can form a vicious circle.",
-      "translation": "贫困与疾病可能形成恶性循环。"
+      "lemma": "top priority",
+      "surface": "top priority",
+      "meaning": "首要任务",
+      "example": "Our top priority is to settle the dispute once and for all.",
+      "translation": "我们的首要任务是彻底解决这场争端。",
+      "tatoeba": 247531
     },
     {
-      "lemma": "a turning point",
-      "surface": "a turning point",
-      "meaning": "转折点",
-      "example": "The war was a turning point in the country's history.",
-      "translation": "这场战争是这个国家历史上的转折点。"
+      "lemma": "draw attention to",
+      "surface": "draw attention to",
+      "meaning": "引起对…的注意",
+      "example": "Don't draw attention to yourself.",
+      "translation": "别引人注意。",
+      "tatoeba": 2275201
     },
     {
-      "lemma": "a double-edged sword",
-      "surface": "a double-edged sword",
-      "meaning": "双刃剑",
-      "example": "Technology is a double-edged sword.",
-      "translation": "科技是一把双刃剑。"
+      "lemma": "in the course of",
+      "surface": "in the course of",
+      "meaning": "在……期间",
+      "example": "We went to Paris in the course of our travels.",
+      "translation": "我们在旅行途中去了巴黎。",
+      "tatoeba": 249488
     },
     {
-      "lemma": "a means of",
-      "surface": "a means of",
-      "meaning": "一种……的手段",
-      "example": "Art can be a means of expressing feelings.",
-      "translation": "艺术可以是一种表达情感的方式。"
+      "lemma": "to some extent",
+      "surface": "to some extent",
+      "meaning": "在某种程度上",
+      "example": "I agree with what you say to some extent.",
+      "translation": "在某种程度上，我认同你所说的。",
+      "tatoeba": 67182
     },
     {
-      "lemma": "the key to",
-      "surface": "the key to",
-      "meaning": "……的关键",
-      "example": "Practice is the key to success.",
-      "translation": "练习是成功的关键。"
+      "lemma": "at the cost of",
+      "surface": "at the cost of",
+      "meaning": "以…为代价",
+      "example": "He wanted to succeed, even at the cost of his health.",
+      "translation": "他想要成功，即使是以自己的健康为代价。",
+      "tatoeba": 295150
     },
     {
-      "lemma": "the root cause of",
-      "surface": "the root cause of",
-      "meaning": "……的根本原因",
-      "example": "We must find the root cause of the problem.",
-      "translation": "我们必须找到问题的根源。"
+      "lemma": "best regards",
+      "surface": "best regards",
+      "meaning": "诚挚的问候",
+      "example": "Please give my best regards to your parents.",
+      "translation": "请代我向你父母致以诚挚的问候。",
+      "tatoeba": 38481
     },
     {
-      "lemma": "the pros and cons",
-      "surface": "the pros and cons",
-      "meaning": "利与弊",
-      "example": "Let's weigh the pros and cons before deciding.",
-      "translation": "做决定前我们权衡一下利弊。"
+      "lemma": "in an effort to",
+      "surface": "in an effort to",
+      "meaning": "试图，为了",
+      "example": "The company cut its prices in an effort to attract more young customers.",
+      "translation": "公司降低了价格，试图吸引更多年轻顾客。"
     },
     {
-      "lemma": "the general public",
-      "surface": "The general public",
-      "meaning": "公众，普通大众",
-      "example": "The general public has a right to know.",
-      "translation": "公众有知情权。"
+      "lemma": "in contrast",
+      "surface": "in contrast",
+      "meaning": "相比之下",
+      "example": "The north of the country is very dry; in contrast, the south stays green all year.",
+      "translation": "这个国家的北部非常干燥，相比之下，南部全年都是绿的。"
     },
     {
-      "lemma": "the younger generation",
-      "surface": "The younger generation",
-      "meaning": "年轻一代",
-      "example": "The younger generation spends more time online.",
-      "translation": "年轻一代上网时间更长。"
+      "lemma": "in response to",
+      "surface": "In response to",
+      "meaning": "作为对…的回应",
+      "example": "In response to customer concerns, we will definitely be addressing this software defect.",
+      "translation": "针对客户的担忧，我们一定会解决这个软件缺陷。",
+      "tatoeba": 3500838
     },
     {
-      "lemma": "the cost of living",
-      "surface": "The cost of living",
-      "meaning": "生活成本",
-      "example": "The cost of living in this city is very high.",
-      "translation": "这座城市的生活成本很高。"
+      "lemma": "on a regular basis",
+      "surface": "on a regular basis",
+      "meaning": "定期",
+      "example": "She visits the dentist on a regular basis, so she seldom gets toothaches.",
+      "translation": "她定期去看牙医，所以很少牙痛。",
+      "tatoeba": 510208
     },
     {
-      "lemma": "quality of life",
-      "surface": "quality of life",
-      "meaning": "生活质量",
-      "example": "Parks improve the quality of life in cities.",
-      "translation": "公园提高了城市的生活质量。"
+      "lemma": "a range of",
+      "surface": "a range of",
+      "meaning": "一系列，各种",
+      "example": "Today, these important habitats are threatened by a range of human activities.",
+      "translation": "如今，这些重要栖息地正受到一系列人类活动的威胁。",
+      "tatoeba": 6673926
     },
     {
-      "lemma": "economic growth",
-      "surface": "economic growth",
-      "meaning": "经济增长",
-      "example": "Tourism has driven economic growth in the region.",
-      "translation": "旅游业推动了该地区的经济增长。"
+      "lemma": "take something into consideration",
+      "surface": "take the cost into consideration",
+      "meaning": "考虑到，把…考虑在内",
+      "example": "We must take the cost into consideration before making a final decision.",
+      "translation": "在做最终决定之前，我们必须考虑成本。"
     },
     {
-      "lemma": "public health",
-      "surface": "public health",
-      "meaning": "公共卫生",
-      "example": "Smoking is a serious public health problem.",
-      "translation": "吸烟是一个严重的公共卫生问题。"
+      "lemma": "course of action",
+      "surface": "course of action",
+      "meaning": "行动方案，做法",
+      "example": "Reaction is not always the best course of action.",
+      "translation": "反应并不总是最好的行动方案。",
+      "tatoeba": 1533758
     },
     {
-      "lemma": "climate change",
-      "surface": "Climate change",
-      "meaning": "气候变化",
-      "example": "Climate change affects every country.",
-      "translation": "气候变化影响着每一个国家。"
+      "lemma": "to a certain extent",
+      "surface": "to a certain extent",
+      "meaning": "在某种程度上",
+      "example": "I found the rumor to be true to a certain extent.",
+      "translation": "我发现这个谣言在某种程度上是真的。",
+      "tatoeba": 50647
     },
     {
-      "lemma": "renewable energy",
-      "surface": "renewable energy",
-      "meaning": "可再生能源",
-      "example": "The country plans to rely more on renewable energy.",
-      "translation": "这个国家计划更多地依靠可再生能源。"
+      "lemma": "make every effort",
+      "surface": "making every effort",
+      "meaning": "尽一切努力",
+      "example": "The police are making every effort to look into the case.",
+      "translation": "警方正尽一切努力调查此案。",
+      "tatoeba": 238229
     },
     {
-      "lemma": "natural resources",
-      "surface": "natural resources",
-      "meaning": "自然资源",
-      "example": "We must protect our natural resources.",
-      "translation": "我们必须保护自然资源。"
+      "lemma": "in connection with",
+      "surface": "in connection with",
+      "meaning": "与……有关，关于",
+      "example": "The police arrested a suspect in connection with the robbery.",
+      "translation": "警方逮捕了一名与这起抢劫案有关的嫌疑人。",
+      "tatoeba": 238215
     },
     {
-      "lemma": "traffic congestion",
-      "surface": "traffic congestion",
-      "meaning": "交通拥堵",
-      "example": "The new subway line will ease traffic congestion.",
-      "translation": "新地铁线将缓解交通拥堵。"
+      "lemma": "in depth",
+      "surface": "examines in depth",
+      "meaning": "深入地，详细地",
+      "example": "The report examines in depth the causes of the recent economic crisis.",
+      "translation": "这份报告深入探讨了最近经济危机的成因。"
     },
     {
-      "lemma": "job opportunities",
-      "surface": "job opportunities",
-      "meaning": "就业机会",
-      "example": "The factory created many job opportunities.",
-      "translation": "这家工厂创造了许多就业机会。"
+      "lemma": "provided that",
+      "surface": "provided that",
+      "meaning": "假如，前提是",
+      "example": "I will accept the work, provided that you help me.",
+      "translation": "我将接受这份工作，前提是你能帮我。",
+      "tatoeba": 71404
     },
     {
-      "lemma": "higher education",
-      "surface": "higher education",
-      "meaning": "高等教育",
-      "example": "The government is investing more in higher education.",
-      "translation": "政府正加大对高等教育的投入。"
+      "lemma": "given that",
+      "surface": "given that",
+      "meaning": "考虑到，鉴于",
+      "example": "She must have studied in France, given that she speaks French fluently.",
+      "translation": "她法语说得这么流利，肯定在法国学习过。",
+      "tatoeba": 8979704
     },
     {
-      "lemma": "mental health",
-      "surface": "mental health",
-      "meaning": "心理健康",
-      "example": "Exercise is good for your mental health.",
-      "translation": "锻炼有益于心理健康。"
+      "lemma": "do more harm than good",
+      "surface": "do more harm than good",
+      "meaning": "弊大于利",
+      "example": "From my point of view, cars do more harm than good.",
+      "translation": "在我看来，汽车弊大于利。",
+      "tatoeba": 246585
     },
     {
-      "lemma": "peer pressure",
-      "surface": "peer pressure",
-      "meaning": "同龄人的压力",
-      "example": "Teenagers often give in to peer pressure.",
-      "translation": "青少年常常屈从于同伴压力。"
+      "lemma": "first and foremost",
+      "surface": "First and foremost",
+      "meaning": "首先，首要的是",
+      "example": "First and foremost, I'd like to thank everyone for coming.",
+      "translation": "首先，我想感谢各位的到来。",
+      "tatoeba": 5674552
     },
     {
-      "lemma": "work-life balance",
-      "surface": "work-life balance",
-      "meaning": "工作与生活的平衡",
-      "example": "Flexible hours help employees keep a good work-life balance.",
-      "translation": "弹性工作时间帮助员工保持工作与生活的平衡。"
+      "lemma": "for one thing",
+      "surface": "For one thing",
+      "meaning": "一来，首先",
+      "example": "For one thing, I've no money, and for another, I've no leisure.",
+      "translation": "一来我没钱，二来我没时间。",
+      "tatoeba": 27866
     },
     {
-      "lemma": "heavy rain",
-      "surface": "Heavy rain",
-      "meaning": "大雨",
-      "example": "Heavy rain caused flooding in the north.",
-      "translation": "大雨在北部造成了洪水。"
+      "lemma": "pave the way for",
+      "surface": "pave the way for",
+      "meaning": "为…铺平道路",
+      "example": "The project was a failure, but it did pave the way for the success of later efforts.",
+      "translation": "这个项目失败了，但它确实为后来各项努力的成功铺平了道路。",
+      "tatoeba": 5262977
     },
     {
-      "lemma": "strong wind",
-      "surface": "strong wind",
-      "meaning": "大风",
-      "example": "A strong wind blew the tent away.",
-      "translation": "一阵大风把帐篷刮跑了。"
+      "lemma": "be equivalent to",
+      "surface": "was equivalent to",
+      "meaning": "相当于，等于",
+      "example": "A trip to America was equivalent to a two-year salary for her.",
+      "translation": "去美国旅行一次相当于她两年的工资。",
+      "tatoeba": 67526
     },
     {
-      "lemma": "heavy traffic",
-      "surface": "heavy traffic",
-      "meaning": "交通繁忙",
-      "example": "We were stuck in heavy traffic for an hour.",
-      "translation": "我们在拥堵的车流中堵了一个小时。"
+      "lemma": "be reflected in",
+      "surface": "are reflected in",
+      "meaning": "反映在，体现在",
+      "example": "A society's values are reflected in its traditions.",
+      "translation": "一个社会的价值观体现在它的传统之中。",
+      "tatoeba": 265339
     },
     {
-      "lemma": "a heavy smoker",
-      "surface": "a heavy smoker",
-      "meaning": "烟瘾很大的人",
-      "example": "My uncle was a heavy smoker for twenty years.",
-      "translation": "我叔叔抽了二十年烟，烟瘾很大。"
+      "lemma": "play a role in",
+      "surface": "plays a role in",
+      "meaning": "在…中起作用",
+      "example": "The left frontal lobe plays a role in controlling mood and emotion.",
+      "translation": "左额叶在控制情绪和情感方面发挥作用。",
+      "tatoeba": 10804111
     },
     {
-      "lemma": "a close friend",
-      "surface": "a close friend",
-      "meaning": "密友",
-      "example": "She is a close friend of mine.",
-      "translation": "她是我的好朋友。"
+      "lemma": "slim chance",
+      "surface": "slim chance",
+      "meaning": "可能性很小",
+      "example": "I think there's only a slim chance of that happening.",
+      "translation": "我认为那种事发生的可能性很小。",
+      "tatoeba": 5618994
     },
     {
-      "lemma": "a narrow escape",
-      "surface": "a narrow escape",
-      "meaning": "死里逃生",
-      "example": "The driver had a narrow escape when his car caught fire.",
-      "translation": "汽车着火时，司机侥幸逃生。"
+      "lemma": "in contrast to",
+      "surface": "In contrast to",
+      "meaning": "与…形成对比",
+      "example": "In contrast to his frightening looks, his voice was kind and calm.",
+      "translation": "与他吓人的外表形成对比，他的声音温和而平静。",
+      "tatoeba": 327923
     },
     {
-      "lemma": "a tough decision",
-      "surface": "a tough decision",
-      "meaning": "艰难的决定",
-      "example": "Leaving home was a tough decision.",
-      "translation": "离开家是一个艰难的决定。"
+      "lemma": "in relation to",
+      "surface": "in relation to",
+      "meaning": "关于，涉及",
+      "example": "I am writing in relation to your complaint.",
+      "translation": "我写信是为了你投诉的事。",
+      "tatoeba": 252819
     },
     {
-      "lemma": "common sense",
-      "surface": "common sense",
-      "meaning": "常识",
-      "example": "It's common sense to lock your door at night.",
-      "translation": "晚上锁门是常识。"
+      "lemma": "common knowledge",
+      "surface": "common knowledge",
+      "meaning": "常识，众所周知的事",
+      "example": "It's common knowledge that the earth turns on its axis.",
+      "translation": "众所周知，地球绕轴自转。",
+      "tatoeba": 277100
     },
     {
-      "lemma": "first impression",
-      "surface": "first impression",
-      "meaning": "第一印象",
-      "example": "Your first impression of a person is often wrong.",
-      "translation": "你对一个人的第一印象常常是错的。"
+      "lemma": "combined with",
+      "surface": "combined with",
+      "meaning": "与…结合",
+      "example": "Usefulness must be combined with pleasantness.",
+      "translation": "实用性必须与愉悦感相结合。",
+      "tatoeba": 5922453
     },
     {
-      "lemma": "deep sleep",
-      "surface": "deep sleep",
-      "meaning": "熟睡，深度睡眠",
-      "example": "The baby fell into a deep sleep.",
-      "translation": "宝宝沉沉睡去。"
+      "lemma": "in brief",
+      "surface": "in brief",
+      "meaning": "简言之",
+      "example": "I can't tell you the whole story now, but in brief, my parents aren't coming here this summer.",
+      "translation": "我现在没法把整件事告诉你，但简而言之，我父母今年夏天不会来这里。",
+      "tatoeba": 241538
     },
     {
-      "lemma": "bitter cold",
-      "surface": "bitter cold",
-      "meaning": "严寒，刺骨的寒冷",
-      "example": "The bitter cold kept everyone indoors.",
-      "translation": "刺骨的寒冷让大家都待在屋里。"
+      "lemma": "in comparison to",
+      "surface": "in comparison to",
+      "meaning": "与…相比",
+      "example": "The buildings are small in comparison to the skyscrapers in New York.",
+      "translation": "与纽约的摩天大楼相比，这些建筑很小。",
+      "tatoeba": 1540769
     },
     {
-      "lemma": "broad daylight",
-      "surface": "broad daylight",
-      "meaning": "光天化日",
-      "example": "The robbery happened in broad daylight.",
-      "translation": "抢劫发生在光天化日之下。"
+      "lemma": "a host of",
+      "surface": "a host of",
+      "meaning": "许多，大量",
+      "example": "We are faced with a host of problems.",
+      "translation": "我们面临着许多问题。",
+      "tatoeba": 249026
     },
     {
-      "lemma": "golden opportunity",
-      "surface": "golden opportunity",
-      "meaning": "绝佳机会",
-      "example": "This job is a golden opportunity for you.",
-      "translation": "这份工作对你来说是绝佳的机会。"
+      "lemma": "as a consequence",
+      "surface": "As a consequence",
+      "meaning": "因此，结果",
+      "example": "Testing has been delayed by two days. As a consequence, we need to reschedule the release date.",
+      "translation": "测试延迟了两天，因此我们需要重新安排发布日期。",
+      "tatoeba": 2938649
     },
     {
-      "lemma": "fierce competition",
-      "surface": "fierce competition",
-      "meaning": "激烈的竞争",
-      "example": "There is fierce competition for places at the university.",
-      "translation": "这所大学的入学竞争很激烈。"
+      "lemma": "be characteristic of",
+      "surface": "is characteristic of",
+      "meaning": "是…特有的",
+      "example": "The smell is characteristic of garlic.",
+      "translation": "这种气味是大蒜所特有的。",
+      "tatoeba": 46701
+    },
+    {
+      "lemma": "be vulnerable to",
+      "surface": "are vulnerable to",
+      "meaning": "易受伤害",
+      "example": "Koalas are vulnerable to bushfires due to their slow movements.",
+      "translation": "由于行动缓慢，考拉很容易受到丛林大火的伤害。",
+      "tatoeba": 8115499
+    },
+    {
+      "lemma": "in comparison with",
+      "surface": "in comparison with",
+      "meaning": "与…相比",
+      "example": "Country life is very peaceful in comparison with city life.",
+      "translation": "与城市生活相比，乡村生活非常宁静。",
+      "tatoeba": 279079
+    },
+    {
+      "lemma": "research into",
+      "surface": "research into",
+      "meaning": "研究，调查",
+      "example": "We carry out some research into the causes of brain damage.",
+      "translation": "我们对脑损伤的成因做了一些研究。",
+      "tatoeba": 263188
+    },
+    {
+      "lemma": "sense of responsibility",
+      "surface": "sense of responsibility",
+      "meaning": "责任感",
+      "example": "Taro has a really strong sense of responsibility.",
+      "translation": "太郎有很强的责任感。",
+      "tatoeba": 1230709
+    },
+    {
+      "lemma": "in the long term",
+      "surface": "in the long term",
+      "meaning": "从长远来看",
+      "example": "This solution is not workable in the long term.",
+      "translation": "从长远来看，这个解决方案行不通。",
+      "tatoeba": 6219022
+    },
+    {
+      "lemma": "beyond that",
+      "surface": "Beyond that",
+      "meaning": "除此之外",
+      "example": "Beyond that I cannot help you.",
+      "translation": "除此之外，我帮不了你。",
+      "tatoeba": 41737
+    },
+    {
+      "lemma": "by definition",
+      "surface": "By definition",
+      "meaning": "按照定义",
+      "example": "By definition, an acute angle is less than 90 degrees.",
+      "translation": "按照定义，锐角小于90度。",
+      "tatoeba": 5398562
+    },
+    {
+      "lemma": "call attention to",
+      "surface": "called attention to",
+      "meaning": "引起对…的注意",
+      "example": "The policeman called attention to the problem of pickpockets.",
+      "translation": "警察提醒人们注意扒手问题。",
+      "tatoeba": 238095
+    },
+    {
+      "lemma": "in support of",
+      "surface": "in support of",
+      "meaning": "支持",
+      "example": "He made a speech in support of the plan.",
+      "translation": "他发表讲话支持这项计划。",
+      "tatoeba": 290715
+    },
+    {
+      "lemma": "raise funds",
+      "surface": "raise funds",
+      "meaning": "筹集资金",
+      "example": "You have to raise funds for the relief work.",
+      "translation": "你必须为救援工作筹集资金。",
+      "tatoeba": 16608
+    },
+    {
+      "lemma": "make something a reality",
+      "surface": "make our goals a reality",
+      "meaning": "实现，使成为现实",
+      "example": "How can we have any self-respect if we don't even try to make our goals a reality?",
+      "translation": "如果我们连努力实现自己的目标都不做，又怎么会有自尊呢？",
+      "tatoeba": 6015102
+    },
+    {
+      "lemma": "among others",
+      "surface": "among others",
+      "meaning": "其中包括，此外还有",
+      "example": "He cited, during his speech, Kant and Heidegger among others.",
+      "translation": "他在演讲中提到了康德和海德格尔等人。",
+      "tatoeba": 2772536
+    },
+    {
+      "lemma": "be consistent with",
+      "surface": "is consistent with",
+      "meaning": "与…一致，相符",
+      "example": "The story is consistent with the evidence.",
+      "translation": "这个故事与证据相符。",
+      "tatoeba": 43283
+    },
+    {
+      "lemma": "on the basis of",
+      "surface": "on the basis of",
+      "meaning": "以…为基础，根据",
+      "example": "The conclusion was formed on the basis of these facts.",
+      "translation": "这个结论是在这些事实的基础上形成的。",
+      "tatoeba": 48377
+    },
+    {
+      "lemma": "to conclude",
+      "surface": "To conclude",
+      "meaning": "最后，总之",
+      "example": "To conclude, the project was a success despite the many difficulties we faced.",
+      "translation": "总而言之，尽管我们面临许多困难，这个项目还是成功了。"
+    },
+    {
+      "lemma": "most importantly",
+      "surface": "most importantly",
+      "meaning": "最重要的是",
+      "example": "She's beautiful, smart, and - most importantly - has a good heart.",
+      "translation": "她很漂亮，聪明，并且最重要的是，她有一颗善良的心。",
+      "tatoeba": 749276
+    },
+    {
+      "lemma": "a considerable amount of",
+      "surface": "a considerable amount of",
+      "meaning": "相当多的，大量的",
+      "example": "A fridge that works well saves a considerable amount of energy.",
+      "translation": "一台运转良好的冰箱能节省相当多的能源。",
+      "tatoeba": 9211669
+    },
+    {
+      "lemma": "common practice",
+      "surface": "common practice",
+      "meaning": "常见做法，惯例",
+      "example": "Is this a common practice in Boston?",
+      "translation": "这在波士顿是常见做法吗？",
+      "tatoeba": 5725651
     },
     {
       "lemma": "take measures",
       "surface": "take measures",
       "meaning": "采取措施",
-      "example": "The government must take measures to reduce pollution.",
-      "translation": "政府必须采取措施减少污染。"
+      "example": "We must take measures to prevent traffic accidents.",
+      "translation": "我们必须采取措施防止交通事故。",
+      "tatoeba": 240344
     },
     {
-      "lemma": "take action",
-      "surface": "take action",
-      "meaning": "采取行动",
-      "example": "It's time to take action on climate change.",
-      "translation": "是时候在气候变化问题上采取行动了。"
+      "lemma": "please note",
+      "surface": "Please note",
+      "meaning": "请注意",
+      "example": "Please note the change in the meeting agenda.",
+      "translation": "请注意会议议程的变更。",
+      "tatoeba": 22517
     },
     {
-      "lemma": "take responsibility for",
-      "surface": "take responsibility for",
-      "meaning": "对……负责",
-      "example": "Parents should take responsibility for their children's behaviour.",
-      "translation": "父母应对孩子的行为负责。"
-    },
-    {
-      "lemma": "take steps to",
-      "surface": "taking steps to",
-      "meaning": "采取步骤（做某事）",
-      "example": "The school is taking steps to stop bullying.",
-      "translation": "学校正在采取措施制止欺凌。"
-    },
-    {
-      "lemma": "meet the needs of",
-      "surface": "meet the needs of",
-      "meaning": "满足……的需要",
-      "example": "The city needs more schools to meet the needs of families.",
-      "translation": "城市需要更多学校来满足家庭的需求。"
-    },
-    {
-      "lemma": "meet the demand for",
-      "surface": "meet the demand for",
-      "meaning": "满足对……的需求",
-      "example": "Farmers struggle to meet the demand for fresh vegetables.",
-      "translation": "农民难以满足对新鲜蔬菜的需求。"
-    },
-    {
-      "lemma": "solve a problem",
-      "surface": "solve a problem",
-      "meaning": "解决问题",
-      "example": "Talking openly can help solve a problem early.",
-      "translation": "坦诚沟通有助于及早解决问题。"
-    },
-    {
-      "lemma": "reach an agreement",
-      "surface": "reached an agreement",
-      "meaning": "达成协议",
-      "example": "The two sides finally reached an agreement.",
-      "translation": "双方最终达成了协议。"
-    },
-    {
-      "lemma": "reach a consensus",
-      "surface": "reach a consensus",
-      "meaning": "达成共识",
-      "example": "The committee failed to reach a consensus.",
-      "translation": "委员会未能达成共识。"
-    },
-    {
-      "lemma": "achieve one's goal",
-      "surface": "achieve her goal",
-      "meaning": "实现目标",
-      "example": "She worked hard to achieve her goal.",
-      "translation": "她努力实现自己的目标。"
-    },
-    {
-      "lemma": "gain experience",
-      "surface": "gain experience",
-      "meaning": "积累经验",
-      "example": "Internships help students gain experience.",
-      "translation": "实习帮助学生积累经验。"
-    },
-    {
-      "lemma": "broaden one's horizons",
-      "surface": "broaden your horizons",
-      "meaning": "开阔眼界",
-      "example": "Travelling can broaden your horizons.",
-      "translation": "旅行可以开阔眼界。"
-    },
-    {
-      "lemma": "acquire knowledge",
-      "surface": "acquire knowledge",
-      "meaning": "获取知识",
-      "example": "Reading is the best way to acquire knowledge.",
-      "translation": "阅读是获取知识的最好方式。"
-    },
-    {
-      "lemma": "conduct research",
-      "surface": "conducted research",
-      "meaning": "进行研究",
-      "example": "Scientists conducted research on sleep patterns.",
-      "translation": "科学家对睡眠模式进行了研究。"
-    },
-    {
-      "lemma": "carry out an experiment",
-      "surface": "carried out an experiment",
-      "meaning": "做实验",
-      "example": "The students carried out an experiment on plant growth.",
-      "translation": "学生们做了一个关于植物生长的实验。"
-    },
-    {
-      "lemma": "collect data",
-      "surface": "collect data",
-      "meaning": "收集数据",
-      "example": "Researchers collect data from thousands of patients.",
-      "translation": "研究人员从数千名患者那里收集数据。"
-    },
-    {
-      "lemma": "provide evidence",
-      "surface": "provides evidence",
-      "meaning": "提供证据",
-      "example": "The study provides evidence that exercise improves mood.",
-      "translation": "这项研究提供了运动能改善情绪的证据。"
-    },
-    {
-      "lemma": "reach a conclusion",
-      "surface": "reached the conclusion",
-      "meaning": "得出结论",
-      "example": "The scientists reached the conclusion that the water was safe.",
-      "translation": "科学家们得出结论：水是安全的。"
-    },
-    {
-      "lemma": "express concern about",
-      "surface": "expressed concern about",
-      "meaning": "对……表示担忧",
-      "example": "Doctors have expressed concern about rising obesity rates.",
-      "translation": "医生们对肥胖率上升表示担忧。"
-    },
-    {
-      "lemma": "express one's opinion",
-      "surface": "express their opinions",
-      "meaning": "表达观点",
-      "example": "Students should feel free to express their opinions in class.",
-      "translation": "学生应能在课堂上自由表达观点。"
-    },
-    {
-      "lemma": "hold the view that",
-      "surface": "hold the view that",
-      "meaning": "持……的观点",
-      "example": "Some experts hold the view that homework should be banned.",
-      "translation": "一些专家认为应该取消家庭作业。"
-    },
-    {
-      "lemma": "make a contribution to",
-      "surface": "made a great contribution to",
-      "meaning": "对……做出贡献",
-      "example": "She made a great contribution to medical science.",
-      "translation": "她对医学做出了巨大贡献。"
-    },
-    {
-      "lemma": "make use of",
-      "surface": "make use of",
-      "meaning": "利用",
-      "example": "We should make use of every chance to practise.",
-      "translation": "我们应该利用每一个练习的机会。"
-    },
-    {
-      "lemma": "make full use of",
-      "surface": "make full use of",
-      "meaning": "充分利用",
-      "example": "Students should make full use of the library.",
-      "translation": "学生应充分利用图书馆。"
+      "lemma": "play a part in",
+      "surface": "play a part in",
+      "meaning": "在…中起作用",
+      "example": "To what extent did he play a part in the research project?",
+      "translation": "他在这个研究项目中起了多大作用？",
+      "tatoeba": 59415
     },
     {
       "lemma": "put pressure on",
       "surface": "put pressure on",
-      "meaning": "给……施加压力",
-      "example": "Rising costs put pressure on small businesses.",
-      "translation": "成本上升给小企业带来了压力。"
+      "meaning": "对…施加压力",
+      "example": "I'm not here to put pressure on you.",
+      "translation": "我不是来给你施压的。",
+      "tatoeba": 3729108
     },
     {
-      "lemma": "put emphasis on",
-      "surface": "put more emphasis on",
-      "meaning": "重视，强调",
-      "example": "Schools should put more emphasis on practical skills.",
-      "translation": "学校应更加重视实践技能。"
+      "lemma": "with the intention of",
+      "surface": "with the intention of",
+      "meaning": "怀着…的目的",
+      "example": "He studied hard with the intention of passing the examination.",
+      "translation": "他努力学习，为的是通过考试。",
+      "tatoeba": 288167
     },
     {
-      "lemma": "place a high value on",
-      "surface": "place a high value on",
-      "meaning": "高度重视",
-      "example": "Many families place a high value on education.",
-      "translation": "许多家庭非常重视教育。"
+      "lemma": "as time goes on",
+      "surface": "as time goes on",
+      "meaning": "随着时间的推移",
+      "example": "I think things will get trickier as time goes on.",
+      "translation": "我觉得随着时间的推移，事情会变得越来越棘手。",
+      "tatoeba": 7110920
     },
     {
-      "lemma": "attach importance to",
-      "surface": "attach great importance to",
-      "meaning": "重视",
-      "example": "Chinese parents attach great importance to their children's studies.",
-      "translation": "中国家长非常重视孩子的学业。"
+      "lemma": "have a great influence on",
+      "surface": "have a great influence on",
+      "meaning": "对…有很大影响",
+      "example": "Such magazines have a great influence on children.",
+      "translation": "这类杂志对儿童有很大的影响。",
+      "tatoeba": 49792
     },
     {
-      "lemma": "set a good example",
-      "surface": "set a good example",
-      "meaning": "树立好榜样",
-      "example": "Parents should set a good example for their children.",
-      "translation": "父母应该给孩子树立好榜样。"
+      "lemma": "be beneficial to",
+      "surface": "is beneficial to",
+      "meaning": "有益于",
+      "example": "Regular exercise is beneficial to good health.",
+      "translation": "多运动有益健康。",
+      "tatoeba": 20214
     },
     {
-      "lemma": "strike a balance between",
-      "surface": "strike a balance between",
-      "meaning": "在……之间取得平衡",
-      "example": "It's hard to strike a balance between work and family.",
-      "translation": "在工作和家庭之间取得平衡很难。"
+      "lemma": "irrespective of",
+      "surface": "irrespective of",
+      "meaning": "不论，不顾",
+      "example": "The laws apply to everyone irrespective of race, creed or color.",
+      "translation": "法律适用于每个人，不论种族、信仰或肤色。",
+      "tatoeba": 43992
     },
     {
-      "lemma": "bridge the gap between",
-      "surface": "bridge the gap between",
-      "meaning": "缩小……之间的差距",
-      "example": "The program aims to bridge the gap between rich and poor.",
-      "translation": "该项目旨在缩小贫富差距。"
+      "lemma": "in view of",
+      "surface": "in view of",
+      "meaning": "考虑到，鉴于",
+      "example": "He stayed behind in view of possible danger.",
+      "translation": "考虑到可能有危险，他留了下来。",
+      "tatoeba": 20692
     },
     {
-      "lemma": "widen the gap",
-      "surface": "widen the gap",
-      "meaning": "扩大差距",
-      "example": "Expensive tutoring may widen the gap between students.",
-      "translation": "昂贵的辅导可能扩大学生之间的差距。"
+      "lemma": "as a consequence of",
+      "surface": "as a consequence of",
+      "meaning": "由于，因为",
+      "example": "The crop suffered serious damage as a consequence of the early frost.",
+      "translation": "由于早霜，庄稼遭受了严重损害。",
+      "tatoeba": 263393
     },
     {
-      "lemma": "cut costs",
-      "surface": "cut costs",
-      "meaning": "削减成本",
-      "example": "The airline cut costs by reducing staff.",
-      "translation": "这家航空公司通过裁员削减成本。"
+      "lemma": "relating to",
+      "surface": "relating to",
+      "meaning": "与…有关",
+      "example": "Documents relating to his private life were stolen in the burglary.",
+      "translation": "与他的私生活有关的文件在入室盗窃中被偷走了。",
+      "tatoeba": 1128718
     },
     {
-      "lemma": "boost the economy",
-      "surface": "boost the economy",
-      "meaning": "提振经济",
-      "example": "Lower taxes may boost the economy.",
-      "translation": "降低税收可能提振经济。"
+      "lemma": "take account of",
+      "surface": "take account of",
+      "meaning": "考虑，顾及",
+      "example": "Try to take account of everything before you make a decision.",
+      "translation": "在做决定之前，尽量考虑到所有事情。",
+      "tatoeba": 238564
     },
     {
-      "lemma": "create jobs",
-      "surface": "create jobs",
-      "meaning": "创造就业",
-      "example": "The new factory will create jobs for local people.",
-      "translation": "新工厂将为当地人创造就业机会。"
+      "lemma": "have an impact on",
+      "surface": "having an impact on",
+      "meaning": "对…有影响",
+      "example": "The pandemic is having an impact on many couples and their relationships.",
+      "translation": "疫情正在对许多夫妻及其关系产生影响。",
+      "tatoeba": 8643340
     },
     {
-      "lemma": "protect the environment",
-      "surface": "protect the environment",
-      "meaning": "保护环境",
-      "example": "We all have a duty to protect the environment.",
-      "translation": "我们都有保护环境的义务。"
+      "lemma": "a significant amount of",
+      "surface": "a significant amount of",
+      "meaning": "大量的",
+      "example": "Travelling causes a significant amount of pollution.",
+      "translation": "旅行会造成大量污染。",
+      "tatoeba": 6035805
     },
     {
-      "lemma": "reduce pollution",
-      "surface": "reduce pollution",
-      "meaning": "减少污染",
-      "example": "Electric buses help reduce pollution.",
-      "translation": "电动公交车有助于减少污染。"
+      "lemma": "sense of purpose",
+      "surface": "sense of purpose",
+      "meaning": "目标感，使命感",
+      "example": "Doing something meaningful can give you a sense of purpose in life.",
+      "translation": "做有意义的事情能给你带来人生目标感。",
+      "tatoeba": 10797558
     },
     {
-      "lemma": "save energy",
-      "surface": "save energy",
-      "meaning": "节约能源",
-      "example": "Turning off lights is an easy way to save energy.",
-      "translation": "随手关灯是节约能源的简单方法。"
+      "lemma": "come into force",
+      "surface": "come into force",
+      "meaning": "生效，开始实施",
+      "example": "The new traffic regulations come into force tomorrow.",
+      "translation": "新的交通法规明天开始生效。",
+      "tatoeba": 3987192
     },
     {
-      "lemma": "waste time",
-      "surface": "wasted time",
-      "meaning": "浪费时间",
-      "example": "I wasted time watching videos instead of studying.",
-      "translation": "我把时间浪费在看视频上，没有学习。"
-    },
-    {
-      "lemma": "spend time with",
-      "surface": "spend time with",
-      "meaning": "和……共度时光",
-      "example": "I try to spend time with my parents every weekend.",
-      "translation": "我每个周末都尽量陪父母。"
-    },
-    {
-      "lemma": "face a challenge",
-      "surface": "face a challenge",
-      "meaning": "面临挑战",
-      "example": "Small farms face a challenge from large companies.",
-      "translation": "小农场面临大公司的挑战。"
-    },
-    {
-      "lemma": "overcome difficulties",
-      "surface": "overcome difficulties",
-      "meaning": "克服困难",
-      "example": "With patience, we can overcome difficulties together.",
-      "translation": "只要有耐心，我们就能一起克服困难。"
-    },
-    {
-      "lemma": "seize the opportunity",
-      "surface": "seized the opportunity",
-      "meaning": "抓住机会",
-      "example": "She seized the opportunity to work abroad.",
-      "translation": "她抓住了出国工作的机会。"
-    },
-    {
-      "lemma": "fulfil one's potential",
-      "surface": "fulfil their potential",
-      "meaning": "充分发挥潜力",
-      "example": "Good teachers help students fulfil their potential.",
-      "translation": "好老师帮助学生充分发挥潜力。"
-    },
-    {
-      "lemma": "keep pace with",
-      "surface": "kept pace with",
-      "meaning": "与……齐步，跟上",
-      "example": "Wages have not kept pace with rising prices.",
-      "translation": "工资没有跟上物价上涨的步伐。"
-    },
-    {
-      "lemma": "adapt to",
-      "surface": "adapt to",
-      "meaning": "适应",
-      "example": "It took the children a while to adapt to the new school.",
-      "translation": "孩子们过了一段时间才适应新学校。"
-    },
-    {
-      "lemma": "benefit from",
-      "surface": "benefit from",
-      "meaning": "从……中受益",
-      "example": "Everyone can benefit from regular exercise.",
-      "translation": "每个人都能从经常锻炼中受益。"
-    },
-    {
-      "lemma": "suffer from",
-      "surface": "suffers from",
-      "meaning": "患（病）；受……之苦",
-      "example": "Her father suffers from back pain.",
-      "translation": "她父亲患有背痛。"
-    },
-    {
-      "lemma": "focus on",
-      "surface": "focus on",
-      "meaning": "集中于，专注于",
-      "example": "Let's focus on the most important issues.",
-      "translation": "我们集中讨论最重要的问题。"
-    },
-    {
-      "lemma": "concentrate on",
-      "surface": "concentrate on",
-      "meaning": "集中注意力于",
-      "example": "I can't concentrate on my work with all this noise.",
-      "translation": "这么吵，我没法专心工作。"
-    },
-    {
-      "lemma": "consist of",
-      "surface": "consists of",
-      "meaning": "由……组成",
-      "example": "The team consists of five engineers.",
-      "translation": "这个团队由五名工程师组成。"
-    },
-    {
-      "lemma": "differ from",
-      "surface": "differs from",
-      "meaning": "与……不同",
-      "example": "British English differs from American English in spelling.",
-      "translation": "英式英语和美式英语在拼写上有所不同。"
-    },
-    {
-      "lemma": "lead a healthy life",
-      "surface": "lead a healthy life",
-      "meaning": "过健康的生活",
-      "example": "Eating well helps you lead a healthy life.",
-      "translation": "合理饮食帮助你过上健康的生活。"
-    },
-    {
-      "lemma": "make a living",
-      "surface": "makes a living",
-      "meaning": "谋生",
-      "example": "He makes a living as a taxi driver.",
-      "translation": "他靠开出租车谋生。"
-    },
-    {
-      "lemma": "earn a living",
-      "surface": "earn a living",
-      "meaning": "谋生",
-      "example": "It's hard to earn a living as an artist.",
-      "translation": "当艺术家很难谋生。"
-    },
-    {
-      "lemma": "make ends meet",
-      "surface": "make ends meet",
-      "meaning": "收支相抵，勉强维持生计",
-      "example": "Many families struggle to make ends meet.",
-      "translation": "许多家庭勉强维持生计。"
-    },
-    {
-      "lemma": "pay the price for",
-      "surface": "paying the price for",
-      "meaning": "为……付出代价",
-      "example": "We are now paying the price for years of neglect.",
-      "translation": "我们正在为多年的忽视付出代价。"
-    },
-    {
-      "lemma": "come into effect",
-      "surface": "came into effect",
-      "meaning": "生效",
-      "example": "The new law came into effect in January.",
-      "translation": "新法律于一月生效。"
-    },
-    {
-      "lemma": "come to the conclusion",
-      "surface": "came to the conclusion",
+      "lemma": "come to a conclusion",
+      "surface": "come to a conclusion",
       "meaning": "得出结论",
-      "example": "We came to the conclusion that the plan wouldn't work.",
-      "translation": "我们得出结论：这个计划行不通。"
+      "example": "It took us three hours to come to a conclusion.",
+      "translation": "我们花了三个小时才得出结论。",
+      "tatoeba": 48378
     },
     {
-      "lemma": "come to terms with",
-      "surface": "came to terms with",
-      "meaning": "接受，适应（不愉快的事）",
-      "example": "She slowly came to terms with her illness.",
-      "translation": "她慢慢接受了自己生病的事实。"
+      "lemma": "large quantities of",
+      "surface": "large quantities of",
+      "meaning": "大量的",
+      "example": "In the city, large quantities of garbage are being produced every day.",
+      "translation": "这座城市每天都会产生大量垃圾。",
+      "tatoeba": 279455
     },
     {
-      "lemma": "bear in mind",
-      "surface": "Bear in mind",
-      "meaning": "记住，考虑到",
-      "example": "Bear in mind that the shop closes early on Sundays.",
-      "translation": "记住，那家店周日关门早。"
+      "lemma": "go into effect",
+      "surface": "go into effect",
+      "meaning": "生效，开始实施",
+      "example": "The revised timetable will go into effect on the 5th of this month.",
+      "translation": "修订后的时刻表将于本月5日生效。",
+      "tatoeba": 242003
     },
     {
-      "lemma": "make a comparison",
-      "surface": "make a comparison",
-      "meaning": "进行比较",
-      "example": "It's hard to make a comparison between the two cities.",
-      "translation": "很难对这两座城市进行比较。"
+      "lemma": "simply put",
+      "surface": "Simply put",
+      "meaning": "简单地说",
+      "example": "Simply put, a human being is an aggregate of many cells.",
+      "translation": "简单地说，人是由许多细胞组成的集合体。",
+      "tatoeba": 2095724
     },
     {
-      "lemma": "draw a distinction between",
-      "surface": "draw a distinction between",
-      "meaning": "区分",
-      "example": "We should draw a distinction between facts and opinions.",
-      "translation": "我们应该区分事实和观点。"
+      "lemma": "at a rate of",
+      "surface": "at a rate of",
+      "meaning": "以…的速度",
+      "example": "The population of the world increases at a rate of two percent a year.",
+      "translation": "世界人口以每年百分之二的速度增长。",
+      "tatoeba": 4969850
     },
     {
-      "lemma": "there is no doubt that",
-      "surface": "There is no doubt that",
-      "meaning": "毫无疑问",
-      "example": "There is no doubt that smoking damages health.",
-      "translation": "毫无疑问，吸烟有害健康。"
+      "lemma": "to sum up",
+      "surface": "To sum up",
+      "meaning": "总之，总而言之",
+      "example": "To sum up, we can say that his new novel is disappointing.",
+      "translation": "总而言之，我们可以说他的新小说令人失望。",
+      "tatoeba": 324891
     },
     {
-      "lemma": "it is widely believed that",
-      "surface": "It is widely believed that",
-      "meaning": "人们普遍认为",
-      "example": "It is widely believed that reading improves vocabulary.",
-      "translation": "人们普遍认为阅读能扩大词汇量。"
+      "lemma": "more precisely",
+      "surface": "more precisely",
+      "meaning": "更准确地说",
+      "example": "I come from the Mediterranean region and more precisely, from Algeria.",
+      "translation": "我来自地中海地区，更准确地说，来自阿尔及利亚。",
+      "tatoeba": 8146106
     },
     {
-      "lemma": "it goes without saying that",
-      "surface": "It goes without saying that",
-      "meaning": "不言而喻",
-      "example": "It goes without saying that safety comes first.",
-      "translation": "不言而喻，安全第一。"
+      "lemma": "in the same way as",
+      "surface": "in the same way as",
+      "meaning": "如同，与…同样地",
+      "example": "Chinese doesn't emphasize words in the same way as English.",
+      "translation": "汉语不像英语那样强调单词。",
+      "tatoeba": 10054668
     },
     {
-      "lemma": "play an important part in",
-      "surface": "plays an important part in",
-      "meaning": "在……中起重要作用",
-      "example": "Diet plays an important part in staying healthy.",
-      "translation": "饮食在保持健康方面起着重要作用。"
+      "lemma": "with the aim of",
+      "surface": "with the aim of",
+      "meaning": "以…为目的",
+      "example": "I started to learn English with the aim of becoming a teacher.",
+      "translation": "我开始学英语，目标是成为一名教师。",
+      "tatoeba": 256934
     },
     {
-      "lemma": "have access to",
-      "surface": "have access to",
-      "meaning": "能够获得，可以使用",
-      "example": "Not all students have access to a computer.",
-      "translation": "并不是所有学生都能用上电脑。"
+      "lemma": "in the area of",
+      "surface": "in the area of",
+      "meaning": "在…方面，在…领域",
+      "example": "He is an expert in the area of city planning.",
+      "translation": "他是城市规划方面的专家。",
+      "tatoeba": 301838
     },
     {
-      "lemma": "have difficulty in",
-      "surface": "have difficulty in",
-      "meaning": "在……方面有困难",
-      "example": "Some children have difficulty in reading.",
-      "translation": "有些孩子在阅读上有困难。"
+      "lemma": "leave room for",
+      "surface": "leave room for",
+      "meaning": "留下…余地",
+      "example": "His statement doesn't leave room for any doubt.",
+      "translation": "他的陈述没有给任何怀疑留下余地。",
+      "tatoeba": 1137673
     },
     {
-      "lemma": "have a tendency to",
-      "surface": "has a tendency to",
-      "meaning": "有……的倾向",
-      "example": "He has a tendency to exaggerate.",
-      "translation": "他说话有夸大的倾向。"
+      "lemma": "in the second place",
+      "surface": "in the second place",
+      "meaning": "其次，第二点",
+      "example": "In the first place, it's too expensive, and in the second place, I don't like it.",
+      "translation": "首先，它太贵了；其次，我不喜欢它。",
+      "tatoeba": 2890106
     },
     {
-      "lemma": "on a large scale",
-      "surface": "on a large scale",
-      "meaning": "大规模地",
-      "example": "The crop is grown on a large scale in the south.",
-      "translation": "这种作物在南方大规模种植。"
+      "lemma": "have an advantage over",
+      "surface": "have an advantage over",
+      "meaning": "比…有优势",
+      "example": "The home team always have an advantage over their opponents.",
+      "translation": "主队总是比对手有优势。",
+      "tatoeba": 737454
     },
     {
-      "lemma": "in recent years",
-      "surface": "In recent years",
-      "meaning": "近年来",
-      "example": "In recent years, online shopping has grown rapidly.",
-      "translation": "近年来，网购迅速发展。"
+      "lemma": "in contrast with",
+      "surface": "in contrast with",
+      "meaning": "与…形成对照，与…相比",
+      "example": "He looked quite happy in contrast with those around him.",
+      "translation": "和周围的人相比，他显得相当快乐。",
+      "tatoeba": 266296
     },
     {
-      "lemma": "in the modern world",
-      "surface": "in the modern world",
-      "meaning": "在现代社会",
-      "example": "English is widely used in the modern world.",
-      "translation": "英语在现代社会使用广泛。"
+      "lemma": "to the extent that",
+      "surface": "to the extent that",
+      "meaning": "到…程度以至于",
+      "example": "A good book can completely absorb your attention, to the extent that you forget your surroundings and even your existence.",
+      "translation": "一本好书能完全吸引你的注意力，以至于你忘记周围环境甚至自己的存在。",
+      "tatoeba": 1269255
     },
     {
-      "lemma": "from a global perspective",
-      "surface": "From a global perspective",
-      "meaning": "从全球视角来看",
-      "example": "From a global perspective, water shortage is a serious issue.",
-      "translation": "从全球视角来看，缺水是一个严重问题。"
+      "lemma": "with the result that",
+      "surface": "with the result that",
+      "meaning": "其结果是",
+      "example": "I was late for the meeting with the result that I missed the most important part.",
+      "translation": "我开会迟到了，结果错过了最重要的部分。",
+      "tatoeba": 256568
     },
     {
-      "lemma": "for the benefit of",
-      "surface": "for the benefit of",
-      "meaning": "为了……的利益",
-      "example": "The park was built for the benefit of local residents.",
-      "translation": "这个公园是为当地居民修建的。"
+      "lemma": "break new ground",
+      "surface": "broken new ground",
+      "meaning": "开创新局面，有所突破",
+      "example": "His designs have broken new ground but his wife doesn't know it.",
+      "translation": "他的设计有所突破，但他妻子并不知道。",
+      "tatoeba": 1295085
     },
     {
-      "lemma": "at the heart of",
-      "surface": "at the heart of",
-      "meaning": "在……的核心",
-      "example": "Trust is at the heart of any good relationship.",
-      "translation": "信任是任何良好关系的核心。"
+      "lemma": "and what is worse",
+      "surface": "and, what is worse",
+      "meaning": "更糟的是",
+      "example": "The road was quite muddy, and, what is worse, it began to rain.",
+      "translation": "道路非常泥泞，更糟的是，天开始下雨了。",
+      "tatoeba": 280411
     },
     {
-      "lemma": "in harmony with",
-      "surface": "in harmony with",
-      "meaning": "与……和谐相处",
-      "example": "The villagers live in harmony with nature.",
-      "translation": "村民们与自然和谐相处。"
+      "lemma": "bear on",
+      "surface": "bear on",
+      "meaning": "与某事有关",
+      "example": "The new evidence may bear on how the accident happened.",
+      "translation": "新证据可能关系到事故是如何发生的。"
     },
     {
-      "lemma": "with the development of",
-      "surface": "With the development of",
-      "meaning": "随着……的发展",
-      "example": "With the development of technology, life has become easier.",
-      "translation": "随着科技的发展，生活变得更加便利。"
+      "lemma": "require something of",
+      "surface": "requires a great deal of commitment of",
+      "meaning": "要求（某人）付出",
+      "example": "The training program requires a great deal of commitment of its participants.",
+      "translation": "这个培训项目要求参与者付出极大的投入。"
     },
     {
-      "lemma": "a good source of",
-      "surface": "a good source of",
-      "meaning": "……的来源",
-      "example": "Fish is a good source of protein.",
-      "translation": "鱼是蛋白质的良好来源。"
+      "lemma": "not to say",
+      "surface": "not to say",
+      "meaning": "甚至可以说",
+      "example": "He is thrifty, not to say stingy.",
+      "translation": "他节俭，甚至可以说吝啬。",
+      "tatoeba": 289788
     },
     {
-      "lemma": "a lack of",
-      "surface": "a lack of",
-      "meaning": "缺乏",
-      "example": "The project failed because of a lack of money.",
-      "translation": "这个项目因缺乏资金而失败。"
+      "lemma": "be subject to",
+      "surface": "are subject to",
+      "meaning": "受…支配",
+      "example": "Even our brains are subject to the laws of physics.",
+      "translation": "就连我们的大脑也受物理定律的支配。",
+      "tatoeba": 23350
     },
     {
-      "lemma": "a shortage of",
-      "surface": "a shortage of",
-      "meaning": "……的短缺",
-      "example": "There is a shortage of nurses in many hospitals.",
-      "translation": "许多医院护士短缺。"
+      "lemma": "be rooted in",
+      "surface": "is rooted in",
+      "meaning": "来源于，植根于",
+      "example": "His belief is rooted in experience.",
+      "translation": "他的信念源于经验。",
+      "tatoeba": 286224
     },
     {
-      "lemma": "a sense of belonging",
-      "surface": "a sense of belonging",
-      "meaning": "归属感",
-      "example": "Clubs give students a sense of belonging.",
-      "translation": "社团给学生带来归属感。"
+      "lemma": "open the door to",
+      "surface": "open the door to",
+      "meaning": "为…打开大门",
+      "example": "The new policy could open the door to more foreign investment.",
+      "translation": "这项新政策可能为更多外国投资打开大门。"
     },
     {
-      "lemma": "a sense of responsibility",
-      "surface": "a sense of responsibility",
-      "meaning": "责任感",
-      "example": "Pets can teach children a sense of responsibility.",
-      "translation": "养宠物可以培养孩子的责任感。"
+      "lemma": "as such",
+      "surface": "as such",
+      "meaning": "如此",
+      "example": "He is an excellent fixer, and has always been regarded as such.",
+      "translation": "他是一位出色的调解人，一直被人们这样看待。",
+      "tatoeba": 304338
     },
     {
-      "lemma": "an essential part of",
-      "surface": "an essential part of",
-      "meaning": "……的重要组成部分",
-      "example": "Music is an essential part of our culture.",
-      "translation": "音乐是我们文化的重要组成部分。"
+      "lemma": "prior to",
+      "surface": "Prior to",
+      "meaning": "之前",
+      "example": "Prior to the meeting, they had dinner.",
+      "translation": "会议之前，他们吃了晚饭。",
+      "tatoeba": 22576
     },
     {
-      "lemma": "a matter of time",
-      "surface": "a matter of time",
-      "meaning": "迟早的事",
-      "example": "It's only a matter of time before prices go up.",
-      "translation": "涨价只是时间问题。"
+      "lemma": "give way to",
+      "surface": "giving way to",
+      "meaning": "让位于，被…取代",
+      "example": "Typewriters are giving way to word-processors.",
+      "translation": "打字机正逐渐被文字处理机取代。",
+      "tatoeba": 29243
     },
     {
-      "lemma": "the main reason for",
-      "surface": "The main reason for",
-      "meaning": "……的主要原因",
-      "example": "The main reason for the delay was the weather.",
-      "translation": "延误的主要原因是天气。"
+      "lemma": "arise from",
+      "surface": "arose from",
+      "meaning": "由……引起，源于",
+      "example": "This problem arose from a mutual misunderstanding.",
+      "translation": "这个问题源于双方的误解。",
+      "tatoeba": 56719
     },
     {
-      "lemma": "the advantages and disadvantages of",
-      "surface": "the advantages and disadvantages of",
-      "meaning": "……的优缺点",
-      "example": "We discussed the advantages and disadvantages of online learning.",
-      "translation": "我们讨论了网上学习的优缺点。"
+      "lemma": "little more than",
+      "surface": "little more than",
+      "meaning": "不过是，仅仅",
+      "example": "Its author is little more than a college kid.",
+      "translation": "其作者不过是个大学生。",
+      "tatoeba": 45091
     },
     {
-      "lemma": "on the decline",
-      "surface": "on the decline",
-      "meaning": "在下降",
-      "example": "The number of smokers is on the decline.",
-      "translation": "吸烟人数在下降。"
+      "lemma": "of late",
+      "surface": "of late",
+      "meaning": "最近",
+      "example": "The activity of foreign trade has been declining of late.",
+      "translation": "最近对外贸易活动一直在减少。",
+      "tatoeba": 321237
     },
     {
-      "lemma": "pave the way for",
-      "surface": "paved the way for",
-      "meaning": "为……铺平道路",
-      "example": "Early computers paved the way for the internet.",
-      "translation": "早期的计算机为互联网的出现铺平了道路。"
+      "lemma": "at the expense of",
+      "surface": "at the expense of",
+      "meaning": "以…为代价",
+      "example": "John finished the work at the expense of his health.",
+      "translation": "约翰以牺牲自己的健康为代价完成了这项工作。",
+      "tatoeba": 52618
     },
     {
-      "lemma": "open up opportunities",
-      "surface": "opens up opportunities",
-      "meaning": "带来机会",
-      "example": "Learning English opens up opportunities around the world.",
-      "translation": "学英语能带来遍及世界的机会。"
+      "lemma": "by means of",
+      "surface": "by means of",
+      "meaning": "通过，借助",
+      "example": "Frank left a message by means of a secret code.",
+      "translation": "弗兰克用暗号留下了一条信息。",
+      "tatoeba": 34195
     },
     {
-      "lemma": "stand a chance of",
-      "surface": "stand a chance of",
-      "meaning": "有……的可能",
-      "example": "Without practice, you don't stand a chance of winning.",
-      "translation": "不练习的话，你根本没有获胜的可能。"
+      "lemma": "what is called",
+      "surface": "what is called",
+      "meaning": "所谓的",
+      "example": "Mr Ford is what is called a self-made man.",
+      "translation": "福特先生就是所谓的白手起家者。",
+      "tatoeba": 34375
     },
     {
-      "lemma": "take for granted",
-      "surface": "take for granted",
-      "meaning": "认为……理所当然",
-      "example": "Many things we take for granted were luxuries a century ago.",
-      "translation": "许多我们视为理所当然的东西，一百年前都是奢侈品。"
+      "lemma": "be subjected to",
+      "surface": "was subjected to",
+      "meaning": "受到，遭受",
+      "example": "He was subjected to severe criticism.",
+      "translation": "他受到了严厉的批评。",
+      "tatoeba": 296058
     },
     {
-      "lemma": "stay healthy",
-      "surface": "stay healthy",
-      "meaning": "保持健康",
-      "example": "Walking every day helps older people stay healthy.",
-      "translation": "每天散步有助于老年人保持健康。"
+      "lemma": "to say the least",
+      "surface": "to say the least",
+      "meaning": "退一步说，至少可以说",
+      "example": "He is not a cheerful guy, to say the least.",
+      "translation": "退一步说，他算不上是个开朗的人。",
+      "tatoeba": 240880
     },
     {
-      "lemma": "raise money for",
-      "surface": "raised money for",
-      "meaning": "为……筹款",
-      "example": "The students raised money for the local hospital.",
-      "translation": "学生们为当地医院筹集了善款。"
+      "lemma": "with a view to",
+      "surface": "with a view to",
+      "meaning": "为了",
+      "example": "She came to Tokyo with a view to getting a new job.",
+      "translation": "她为了找新工作而来到东京。",
+      "tatoeba": 315148
     },
     {
-      "lemma": "run a business",
-      "surface": "runs a business",
-      "meaning": "经营企业",
-      "example": "My aunt runs a business selling handmade soap.",
-      "translation": "我姑姑经营着一家卖手工皂的小店。"
+      "lemma": "in accordance with",
+      "surface": "in accordance with",
+      "meaning": "依照",
+      "example": "These disputes between the two nations should be solved in accordance with international law.",
+      "translation": "这两个国家之间的争端应当依照国际法解决。",
+      "tatoeba": 62353
     },
     {
-      "lemma": "do research on",
-      "surface": "doing research on",
-      "meaning": "研究",
-      "example": "She is doing research on childhood memory.",
-      "translation": "她正在研究童年记忆。"
+      "lemma": "a wave of",
+      "surface": "a wave of",
+      "meaning": "一阵，浪潮",
+      "example": "This program was very popular so the information that it went off the air caused a wave of protest.",
+      "translation": "这个节目非常受欢迎，所以它停播的消息引发了一阵抗议。",
+      "tatoeba": 1064178
     },
     {
-      "lemma": "do harm to",
-      "surface": "do harm to",
-      "meaning": "对……有害",
-      "example": "A little rain won't do harm to the plants.",
-      "translation": "下点雨不会对植物有害。"
+      "lemma": "on that point",
+      "surface": "on that point",
+      "meaning": "在这一点上",
+      "example": "I can't go along with you on that point.",
+      "translation": "在这一点上，我不能同意你的看法。",
+      "tatoeba": 44845
     },
     {
-      "lemma": "do damage to",
-      "surface": "did serious damage to",
-      "meaning": "对……造成损害",
-      "example": "The storm did serious damage to the roof.",
-      "translation": "暴风雨严重损坏了屋顶。"
+      "lemma": "conform to",
+      "surface": "conform to",
+      "meaning": "遵守",
+      "example": "Since you're a member of this sports club, you'll have to conform to its rules.",
+      "translation": "既然你是这个体育俱乐部的成员，就必须遵守它的规则。",
+      "tatoeba": 70100
     },
     {
-      "lemma": "be in danger of",
-      "surface": "is in danger of",
-      "meaning": "有……的危险",
-      "example": "The old theatre is in danger of being knocked down.",
-      "translation": "那座老剧院面临被拆除的危险。"
+      "lemma": "adhere to",
+      "surface": "adhered to",
+      "meaning": "坚持",
+      "example": "He adhered to the original plan.",
+      "translation": "他坚持原来的计划。",
+      "tatoeba": 296051
     },
     {
-      "lemma": "make a profit",
-      "surface": "made a profit",
-      "meaning": "盈利",
-      "example": "The shop made a profit in its first year.",
-      "translation": "这家店第一年就实现了盈利。"
+      "lemma": "with regard to",
+      "surface": "with regard to",
+      "meaning": "关于",
+      "example": "I have nothing to say with regard to that problem.",
+      "translation": "对于那个问题，我没什么可说的。",
+      "tatoeba": 43753
     },
     {
-      "lemma": "meet a deadline",
-      "surface": "meet the deadline",
-      "meaning": "赶上截止日期",
-      "example": "We worked all night to meet the deadline.",
-      "translation": "我们通宵工作，才赶上了截止日期。"
+      "lemma": "be characterized by",
+      "surface": "are characterized by",
+      "meaning": "以……为特征",
+      "example": "Latin American novels are characterized by their contrasts.",
+      "translation": "拉美小说以对比鲜明为特征。",
+      "tatoeba": 1131321
     },
     {
-      "lemma": "take a risk",
-      "surface": "took a risk",
-      "meaning": "冒险",
-      "example": "He took a risk by investing all his savings.",
-      "translation": "他把全部积蓄都拿去投资，冒了个险。"
+      "lemma": "to make matters worse",
+      "surface": "To make matters worse",
+      "meaning": "更糟糕的是",
+      "example": "To make matters worse, it began to rain.",
+      "translation": "更糟的是，天开始下雨了。",
+      "tatoeba": 53978
     },
     {
-      "lemma": "follow the rules",
-      "surface": "follow the rules",
-      "meaning": "遵守规则",
-      "example": "Players must follow the rules of the game.",
-      "translation": "选手必须遵守比赛规则。"
+      "lemma": "on the part of",
+      "surface": "on the part of",
+      "meaning": "由……做出的",
+      "example": "The accident was caused by the error on the part of the driver.",
+      "translation": "这起事故是由司机的失误造成的。",
+      "tatoeba": 47113
     },
     {
-      "lemma": "break the law",
-      "surface": "broke the law",
-      "meaning": "违法",
-      "example": "The company broke the law by dumping waste in the river.",
-      "translation": "这家公司把废物倒进河里，触犯了法律。"
+      "lemma": "in the event",
+      "surface": "in the event",
+      "meaning": "结果",
+      "example": "I felt ill and was admitted to the hospital, but in the event, it was nothing serious.",
+      "translation": "我感到不舒服，被送进了医院，但结果并不严重。",
+      "tatoeba": 20292
     },
     {
-      "lemma": "set a goal",
-      "surface": "set a goal",
-      "meaning": "设定目标",
-      "example": "It helps to set a goal for each week.",
-      "translation": "每周设定一个目标会很有帮助。"
+      "lemma": "with respect to",
+      "surface": "With respect to",
+      "meaning": "关于，至于",
+      "example": "With respect to financial matters, Mr Jones knows more than anyone else in the company.",
+      "translation": "关于财务方面的事项，公司里没有人比琼斯先生更了解。",
+      "tatoeba": 244292
     },
     {
-      "lemma": "make an appointment",
-      "surface": "made an appointment",
-      "meaning": "预约",
-      "example": "I made an appointment with the dentist for Monday.",
-      "translation": "我约了周一看牙医。"
+      "lemma": "leave much to be desired",
+      "surface": "leaves much to be desired",
+      "meaning": "有待改进",
+      "example": "Your behavior leaves much to be desired.",
+      "translation": "你的行为还有很多有待改进之处。",
+      "tatoeba": 17159
     },
     {
-      "lemma": "keep a balance",
-      "surface": "keep a balance",
-      "meaning": "保持平衡",
-      "example": "It's important to keep a balance between study and rest.",
-      "translation": "保持学习和休息的平衡很重要。"
+      "lemma": "be preferable to",
+      "surface": "is preferable to",
+      "meaning": "比…更可取",
+      "example": "For me, reading at home is preferable to reading sitting beside strangers in a library.",
+      "translation": "对我来说，在家里阅读比在图书馆里坐在陌生人旁边阅读更可取。",
+      "tatoeba": 251228
     },
     {
-      "lemma": "gain popularity",
-      "surface": "gained popularity",
-      "meaning": "受欢迎，流行起来",
-      "example": "Electric cars have gained popularity in recent years.",
-      "translation": "近年来电动汽车越来越受欢迎。"
+      "lemma": "assuming that",
+      "surface": "assuming that",
+      "meaning": "假定，以为",
+      "example": "He was in error in assuming that she would come to see him.",
+      "translation": "他错误地以为她会来看他。",
+      "tatoeba": 308215
     },
     {
-      "lemma": "lose weight",
-      "surface": "lose weight",
-      "meaning": "减肥",
-      "example": "He cycles to work to lose weight.",
-      "translation": "他骑车上班来减肥。"
+      "lemma": "be referred to as",
+      "surface": "is referred to as",
+      "meaning": "被称为",
+      "example": "In Britain a truck is referred to as a lorry.",
+      "translation": "在英国，卡车被称为“lorry”。",
+      "tatoeba": 66619
     },
     {
-      "lemma": "catch a cold",
-      "surface": "caught a cold",
-      "meaning": "感冒",
-      "example": "I caught a cold after getting wet in the rain.",
-      "translation": "我淋了雨，感冒了。"
+      "lemma": "in short supply",
+      "surface": "in short supply",
+      "meaning": "供应不足",
+      "example": "Good technicians are in short supply in the developing countries.",
+      "translation": "发展中国家缺少优秀的技术人员。",
+      "tatoeba": 279408
     },
     {
-      "lemma": "take medicine",
-      "surface": "take medicine",
-      "meaning": "吃药",
-      "example": "Remember to take medicine after meals.",
-      "translation": "记得饭后吃药。"
+      "lemma": "in the case of",
+      "surface": "In the case of",
+      "meaning": "在……情况下",
+      "example": "In the case of fire, dial 119.",
+      "translation": "遇到火警时，拨打119。",
+      "tatoeba": 23823
     },
     {
-      "lemma": "give a speech",
-      "surface": "gave a speech",
-      "meaning": "发表演讲",
-      "example": "The mayor gave a speech at the opening ceremony.",
-      "translation": "市长在开幕式上发表了讲话。"
+      "lemma": "resistant to",
+      "surface": "resistant to",
+      "meaning": "对……有抵抗力",
+      "example": "These bacteria have mutated into forms that are resistant to certain drugs.",
+      "translation": "这些细菌已经变异成对某些药物有抗药性的形态。",
+      "tatoeba": 3939819
     },
     {
-      "lemma": "hold a meeting",
-      "surface": "held a meeting",
-      "meaning": "召开会议",
-      "example": "The managers held a meeting to discuss the budget.",
-      "translation": "经理们开会讨论预算。"
+      "lemma": "culminate in",
+      "surface": "culminated in",
+      "meaning": "达到高潮，以…告终",
+      "example": "The celebrations culminated in a spectacular fireworks display.",
+      "translation": "庆祝活动在壮观的烟花表演中达到高潮。",
+      "tatoeba": 699986
     },
     {
-      "lemma": "make a complaint",
-      "surface": "made a complaint",
-      "meaning": "投诉",
-      "example": "She made a complaint about the noisy neighbours.",
-      "translation": "她投诉了吵闹的邻居。"
+      "lemma": "come to pass",
+      "surface": "came to pass",
+      "meaning": "发生",
+      "example": "What do you think came to pass here?",
+      "translation": "你觉得这儿发生了什么事？",
+      "tatoeba": 61912
     },
     {
-      "lemma": "draw up a plan",
-      "surface": "drew up a plan",
-      "meaning": "制订计划",
-      "example": "The council drew up a plan to improve the roads.",
-      "translation": "市议会制订了改善道路的计划。"
+      "lemma": "a multitude of something",
+      "surface": "a multitude of",
+      "meaning": "大量的，众多的",
+      "example": "It is a great joy to see your own sentences translated into a multitude of other languages.",
+      "translation": "看到自己的句子被翻译成其他多种语言，是一件很开心的事。",
+      "tatoeba": 4456136
     },
     {
-      "lemma": "fall short of",
-      "surface": "fell short of",
-      "meaning": "未达到（期望、目标）",
-      "example": "Sales fell short of our expectations.",
-      "translation": "销售额没有达到我们的预期。"
+      "lemma": "an abundance of something",
+      "surface": "an abundance of",
+      "meaning": "大量的，丰富的",
+      "example": "Our garden produced an abundance of cabbages last year.",
+      "translation": "去年我们的菜园收获了大量的卷心菜。",
+      "tatoeba": 244702
     },
     {
-      "lemma": "weigh up",
-      "surface": "weigh up",
-      "meaning": "权衡，斟酌",
-      "example": "You need to weigh up the costs before buying a car.",
-      "translation": "买车前你需要权衡一下花费。"
+      "lemma": "be characterized by something",
+      "surface": "are characterized by",
+      "meaning": "以…为特征",
+      "example": "Latin American novels are characterized by their contrasts.",
+      "translation": "拉丁美洲小说以对比鲜明为特色。",
+      "tatoeba": 1131321
     },
     {
-      "lemma": "in the hope of",
-      "surface": "in the hope of",
-      "meaning": "怀着……的希望",
-      "example": "He moved to the city in the hope of finding work.",
-      "translation": "他搬到城里，希望找到工作。"
+      "lemma": "be abundant in",
+      "surface": "is abundant in",
+      "meaning": "富有，盛产",
+      "example": "The United States is abundant in natural resources.",
+      "translation": "美国的自然资源很丰富。",
+      "tatoeba": 320221
+    },
+    {
+      "lemma": "from the outset",
+      "surface": "From the outset",
+      "meaning": "从一开始",
+      "example": "From the outset I was prepared for the worst.",
+      "translation": "从一开始我就做好了最坏的打算。",
+      "tatoeba": 7900081
+    },
+    {
+      "lemma": "in regard to",
+      "surface": "In regard to",
+      "meaning": "关于，至于",
+      "example": "In regard to the schedule, I'll let you know later.",
+      "translation": "关于日程安排，我稍后告诉你。",
+      "tatoeba": 52032
+    },
+    {
+      "lemma": "terms and conditions",
+      "surface": "terms and conditions",
+      "meaning": "条款和条件",
+      "example": "Few people take the trouble to read all the terms and conditions of a contract before signing it.",
+      "translation": "很少有人会费心在签署合同前读完所有条款和条件。",
+      "tatoeba": 3987000
+    },
+    {
+      "lemma": "in the light of",
+      "surface": "In the light of",
+      "meaning": "根据，鉴于",
+      "example": "In the light of what you told us, I think we should revise our plan.",
+      "translation": "根据你所说的话，我认为我们应该修改我们的计划。",
+      "tatoeba": 16856
+    },
+    {
+      "lemma": "none the less",
+      "surface": "none the less",
+      "meaning": "仍然",
+      "example": "The lecture was very long, but I enjoyed it none the less.",
+      "translation": "那场演讲很长，但我却听得津津有味。",
+      "tatoeba": 47945
+    },
+    {
+      "lemma": "come into existence",
+      "surface": "came into existence",
+      "meaning": "开始存在，形成",
+      "example": "No one knows when such a custom came into existence.",
+      "translation": "没有人知道这种习俗是何时形成的。",
+      "tatoeba": 49768
+    },
+    {
+      "lemma": "overwhelming majority",
+      "surface": "overwhelming majority",
+      "meaning": "绝大多数",
+      "example": "The bill was passed by an overwhelming majority.",
+      "translation": "这项法案以压倒性多数获得通过。",
+      "tatoeba": 20024
+    },
+    {
+      "lemma": "in the absence of",
+      "surface": "In the absence of",
+      "meaning": "缺少…时，缺乏…时",
+      "example": "In the absence of sufficient proof, the police could not indict him.",
+      "translation": "由于缺乏充分证据，警方无法起诉他。",
+      "tatoeba": 266513
+    },
+    {
+      "lemma": "as regards",
+      "surface": "as regards",
+      "meaning": "关于，至于",
+      "example": "I cannot agree with you as regards the new plan.",
+      "translation": "关于这个新计划，我不能同意你的看法。",
+      "tatoeba": 46118
+    },
+    {
+      "lemma": "track record",
+      "surface": "track record",
+      "meaning": "过往记录，成绩记录",
+      "example": "The company has a strong track record of delivering projects on time.",
+      "translation": "这家公司在按时交付项目方面有着良好的过往记录。"
+    },
+    {
+      "lemma": "by virtue of",
+      "surface": "by virtue of",
+      "meaning": "凭借，由于",
+      "example": "She became rich by virtue of hard work and good business sense.",
+      "translation": "她凭借努力和商业头脑致富。",
+      "tatoeba": 18846
+    },
+    {
+      "lemma": "in all likelihood",
+      "surface": "In all likelihood",
+      "meaning": "很可能，十之八九",
+      "example": "In all likelihood, you will pass the entrance exam if you use this textbook.",
+      "translation": "如果你使用这本教材，你很可能通过入学考试。",
+      "tatoeba": 59185
+    },
+    {
+      "lemma": "in this manner",
+      "surface": "in this manner",
+      "meaning": "以这种方式，如此",
+      "example": "You can't keep living in this manner.",
+      "translation": "你不能一直这样生活下去。",
+      "tatoeba": 11452564
+    },
+    {
+      "lemma": "in this regard",
+      "surface": "In this regard",
+      "meaning": "在这方面，在这点上",
+      "example": "In this regard, I agree with you.",
+      "translation": "在这方面，我同意你的看法。",
+      "tatoeba": 59005
+    },
+    {
+      "lemma": "in this respect",
+      "surface": "in this respect",
+      "meaning": "在这方面",
+      "example": "We had a fiery debate in this respect.",
+      "translation": "我们在这方面进行了激烈的辩论。",
+      "tatoeba": 6200069
+    },
+    {
+      "lemma": "so much so that",
+      "surface": "so much so that",
+      "meaning": "到如此程度以至于",
+      "example": "He is very strong--so much so that no one can defeat him.",
+      "translation": "他非常强壮，以至于没人能打败他。",
+      "tatoeba": 302975
+    },
+    {
+      "lemma": "in consequence",
+      "surface": "in consequence",
+      "meaning": "结果，因此",
+      "example": "She ignored the doctor's advice and, in consequence, her condition got worse.",
+      "translation": "她无视医生的建议，结果病情加重了。"
+    },
+    {
+      "lemma": "shed light on something",
+      "surface": "shed light on",
+      "meaning": "阐明，揭示",
+      "example": "His unique perspective helped shed light on the situation.",
+      "translation": "他独特的视角有助于阐明这一情况。",
+      "tatoeba": 522309
+    },
+    {
+      "lemma": "during the course of something",
+      "surface": "during the course of",
+      "meaning": "在…期间",
+      "example": "The weather improved considerably during the course of the day.",
+      "translation": "这一天中天气明显好转了。",
+      "tatoeba": 9128396
+    },
+    {
+      "lemma": "as opposed to",
+      "surface": "as opposed to",
+      "meaning": "相对于，与…相对",
+      "example": "Red, as opposed to green, is a sign of danger.",
+      "translation": "红色相对于绿色而言，是危险的标志。",
+      "tatoeba": 32261
+    },
+    {
+      "lemma": "be susceptible to",
+      "surface": "was susceptible to",
+      "meaning": "易患…，对…敏感",
+      "example": "She was susceptible to colds.",
+      "translation": "她易患感冒。",
+      "tatoeba": 388662
+    },
+    {
+      "lemma": "in the wake of",
+      "surface": "in the wake of",
+      "meaning": "在…之后，随着",
+      "example": "Gold prices are skyrocketing in the wake of financial instability.",
+      "translation": "金融动荡之后，黄金价格暴涨。",
+      "tatoeba": 244272
+    },
+    {
+      "lemma": "a barrage of",
+      "surface": "a barrage of",
+      "meaning": "一连串的，接二连三的",
+      "example": "The minister had to face a barrage of questions from the press.",
+      "translation": "部长不得不面对媒体连珠炮般的提问。",
+      "tatoeba": 275748
+    },
+    {
+      "lemma": "a sequence of",
+      "surface": "a sequence of",
+      "meaning": "一系列",
+      "example": "Many people find it difficult to remember a sequence of more than seven numbers.",
+      "translation": "许多人发现，很难记住一个超过七个数字的序列。",
+      "tatoeba": 11122037
+    },
+    {
+      "lemma": "a surge of",
+      "surface": "a surge of",
+      "meaning": "一阵，涌起",
+      "example": "Benedito felt a surge of affection for his billy goat as it nuzzled against his hand.",
+      "translation": "贝内迪托的山羊用鼻子蹭他的手时，他心里涌起一阵喜爱之情。",
+      "tatoeba": 11739043
+    },
+    {
+      "lemma": "as compared with",
+      "surface": "As compared with",
+      "meaning": "与…相比",
+      "example": "As compared with last summer, we haven't had so much rain this year.",
+      "translation": "与去年夏天相比，今年我们这里的雨水没有那么多。",
+      "tatoeba": 19442
+    },
+    {
+      "lemma": "be distinct from something",
+      "surface": "is distinct from",
+      "meaning": "与…不同，有别于",
+      "example": "A dog is distinct from a cat in physical characteristics.",
+      "translation": "狗在身体特征上与猫不同。",
+      "tatoeba": 239165
+    },
+    {
+      "lemma": "be incompatible with something",
+      "surface": "are incompatible with",
+      "meaning": "与…矛盾，不相容",
+      "example": "The facts are incompatible with your hypothesis.",
+      "translation": "这些事实与你的假设相矛盾。",
+      "tatoeba": 599658
+    },
+    {
+      "lemma": "be indebted to someone",
+      "surface": "be indebted to",
+      "meaning": "受惠于，感激",
+      "example": "I don't like to be indebted to anyone.",
+      "translation": "我不喜欢欠任何人的情。",
+      "tatoeba": 6660636
+    },
+    {
+      "lemma": "be indigenous to something",
+      "surface": "is indigenous to",
+      "meaning": "原产于，土生土长于",
+      "example": "The panda is indigenous to Sichuan Province and does not live in the wild in any other places.",
+      "translation": "熊猫原产于四川省，在其他任何地方的野外都不生活。",
+      "tatoeba": 765399
+    },
+    {
+      "lemma": "be oblivious to something",
+      "surface": "are oblivious to",
+      "meaning": "未察觉，不知道",
+      "example": "They are oblivious to their fate.",
+      "translation": "他们对自己的命运浑然不觉。",
+      "tatoeba": 12665233
+    },
+    {
+      "lemma": "come to fruition",
+      "surface": "come to fruition",
+      "meaning": "实现，取得成果",
+      "example": "Your plans will never come to fruition unless you make them more realistic.",
+      "translation": "除非你把计划订得更现实一些，否则它们永远不会实现。",
+      "tatoeba": 9040905
+    },
+    {
+      "lemma": "at the outset",
+      "surface": "At the outset",
+      "meaning": "起初，开始时",
+      "example": "At the outset of the long voyage I was seasick, but I gradually began to get my sea legs.",
+      "translation": "长途航行刚开始时，我晕船，但渐渐适应了。",
+      "tatoeba": 278043
+    },
+    {
+      "lemma": "a succession of",
+      "surface": "a succession of",
+      "meaning": "一连串，接连的",
+      "example": "After a succession of warm days, the weather became cold.",
+      "translation": "连续几天温暖之后，天气变冷了。",
+      "tatoeba": 276783
+    },
+    {
+      "lemma": "in accord with",
+      "surface": "in accord with",
+      "meaning": "与…一致",
+      "example": "The story is not in accord with the facts.",
+      "translation": "这个故事与事实不符。",
+      "tatoeba": 43284
+    },
+    {
+      "lemma": "in actuality",
+      "surface": "In actuality",
+      "meaning": "实际上",
+      "example": "In actuality, it's not as scary as it seems.",
+      "translation": "实际上，它并不像看起来那么可怕。",
+      "tatoeba": 9867736
+    },
+    {
+      "lemma": "beyond the scope of",
+      "surface": "beyond the scope of",
+      "meaning": "超出…范围",
+      "example": "This is beyond the scope of my imagination.",
+      "translation": "这超出了我的想象范围。",
+      "tatoeba": 55613
+    },
+    {
+      "lemma": "in consequence of",
+      "surface": "in consequence of",
+      "meaning": "由于",
+      "example": "Trains stopped in consequence of the heavy rain.",
+      "translation": "由于大雨，火车停运了。",
+      "tatoeba": 275565
+    },
+    {
+      "lemma": "in excess of",
+      "surface": "in excess of",
+      "meaning": "超过",
+      "example": "The load of the truck was in excess of three tons.",
+      "translation": "货车的载货量超过三吨。",
+      "tatoeba": 50165
+    },
+    {
+      "lemma": "without regard to",
+      "surface": "without regard to",
+      "meaning": "不顾，不考虑",
+      "example": "He often acted without regard to the feelings of others.",
+      "translation": "他常常不顾别人的感受行事。",
+      "tatoeba": 290100
+    },
+    {
+      "lemma": "an array of",
+      "surface": "an array of",
+      "meaning": "各种各样的",
+      "example": "The store offers an array of fresh produce.",
+      "translation": "这家商店提供各种新鲜农产品。",
+      "tatoeba": 12890297
+    },
+    {
+      "lemma": "of the utmost importance",
+      "surface": "of the utmost importance",
+      "meaning": "至关重要的",
+      "example": "This is a matter of the utmost importance.",
+      "translation": "这件事至关重要。",
+      "tatoeba": 55708
+    },
+    {
+      "lemma": "in the matter of",
+      "surface": "in the matter of",
+      "meaning": "关于",
+      "example": "I want to speak to her in the matter of my salary.",
+      "translation": "我想跟她谈谈我的薪水问题。",
+      "tatoeba": 3304651
+    },
+    {
+      "lemma": "insofar as",
+      "surface": "Insofar as",
+      "meaning": "就…而言",
+      "example": "Insofar as we know, he is guilty.",
+      "translation": "就我们所知，他有罪。",
+      "tatoeba": 23359
+    },
+    {
+      "lemma": "such being the case",
+      "surface": "Such being the case",
+      "meaning": "既然如此",
+      "example": "Such being the case, I can't go with you.",
+      "translation": "既然如此，我不能和你一起去。",
+      "tatoeba": 51246
+    },
+    {
+      "lemma": "be tantamount to",
+      "surface": "was tantamount to",
+      "meaning": "相当于，无异于",
+      "example": "His request was tantamount to a threat.",
+      "translation": "他的要求无异于威胁。",
+      "tatoeba": 287754
+    },
+    {
+      "lemma": "make reference to",
+      "surface": "made reference to",
+      "meaning": "提及，提到",
+      "example": "He made reference to my book.",
+      "translation": "他提到了我的书。",
+      "tatoeba": 297952
+    },
+    {
+      "lemma": "without precedent",
+      "surface": "without precedent",
+      "meaning": "史无前例",
+      "example": "It's totally without precedent for the suspect's attorney to be the true culprit.",
+      "translation": "嫌疑人的律师竟然是真正的罪魁祸首，这完全史无前例。",
+      "tatoeba": 282809
     }
   ]
 }

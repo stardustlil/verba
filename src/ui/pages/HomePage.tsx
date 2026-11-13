@@ -1,34 +1,34 @@
-import { CalendarCheck, CheckCircle2, Clock, Flame, Play, Plus, Trophy } from "lucide-react";
+import { CheckCircle2, Clock, Flame, Play, Plus, Trophy } from "lucide-react";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { dayStart } from "../../core/srs/day";
+import { studyDay } from "../../core/srs/day";
 import { currentBookId, listBooks } from "../../repo/books";
 import { getSettings } from "../../repo/settings";
 import { homeStats, recentDays } from "../../repo/stats";
 import { EXTRA_COUNT } from "../../repo/study";
 import { BookCover } from "../bookCover";
 import { Button, Card, Notice, ProgressBar, cx } from "../components";
+import { Heatmap, heatmapSpan } from "../Heatmap";
 import { useAsync } from "../hooks";
+import { useCountUp } from "../motion";
 import { db } from "../services";
 
 async function load() {
   const now = Date.now();
   const settings = await getSettings(db);
   const bookId = await currentBookId(db);
-  const [stats, books, week] = await Promise.all([
+  const [stats, books, days] = await Promise.all([
     homeStats(db, settings.dailyNew, now, bookId),
     listBooks(db),
-    recentDays(db, now, 7),
+    recentDays(db, now, heatmapSpan(studyDay(now), 53)),
   ]);
   return {
     stats,
     book: books.find((b) => b.id === bookId) ?? null,
-    week,
+    days,
     dailyNew: settings.dailyNew,
   };
 }
-
-const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
 
 function minutes(ms: number): string {
   if (ms <= 0) return "0";
@@ -37,6 +37,7 @@ function minutes(ms: number): string {
 
 /** 今日任务的环形进度 */
 function Ring({ pct }: { pct: number }) {
+  const percent = useCountUp(Math.round(pct * 100));
   const r = 34;
   const c = 2 * Math.PI * r;
   return (
@@ -54,16 +55,16 @@ function Ring({ pct }: { pct: number }) {
           strokeDasharray={c}
           strokeDashoffset={c * (1 - pct)}
           className={cx(
-            "transition-[stroke-dashoffset] duration-500",
+            "transition-[stroke-dashoffset] duration-1000 ease-out",
             pct >= 1 ? "stroke-good" : "stroke-accent",
           )}
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         {pct >= 1 ? (
-          <CheckCircle2 size={26} className="text-good" />
+          <CheckCircle2 size={26} className="animate-pop text-good" />
         ) : (
-          <span className="text-lg font-semibold tabular-nums">{Math.round(pct * 100)}%</span>
+          <span className="text-lg font-semibold tabular-nums">{percent}%</span>
         )}
       </div>
     </div>
@@ -78,7 +79,7 @@ function Stat({
 }: {
   icon: React.ReactNode;
   label: string;
-  value: number | string | undefined;
+  value: number | undefined;
   unit?: string;
 }) {
   return (
@@ -88,7 +89,7 @@ function Stat({
       </span>
       <span className="flex-1 text-sm text-ink-soft">{label}</span>
       <span className="text-lg font-semibold tabular-nums">
-        {value ?? "–"}
+        {value === undefined ? "–" : <CountUp value={value} />}
         {unit && value !== undefined && (
           <span className="ml-1 text-xs font-normal text-ink-soft">{unit}</span>
         )}
@@ -97,14 +98,20 @@ function Stat({
   );
 }
 
+function CountUp({ value }: { value: number }) {
+  return <>{useCountUp(value)}</>;
+}
+
 /** 首页（需求第 6 节） */
 export default function HomePage() {
   const data = useAsync(load, []);
   const navigate = useNavigate();
   const s = data.data?.stats;
   const book = data.data?.book;
-  const week = data.data?.week ?? [];
-  const today = week.at(-1);
+  const days = data.data?.days ?? [];
+  const today = days.at(-1);
+  const activeDays = days.filter((d) => d.answered > 0).length;
+  const totalMinutes = Math.round(days.reduce((sum, d) => sum + d.studyMs, 0) / 60000);
   const canStart = s !== undefined && s.dueToday + s.newToday > 0;
   const extraCount = book ? Math.min(EXTRA_COUNT, book.fresh) : 0;
   const remaining = s ? s.dueToday + s.newToday : 0;
@@ -115,10 +122,17 @@ export default function HomePage() {
       ? Math.min(1, s.doneToday / (s.doneToday + remaining))
       : 1;
 
-  // 首页按 Enter 直接开始学习
+  // 首页按空格或 Enter 直接开始学习
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Enter" || e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
+      if (
+        (e.key !== " " && e.key !== "Enter") ||
+        e.metaKey ||
+        e.ctrlKey ||
+        e.altKey ||
+        e.isComposing
+      )
+        return;
       const target = e.target as HTMLElement | null;
       if (target && ["INPUT", "TEXTAREA", "BUTTON", "A", "SELECT"].includes(target.tagName)) return;
       if (canStart) {
@@ -132,21 +146,11 @@ export default function HomePage() {
 
   return (
     <div className="h-full overflow-y-auto">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-10 pt-9 pb-8">
+      <div className="stagger mx-auto flex w-full max-w-5xl flex-col gap-4 px-10 pt-9 pb-8">
         <header className="mb-3 flex items-end justify-between gap-4">
-          <div>
-            <h1 className="text-[26px] font-semibold tracking-tight">今天</h1>
-            <p className="mt-1 text-sm text-ink-soft">
-              {new Date().toLocaleDateString("zh-CN", {
-                month: "long",
-                day: "numeric",
-                weekday: "long",
-              })}
-              <span className="mx-2 text-ink-faint">·</span>一天从凌晨 4 点开始计算
-            </p>
-          </div>
+          <h1 className="text-[26px] font-semibold tracking-tight">今天</h1>
           {s && s.streak > 0 && (
-            <span className="flex items-center gap-1.5 rounded-full bg-warn-soft px-3 py-1.5 text-sm font-medium text-warn">
+            <span className="flex animate-pop items-center gap-1.5 rounded-full bg-warn-soft px-3 py-1.5 text-sm font-medium text-warn">
               <Flame size={15} />
               连续 {s.streak} 天
             </span>
@@ -165,7 +169,7 @@ export default function HomePage() {
                 {!s ? "正在加载…" : canStart ? `还剩 ${remaining} 个` : "今日任务已完成"}
               </div>
               <div className="mt-0.5 text-xs text-ink-soft">
-                今天已练 {s?.doneToday ?? 0} 个句块
+                今天已练 {s?.doneToday ?? 0} 个短语
               </div>
             </div>
           </div>
@@ -173,13 +177,13 @@ export default function HomePage() {
           <div className="flex gap-8 border-line sm:border-l sm:pl-8">
             <div>
               <div className="text-[34px] leading-none font-semibold tabular-nums">
-                {s?.newToday ?? "–"}
+                {s ? <CountUp value={s.newToday} /> : "–"}
               </div>
-              <div className="mt-1.5 text-xs text-ink-soft">新句块</div>
+              <div className="mt-1.5 text-xs text-ink-soft">新短语</div>
             </div>
             <div>
               <div className="text-[34px] leading-none font-semibold tabular-nums">
-                {s?.dueToday ?? "–"}
+                {s ? <CountUp value={s.dueToday} /> : "–"}
               </div>
               <div className="mt-1.5 text-xs text-ink-soft">待复习</div>
             </div>
@@ -196,14 +200,13 @@ export default function HomePage() {
               开始学习
               {canStart && (
                 <span className="ml-1 rounded-md bg-white/20 px-1.5 py-px text-[11px] font-medium">
-                  Enter
+                  空格
                 </span>
               )}
             </Button>
             <Button
               variant={canStart ? "secondary" : "soft"}
               disabled={extraCount === 0}
-              title="在每日任务之外，多学当前词书里的新句块；不占用每日新句块数"
               onClick={() => navigate("/practice?extra=1")}
             >
               <Plus size={15} />
@@ -259,7 +262,7 @@ export default function HomePage() {
             <Stat
               icon={<Clock size={15} />}
               label="今日学习"
-              value={today ? minutes(today.studyMs) : undefined}
+              value={today ? Number(minutes(today.studyMs)) : undefined}
               unit="分钟"
             />
             <Stat icon={<Flame size={15} />} label="连续学习" value={s?.streak} unit="天" />
@@ -272,49 +275,17 @@ export default function HomePage() {
           </Card>
         </div>
 
-        {/* 最近 7 天 */}
+        {/* 练习记录 */}
         <Card className="p-6">
-          <div className="mb-4 flex items-center justify-between gap-4">
-            <h2 className="text-sm font-medium">最近 7 天</h2>
-            <span className="flex items-center gap-1 text-xs text-ink-soft">
-              <CalendarCheck size={13} />
-              完成当天开始时到期的全部复习，算作打卡一天
-            </span>
+          <div className="mb-4 flex items-baseline justify-between gap-4">
+            <h2 className="text-sm font-medium">练习记录</h2>
+            {days.length > 0 && (
+              <span className="text-xs text-ink-soft tabular-nums">
+                一年来练习 {activeDays} 天 · 共 {totalMinutes} 分钟
+              </span>
+            )}
           </div>
-          <div className="grid grid-cols-7 gap-2">
-            {week.map((d, i) => {
-              const date = new Date(dayStart(d.day));
-              const isToday = i === week.length - 1;
-              return (
-                <div
-                  key={d.day}
-                  className={cx(
-                    "flex flex-col items-center gap-1.5 rounded-xl py-3",
-                    isToday && "bg-accent-soft/60 ring-1 ring-accent/25",
-                  )}
-                >
-                  <span className="text-[11px] text-ink-faint">
-                    {isToday ? "今天" : `周${WEEKDAYS[date.getDay()]}`}
-                  </span>
-                  <span
-                    className={cx(
-                      "flex size-9 items-center justify-center rounded-full text-sm font-medium tabular-nums",
-                      d.completed
-                        ? "bg-good text-white"
-                        : d.answered > 0
-                          ? "bg-good-soft text-good ring-1 ring-good/30"
-                          : "bg-ink/5 text-ink-faint",
-                    )}
-                  >
-                    {date.getDate()}
-                  </span>
-                  <span className="text-[11px] text-ink-soft tabular-nums">
-                    {d.studyMs > 0 ? `${minutes(d.studyMs)} 分钟` : "—"}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
+          <Heatmap days={days} />
         </Card>
       </div>
     </div>

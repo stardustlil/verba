@@ -14,9 +14,11 @@ import {
   sessionChunks,
   introduceChunk,
   loadStudyChunk,
+  markKnown,
   newAvailableToday,
   overrideAnswer,
   recordAnswer,
+  undoMarkKnown,
 } from "./study";
 import { createNodeDb } from "./testing/nodeDb";
 
@@ -351,5 +353,44 @@ describe("首页数据与连续天数", () => {
     await answer(db, a!, noon(DAY));
     await softDeleteChunk(db, b!);
     expect(await refreshDay(db, DAY)).toBe(true);
+  });
+});
+
+describe("标记熟练", () => {
+  it("新短语：直接进入默写、排到 60 天后，算已掌握，不占当天额度；撤销后恢复", async () => {
+    const [a] = await seed(db, ["a b", "c d"]);
+    expect(await newAvailableToday(db, 1, noon(DAY))).toBe(1);
+    const mark = await markKnown(db, a!, noon(DAY));
+    const chunk = await loadStudyChunk(db, a!);
+    expect(chunk?.progress.stage).toBe("recall");
+    expect(chunk?.progress.scheduledDays).toBeGreaterThanOrEqual(60);
+    expect(studyDay(chunk!.progress.due!) > addDays(DAY, 59)).toBe(true);
+    // 不占额度，今天也不会再出
+    expect(await newAvailableToday(db, 1, noon(DAY))).toBe(1);
+    expect((await sessionChunks(db, 5, noon(DAY))).newIds).not.toContain(a);
+    expect((await homeStats(db, 20, noon(DAY))).mastered).toBe(1);
+    expect(await db.query("SELECT * FROM reviews")).toHaveLength(0);
+
+    await undoMarkKnown(db, mark, noon(DAY));
+    const back = await loadStudyChunk(db, a!);
+    expect(back?.progress).toEqual(mark.before);
+    expect((await sessionChunks(db, 5, noon(DAY))).newIds).toContain(a);
+  });
+
+  it("到期的复习标记熟练后不再拦着打卡；撤销后恢复", async () => {
+    const [a, b] = await seed(db, ["a b", "c d"]);
+    const yesterday = addDays(DAY, -1);
+    for (const id of [a!, b!]) {
+      await introduceChunk(db, id, noon(yesterday));
+      await answer(db, id, noon(yesterday), false);
+    }
+    expect((await homeStats(db, 20, noon(DAY))).dueToday).toBe(2);
+    await answer(db, a!, noon(DAY));
+    expect(await refreshDay(db, DAY)).toBe(false);
+    const mark = await markKnown(db, b!, noon(DAY));
+    expect((await homeStats(db, 20, noon(DAY))).dueToday).toBe(0);
+    expect(await refreshDay(db, DAY)).toBe(true);
+    await undoMarkKnown(db, mark, noon(DAY));
+    expect((await homeStats(db, 20, noon(DAY))).dueToday).toBe(1);
   });
 });

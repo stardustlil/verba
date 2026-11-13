@@ -21,14 +21,11 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
-function Row({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
+function Row({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="grid grid-cols-[9rem_1fr] items-start gap-4">
       <div className="pt-2 text-sm text-ink">{label}</div>
-      <div>
-        {children}
-        {hint && <p className="mt-1.5 text-xs text-ink-soft">{hint}</p>}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
@@ -128,10 +125,7 @@ export default function SettingsPage() {
         {current && (
           <>
             <Section title="AI">
-              <Row
-                label="API key"
-                hint="保存在本机应用数据目录下的独立文件中，只有当前用户可读。未填写时仍可导入文章并手动添加句块。"
-              >
+              <Row label="API key">
                 <p className="mb-2 pt-2 font-mono text-sm text-ink">
                   {apiKey.data ?? <span className="font-sans text-ink-faint">未填写</span>}
                 </p>
@@ -159,7 +153,7 @@ export default function SettingsPage() {
                   )}
                 </form>
               </Row>
-              <Row label="API 地址" hint="可换成其他兼容 OpenAI 格式的服务地址。">
+              <Row label="API 地址">
                 <SavedInput
                   label="API 地址"
                   value={current.aiBaseUrl}
@@ -178,9 +172,9 @@ export default function SettingsPage() {
             </Section>
 
             <Section title="学习">
-              <Row label="每日新句块数">
+              <Row label="每日新短语数">
                 <SavedInput
-                  label="每日新句块数"
+                  label="每日新短语数"
                   type="number"
                   min={1}
                   max={500}
@@ -189,7 +183,7 @@ export default function SettingsPage() {
                   onSave={(v) => updateNumber("dailyNew", v, 500)}
                 />
               </Row>
-              <Row label="“写得慢”的时长" hint="写对但用时超过这个秒数，评为“一般”。">
+              <Row label="“写得慢”的时长（秒）">
                 <SavedInput
                   label="写得慢的时长（秒）"
                   type="number"
@@ -235,7 +229,7 @@ export default function SettingsPage() {
 
             <Section title="声音">
               {speechSupported && (
-                <Row label="自动朗读" hint="跟写新句块和看到答案时，用系统语音读出英文。">
+                <Row label="自动朗读">
                   <label className="inline-flex cursor-pointer items-center gap-2.5 pt-2 text-sm">
                     <input
                       type="checkbox"
@@ -247,10 +241,7 @@ export default function SettingsPage() {
                   </label>
                 </Row>
               )}
-              <Row
-                label="打字音效"
-                hint="按键的敲击声、打错字母的提示音，以及答对 / 答错的结果音。"
-              >
+              <Row label="打字音效">
                 <label className="inline-flex cursor-pointer items-center gap-2.5 pt-2 text-sm">
                   <input
                     type="checkbox"
@@ -264,7 +255,7 @@ export default function SettingsPage() {
             </Section>
 
             <Section title="数据">
-              <Row label="数据文件夹" hint="学习数据全部保存在本机。">
+              <Row label="数据文件夹">
                 <Button onClick={() => setConfirmOpen(true)}>打开数据文件夹</Button>
               </Row>
             </Section>

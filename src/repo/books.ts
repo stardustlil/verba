@@ -18,6 +18,8 @@ export interface BookEntry {
   meaning: string;
   example: string;
   translation: string;
+  /** 例句在 Tatoeba 中的编号；没有的是新写的例句 */
+  tatoeba?: number;
 }
 
 export interface BookData {
@@ -52,8 +54,11 @@ export function bookChunkId(bookId: string, lemma: string): string {
 
 /**
  * 把内置词书写进数据库。每本书只在版本变化时处理一次：
- * 只新增尚未在书中的条目；原形在忽略名单里的跳过（用户删过的不会复活）；
- * 库里已有同原形的句块时直接挂到书上，并补上书里的例句。
+ * - 新增尚未在书中的条目；原形在忽略名单里的跳过（用户删过的不会复活）；
+ *   库里已有同原形的句块时直接挂到书上，并补上书里的例句
+ * - 还没学过的条目，释义和书里的例句换成新版
+ * - 新版里去掉的条目：没学过的直接删除（别的书还收录的只解除关联）；
+ *   学过的保留在书末，复习进度不受影响
  */
 export async function seedBuiltinBooks(
   db: Db,
@@ -71,16 +76,35 @@ export async function seedBuiltinBooks(
   for (const [sort, book] of books.entries()) {
     if (!pending.includes(book)) continue;
     const keys = book.entries.map((e) => lemmaKey(e.lemma));
-    const existing = await db.query<{ id: string; lemma_key: string; examples: number }>(
-      `SELECT c.id, c.lemma_key, (SELECT COUNT(*) FROM examples e WHERE e.chunk_id = c.id) AS examples
+    const bookKeys = new Set(keys);
+    const otherKeys = new Set(
+      books.filter((b) => b !== book).flatMap((b) => b.entries.map((e) => lemmaKey(e.lemma))),
+    );
+    const existing = await db.query<{
+      id: string;
+      lemma_key: string;
+      stage: string;
+      origin: string;
+      examples: number;
+    }>(
+      `SELECT c.id, c.lemma_key, c.stage, c.origin,
+              (SELECT COUNT(*) FROM examples e WHERE e.chunk_id = c.id) AS examples
        FROM chunks c WHERE c.deleted_at IS NULL AND c.lemma_key IN (${placeholders(keys.length)})
        ORDER BY c.created_at, c.id`,
       keys,
     );
-    const byKey = new Map<string, { id: string; examples: number }>();
-    for (const row of existing) if (!byKey.has(row.lemma_key)) byKey.set(row.lemma_key, row);
-    const sentences = await db.query<{ chunk_id: string; sentence_text: string }>(
-      `SELECT chunk_id, sentence_text FROM examples
+    const byKey = new Map<string, { id: string; examples: number; fresh: boolean }>();
+    for (const row of existing) {
+      if (byKey.has(row.lemma_key)) continue;
+      byKey.set(row.lemma_key, {
+        id: row.id,
+        examples: row.examples,
+        // 还没学过、也不是用户自己添加的：可以整体换成新版内容
+        fresh: row.stage === "new" && row.origin === "book",
+      });
+    }
+    const sentences = await db.query<{ chunk_id: string; sentence_text: string; book_id: string }>(
+      `SELECT chunk_id, sentence_text, book_id FROM examples
        WHERE chunk_id IN (${placeholders(Math.max(existing.length, 1))})`,
       existing.length > 0 ? existing.map((r) => r.id) : [""],
     );
@@ -95,6 +119,55 @@ export async function seedBuiltinBooks(
         params: [book.id, book.title, book.description, sort, book.color, now],
       },
     ];
+
+    // 新版里去掉的条目
+    const linked = await db.query<{
+      chunk_id: string;
+      lemma_key: string;
+      stage: string;
+      origin: string;
+      from_article: number;
+    }>(
+      `SELECT c.id AS chunk_id, c.lemma_key, c.stage, c.origin,
+              EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = c.id AND e.article_id IS NOT NULL) AS from_article
+       FROM book_chunks bc JOIN chunks c ON c.id = bc.chunk_id
+       WHERE bc.book_id = ? AND c.deleted_at IS NULL ORDER BY bc.idx`,
+      [book.id],
+    );
+    let tail = book.entries.length;
+    for (const row of linked) {
+      if (bookKeys.has(row.lemma_key)) continue;
+      const unstudied = row.stage === "new";
+      if (
+        unstudied &&
+        row.origin === "book" &&
+        !row.from_article &&
+        !otherKeys.has(row.lemma_key)
+      ) {
+        statements.push(
+          { sql: "DELETE FROM examples WHERE chunk_id = ?", params: [row.chunk_id] },
+          { sql: "DELETE FROM book_chunks WHERE chunk_id = ?", params: [row.chunk_id] },
+          { sql: "DELETE FROM chunks WHERE id = ?", params: [row.chunk_id] },
+        );
+      } else if (unstudied) {
+        statements.push(
+          {
+            sql: "DELETE FROM examples WHERE chunk_id = ? AND book_id = ?",
+            params: [row.chunk_id, book.id],
+          },
+          {
+            sql: "DELETE FROM book_chunks WHERE book_id = ? AND chunk_id = ?",
+            params: [book.id, row.chunk_id],
+          },
+        );
+      } else {
+        statements.push({
+          sql: "UPDATE book_chunks SET idx = ? WHERE book_id = ? AND chunk_id = ?",
+          params: [tail++, book.id, row.chunk_id],
+        });
+      }
+    }
+
     for (const [idx, entry] of book.entries.entries()) {
       const key = lemmaKey(entry.lemma);
       if (ignored.has(key)) continue;
@@ -107,7 +180,25 @@ export async function seedBuiltinBooks(
                 VALUES (?, ?, ?, ?, 'book', ?, 0, ?, 0)`,
           params: [chunkId, entry.lemma, key, entry.meaning, now, idx],
         });
-        byKey.set(key, { id: chunkId, examples: 0 });
+        byKey.set(key, { id: chunkId, examples: 0, fresh: true });
+      } else if (found.fresh) {
+        // 没学过的条目换成新版的原形写法、释义和例句
+        const stale = sentences.filter(
+          (s) =>
+            s.chunk_id === chunkId && s.book_id === book.id && s.sentence_text !== entry.example,
+        );
+        statements.push({
+          sql: "UPDATE chunks SET lemma = ?, meaning = ? WHERE id = ?",
+          params: [entry.lemma, entry.meaning, chunkId],
+        });
+        if (stale.length > 0) {
+          statements.push({
+            sql: "DELETE FROM examples WHERE chunk_id = ? AND book_id = ? AND sentence_text != ?",
+            params: [chunkId, book.id, entry.example],
+          });
+          found.examples -= stale.length;
+          for (const s of stale) hasSentence.delete(`${s.chunk_id}\n${s.sentence_text}`);
+        }
       }
       const target = byKey.get(key)!;
       if (
@@ -185,8 +276,8 @@ export async function listBooks(db: Db): Promise<BookSummary[]> {
   const learned = mine?.learned ?? 0;
   books.push({
     id: MY_BOOK,
-    title: "我的句块",
-    description: "从导入的文章中抽取或手动添加的句块。",
+    title: "我的短语",
+    description: "从导入的文章中抽取或手动添加的短语。",
     color: "slate",
     builtin: false,
     total,

@@ -220,9 +220,9 @@ export async function addManualChunk(
       `SELECT COUNT(*) AS n, COALESCE(SUM(sentence_id = ?), 0) AS same FROM examples WHERE chunk_id = ?`,
       [input.sentenceId, chunkId],
     );
-    if ((count?.same ?? 0) > 0) throw new Error("这个句子已经是该句块的例句");
+    if ((count?.same ?? 0) > 0) throw new Error("这个句子已经是该短语的例句");
     if ((count?.n ?? 0) >= MAX_EXAMPLES)
-      throw new Error(`该句块已有 ${MAX_EXAMPLES} 个例句，不能再添加`);
+      throw new Error(`该短语已有 ${MAX_EXAMPLES} 个例句，不能再添加`);
     example.params = [
       newId(),
       chunkId,

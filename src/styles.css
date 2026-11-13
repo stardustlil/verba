@@ -83,9 +83,18 @@
   --shadow-card: 0 1px 2px rgb(28 25 23 / 0.04), 0 6px 24px -8px rgb(28 25 23 / 0.08);
   --shadow-float: 0 12px 40px -12px rgb(28 25 23 / 0.25);
 
+  /* 非线性缓动：spring 略微回弹，out 快起慢收 */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
   --animate-blink: blink 1.05s step-end infinite;
-  --animate-shake: shake 0.28s ease-in-out;
-  --animate-rise: rise 0.22s ease-out;
+  --animate-shake: shake 0.36s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  --animate-rise: rise 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pop: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-page: page 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-card: card 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-bounce-in: bounce-in 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-cell: cell 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 
   @keyframes blink {
     50% {
@@ -93,24 +102,110 @@
     }
   }
   @keyframes shake {
-    20%,
-    60% {
-      transform: translateX(-3px);
+    15%,
+    55% {
+      transform: translateX(-5px);
     }
-    40%,
-    80% {
-      transform: translateX(3px);
+    35%,
+    75% {
+      transform: translateX(4px);
+    }
+    90% {
+      transform: translateX(-1px);
     }
   }
   @keyframes rise {
     from {
       opacity: 0;
-      transform: translateY(6px);
+      transform: translateY(10px) scale(0.985);
     }
     to {
       opacity: 1;
       transform: none;
     }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.88);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes page {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes card {
+    from {
+      opacity: 0;
+      transform: translateX(28px);
+      filter: blur(3px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(1);
+    }
+    35% {
+      transform: scale(1.06);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes cell {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* 依次出场：子元素逐个错开 */
+.stagger > * {
+  animation: rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.stagger > :nth-child(2) {
+  animation-delay: 50ms;
+}
+.stagger > :nth-child(3) {
+  animation-delay: 100ms;
+}
+.stagger > :nth-child(4) {
+  animation-delay: 150ms;
+}
+.stagger > :nth-child(5) {
+  animation-delay: 200ms;
+}
+.stagger > :nth-child(n + 6) {
+  animation-delay: 250ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

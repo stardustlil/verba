@@ -25,7 +25,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-/** 句块详情（需求 8.2） */
+/** 短语详情（需求 8.2） */
 export default function ChunkDetailPage() {
   const { id = "" } = useParams();
   const navigate = useNavigate();
@@ -47,11 +47,11 @@ export default function ChunkDetailPage() {
   if (chunk.loading && !c) return null;
   if (!c) {
     return (
-      <Page title="句块">
+      <Page title="短语">
         <div className="space-y-4">
-          <Notice tone="error">{chunk.error ?? "句块不存在或已删除。"}</Notice>
+          <Notice tone="error">{chunk.error ?? "短语不存在或已删除。"}</Notice>
           <Link to="/chunks" className="text-sm text-accent hover:underline">
-            返回句块列表
+            返回短语列表
           </Link>
         </div>
       </Page>
@@ -75,7 +75,7 @@ export default function ChunkDetailPage() {
             返回
           </Button>
           <Button variant="ghost" className="text-bad" onClick={() => setConfirmDelete(true)}>
-            删除句块
+            删除短语
           </Button>
         </>
       }
@@ -150,9 +150,7 @@ export default function ChunkDetailPage() {
 
         <Section title="备选答案">
           {c.altAnswers.length === 0 ? (
-            <p className="text-sm text-ink-soft">
-              没有。纯中文默写时用“我写的也对”改判的写法会存在这里。
-            </p>
+            <p className="text-sm text-ink-soft">没有</p>
           ) : (
             <ul className="flex flex-wrap gap-2">
               {c.altAnswers.map((a) => (
@@ -227,7 +225,7 @@ export default function ChunkDetailPage() {
 
       {confirmDelete && (
         <Dialog
-          title="删除这个句块？"
+          title="删除这个短语？"
           confirmLabel="删除"
           danger
           onCancel={() => setConfirmDelete(false)}

@@ -20,7 +20,7 @@ const SORTS: Array<{ value: ChunkSort; label: string }> = [
   { value: "errors", label: "按出错次数" },
 ];
 
-/** 句块列表（需求 8.1）。筛选条件放在地址里，从详情返回时保留。 */
+/** 短语列表（需求 8.1）。筛选条件放在地址里，从详情返回时保留。 */
 export default function ChunksPage() {
   const [params, setParams] = useSearchParams();
   const search = params.get("q") ?? "";
@@ -52,7 +52,7 @@ export default function ChunksPage() {
   const items = chunks.data ?? [];
 
   return (
-    <Page title="句块" description={chunks.data ? `共 ${items.length} 个` : undefined}>
+    <Page title="短语" description={chunks.data ? `共 ${items.length} 个` : undefined}>
       <div className="mb-4 flex flex-wrap gap-2">
         <TextInput
           type="search"
@@ -119,8 +119,8 @@ export default function ChunksPage() {
         {chunks.data && items.length === 0 && (
           <p className="text-sm text-ink-soft">
             {search || status !== "all" || articleId || bookId
-              ? "没有符合条件的句块。"
-              : "句块库还是空的。"}
+              ? "没有符合条件的短语。"
+              : "短语库还是空的。"}
           </p>
         )}
         {items.length > 0 && (

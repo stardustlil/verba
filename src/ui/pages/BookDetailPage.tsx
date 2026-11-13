@@ -115,7 +115,7 @@ export default function BookDetailPage() {
       <div className="min-h-0 flex-1 overflow-y-auto">
         {chunks.data && chunks.data.length === 0 && (
           <p className="py-6 text-center text-sm text-ink-soft">
-            {search ? "没有符合条件的句块。" : "这本书里还没有句块。"}
+            {search ? "没有符合条件的短语。" : "这本书里还没有短语。"}
           </p>
         )}
         <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">

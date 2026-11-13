@@ -47,3 +47,25 @@ export function schedule(card: string | null, rating: Rating, now: number): Sche
     scheduledDays: next.scheduled_days,
   };
 }
+
+/** 标记“熟练”后，至少隔这么多天再复习 */
+export const KNOWN_INTERVAL_DAYS = 60;
+
+/**
+ * 用户标记“熟练”：按 Easy 评一次，并把间隔拉长到至少 KNOWN_INTERVAL_DAYS 天。
+ * 稳定性同步提高，之后的复习按这个间隔继续调度。
+ */
+export function scheduleKnown(card: string | null, now: number): Scheduled {
+  const at = new Date(now);
+  const current = card === null ? createEmptyCard(at) : revive(card);
+  const next = scheduler.next(current, at, FsrsRating.Easy).card;
+  const days = Math.max(next.scheduled_days, KNOWN_INTERVAL_DAYS);
+  const due = new Date(now + days * 24 * 60 * 60 * 1000);
+  const result: Card = {
+    ...next,
+    stability: Math.max(next.stability, days),
+    scheduled_days: days,
+    due,
+  };
+  return { card: JSON.stringify(result), due: due.getTime(), scheduledDays: days };
+}

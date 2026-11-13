@@ -6,7 +6,8 @@ import { lemmaKey } from "../core/judge/normalize";
 import { studyDay } from "../core/srs/day";
 import { type ChunkProgress, applyCountedAnswer } from "../core/srs/progress";
 import { type Rating, rate } from "../core/srs/rating";
-import type { QuestionMode, Stage } from "../core/srs/stage";
+import { scheduleKnown } from "../core/srs/scheduler";
+import { CLOZE_STREAK_TO_PROMOTE, type QuestionMode, type Stage } from "../core/srs/stage";
 import { type Db, type Statement, newId } from "./db";
 import { currentBookId, freshCount, nextNewChunks } from "./books";
 import { DUE_CONDITION, INTRODUCED_IN_QUOTA, endOfDay, refreshDay } from "./stats";
@@ -189,6 +190,88 @@ export async function introduceChunk(
   ]);
 }
 
+/** 标记“熟练”前的状态，撤销时用 */
+export interface KnownMark {
+  chunkId: string;
+  before: ChunkProgress;
+  introducedAt: number | null;
+  introducedDay: string | null;
+  introducedExtra: number;
+  /** 今天开始时它是否在到期复习里（影响打卡） */
+  dueToday: boolean;
+}
+
+/**
+ * 标记“熟练”：直接进入纯中文默写阶段，下次复习排到几十天后（见 scheduleKnown）。
+ * 不写答题记录；新短语不占当天的新短语额度；也不再算作今天必须完成的复习。
+ */
+export async function markKnown(db: Db, chunkId: string, now: number): Promise<KnownMark> {
+  const day = studyDay(now);
+  const [row] = await db.query<
+    ProgressRow & {
+      introduced_at: number | null;
+      introduced_day: string | null;
+      introduced_extra: number;
+    }
+  >(
+    `SELECT ${PROGRESS_COLUMNS}, introduced_at, introduced_day, introduced_extra
+     FROM chunks WHERE id = ? AND deleted_at IS NULL`,
+    [chunkId],
+  );
+  if (!row) throw new Error("短语不存在");
+  const [due] = await db.query<{ n: number }>(
+    "SELECT COUNT(*) AS n FROM day_due WHERE study_day = ? AND chunk_id = ?",
+    [day, chunkId],
+  );
+  const before = toProgress(row);
+  const scheduled = scheduleKnown(before.fsrsCard, now);
+  const statements: Statement[] = [
+    progressUpdate(chunkId, {
+      ...before,
+      stage: "recall",
+      clozeStreak: Math.max(before.clozeStreak, CLOZE_STREAK_TO_PROMOTE),
+      fsrsCard: scheduled.card,
+      due: scheduled.due,
+      scheduledDays: scheduled.scheduledDays,
+    }),
+    { sql: "DELETE FROM day_due WHERE study_day = ? AND chunk_id = ?", params: [day, chunkId] },
+  ];
+  if (row.introduced_at === null) {
+    statements.push({
+      sql: "UPDATE chunks SET introduced_at = ?, introduced_day = ?, introduced_extra = 1 WHERE id = ?",
+      params: [now, day, chunkId],
+    });
+  }
+  await db.transaction(statements);
+  await refreshDay(db, day);
+  return {
+    chunkId,
+    before,
+    introducedAt: row.introduced_at,
+    introducedDay: row.introduced_day,
+    introducedExtra: row.introduced_extra,
+    dueToday: (due?.n ?? 0) > 0,
+  };
+}
+
+/** 撤销“熟练”，恢复到标记之前 */
+export async function undoMarkKnown(db: Db, mark: KnownMark, now: number): Promise<void> {
+  const statements: Statement[] = [
+    progressUpdate(mark.chunkId, mark.before),
+    {
+      sql: "UPDATE chunks SET introduced_at = ?, introduced_day = ?, introduced_extra = ? WHERE id = ?",
+      params: [mark.introducedAt, mark.introducedDay, mark.introducedExtra, mark.chunkId],
+    },
+  ];
+  if (mark.dueToday) {
+    statements.push({
+      sql: "INSERT OR IGNORE INTO day_due (study_day, chunk_id) VALUES (?, ?)",
+      params: [studyDay(now), mark.chunkId],
+    });
+  }
+  await db.transaction(statements);
+}
+
 export interface AnswerInput {
   chunkId: string;
   mode: QuestionMode;
@@ -225,7 +308,7 @@ export async function recordAnswer(db: Db, answer: AnswerInput): Promise<AnswerR
   const [row] = await db.query<ProgressRow>(`SELECT ${PROGRESS_COLUMNS} FROM chunks WHERE id = ?`, [
     answer.chunkId,
   ]);
-  if (!row) throw new Error("句块不存在");
+  if (!row) throw new Error("短语不存在");
   const before = toProgress(row);
   const [already] = await db.query<{ n: number }>(
     "SELECT COUNT(*) AS n FROM reviews WHERE chunk_id = ? AND study_day = ? AND counted = 1",

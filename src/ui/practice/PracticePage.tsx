@@ -1,9 +1,9 @@
 /**
  * 练习（需求第 5 节），全屏专注模式。
- * 一轮 = 复习 → 新句块跟写 → 语境填空 → 纯中文默写，题目上直接打字，没有输入框。
+ * 一轮 = 复习 → 新短语跟写 → 语境填空 → 纯中文默写，题目上直接打字，没有输入框。
  * 出题顺序、评级、调度等规则都在 core/srs，这里只管界面和流程。
  */
-import { ArrowLeft, AudioLines, Keyboard, Volume2, VolumeX, X } from "lucide-react";
+import { ArrowLeft, AudioLines, BadgeCheck, Keyboard, Volume2, VolumeX, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { copyProgress } from "../../core/judge/copy";
@@ -32,15 +32,18 @@ import { getSettings, saveSettings } from "../../repo/settings";
 import { addStudyTime } from "../../repo/stats";
 import {
   type AnswerRecord,
+  type KnownMark,
   type StudyChunk,
   type StudyExample,
   EXTRA_COUNT,
   introduceChunk,
   loadStudyChunk,
+  markKnown,
   newAvailableToday,
   overrideAnswer,
   recordAnswer,
   sessionChunks,
+  undoMarkKnown,
 } from "../../repo/study";
 import { Button, Notice, TextInput, cx } from "../components";
 import { focusedTextField, hasMod, isImeKey, modLabel } from "../keys";
@@ -52,7 +55,7 @@ import { Stopwatch } from "./stopwatch";
 import { type RoundStats, Summary } from "./Summary";
 import { TypingLine } from "./TypingLine";
 
-/** daily 每日任务（到期复习 + 今日额度内的新句块）；extra 额外练习（只学新句块，不占额度） */
+/** daily 每日任务（到期复习 + 今日额度内的新短语）；extra 额外练习（只学新短语，不占额度） */
 export type RoundKind = "daily" | "extra";
 
 type Mode = "copy" | "cloze" | "recall";
@@ -171,7 +174,13 @@ export default function PracticePage() {
   const queue = useRef<QueueItem[]>([]);
   const initial = useRef<QueueItem[]>([]);
   const deletedIds = useRef(new Set<string>());
-  const undoStack = useRef<Array<{ deleted: DeletedChunk; item: QueueItem }>>([]);
+  /** 可以撤销的操作：删除短语、标记熟练 */
+  const undoStack = useRef<
+    Array<
+      | { kind: "delete"; deleted: DeletedChunk; item: QueueItem }
+      | { kind: "known"; mark: KnownMark; item: QueueItem }
+    >
+  >([]);
   const answerWatch = useRef(new Stopwatch());
   const sessionWatch = useRef(new Stopwatch());
   const savedMs = useRef(0);
@@ -185,7 +194,7 @@ export default function PracticePage() {
   /** 本轮是否中途退出（还有题没做完） */
   const exitedEarly = useRef(false);
   const stats = useRef<RoundStats>(emptyStats());
-  /** 已评过分的“句块:阶段”，以及其中第一次答错的 */
+  /** 已评过分的“短语:阶段”，以及其中第一次答错的 */
   const graded = useRef(new Set<string>());
   const firstWrong = useRef(new Set<string>());
 
@@ -329,7 +338,7 @@ export default function PracticePage() {
   const card = view.kind === "card" ? view.card : null;
   const setCard = (next: Card) => setView({ kind: "card", card: next });
 
-  /** 记一次有评分的作答；每个句块每个阶段只算第一次 */
+  /** 记一次有评分的作答；每个短语每个阶段只算第一次 */
   const grade = (c: Card, correct: boolean) => {
     const key = `${c.chunk.id}:${c.item.phase}`;
     if (!graded.current.has(key)) {
@@ -361,6 +370,9 @@ export default function PracticePage() {
     setTyped(value);
     if (card.mode !== "copy" && card.status === "typing" && value.length > 0) {
       answerWatch.current.start();
+      // 自由作答：写对的那一刻自动判对，不用按键提交
+      if (!composing && isCorrect(value, targetsOf(card))) void submit(value);
+      return;
     }
     if (!isCopying(card) || !copyProgress(answerOf(card), value).complete) return;
     // 照着打完了
@@ -392,17 +404,18 @@ export default function PracticePage() {
     }
   };
 
-  const submit = () =>
+  /** 提交自由作答。input 默认取当前输入；自动判对时传入刚打完的值 */
+  const submit = (input: string = typed) =>
     run(async () => {
-      if (!card || card.mode === "copy" || card.status !== "typing" || !typed.trim()) return;
+      if (!card || card.mode === "copy" || card.status !== "typing" || !input.trim()) return;
       answerWatch.current.pause();
       const targets = targetsOf(card);
-      const correct = isCorrect(typed, targets);
+      const correct = isCorrect(input, targets);
       const record = await recordAnswer(db, {
         chunkId: card.chunk.id,
         mode: card.mode,
         exampleId: card.mode === "cloze" ? (card.example?.id ?? null) : null,
-        input: typed,
+        input,
         correct,
         viewedAnswer: false,
         durationMs: answerWatch.current.elapsed(),
@@ -416,7 +429,7 @@ export default function PracticePage() {
       if (correct) {
         setCard({ ...card, status: "correct", record });
       } else {
-        setCard({ ...card, status: "wrong", record, marks: bestDiff(typed, targets) });
+        setCard({ ...card, status: "wrong", record, marks: bestDiff(input, targets) });
         setTyped("");
       }
     });
@@ -455,25 +468,41 @@ export default function PracticePage() {
     run(async () => {
       if (!card) return;
       const deleted = await softDeleteChunk(db, card.chunk.id);
-      undoStack.current.push({ deleted, item: card.item });
+      undoStack.current.push({ kind: "delete", deleted, item: card.item });
       deletedIds.current.add(card.chunk.id);
       stats.current.wrong = stats.current.wrong.filter((w) => w.id !== card.chunk.id);
       flash(`已删除“${card.chunk.lemma}”，按 ${modLabel("Z")} 撤销`);
       await showHead(withoutChunk(queue.current, card.chunk.id));
     });
 
-  const undoDelete = () =>
+  /** 标记熟练：这个短语本轮不再出现，几十天后再复习 */
+  const markCurrentKnown = () =>
+    run(async () => {
+      if (!card) return;
+      const mark = await markKnown(db, card.chunk.id, Date.now());
+      undoStack.current.push({ kind: "known", mark, item: card.item });
+      deletedIds.current.add(card.chunk.id);
+      stats.current.wrong = stats.current.wrong.filter((w) => w.id !== card.chunk.id);
+      flash(`已标记“${card.chunk.lemma}”为熟练，按 ${modLabel("Z")} 撤销`);
+      lastLemma.current = card.chunk.lemma;
+      await showHead(withoutChunk(queue.current, card.chunk.id));
+    });
+
+  /** 撤销最近一次删除或标记熟练 */
+  const undoLast = () =>
     run(async () => {
       const last = undoStack.current.pop();
       if (!last) return;
-      await undoDeleteChunk(db, last.deleted);
-      deletedIds.current.delete(last.deleted.chunkId);
-      // 恢复这个句块在本轮中后面的阶段
+      const chunkId = last.kind === "delete" ? last.deleted.chunkId : last.mark.chunkId;
+      if (last.kind === "delete") await undoDeleteChunk(db, last.deleted);
+      else await undoMarkKnown(db, last.mark, Date.now());
+      deletedIds.current.delete(chunkId);
+      // 恢复这个短语在本轮中后面的阶段
       const rank = PHASES.indexOf(last.item.phase);
       const later = initial.current.filter(
-        (i) => i.chunkId === last.deleted.chunkId && PHASES.indexOf(i.phase) > rank,
+        (i) => i.chunkId === chunkId && PHASES.indexOf(i.phase) > rank,
       );
-      flash("已撤销删除");
+      flash(last.kind === "delete" ? "已撤销删除" : "已撤销熟练标记");
       await showHead([last.item, ...insertByPhase(queue.current, later)]);
     });
 
@@ -517,7 +546,7 @@ export default function PracticePage() {
       await saveSettings(db, { typingSound: value });
     });
 
-  /** ⌘P 朗读。作答中只读跟写的句块，免得泄露答案 */
+  /** ⌘P 朗读。作答中只读跟写的短语，免得泄露答案 */
   const speakNow = () => {
     if (!card) return;
     if (card.mode === "copy") speak(card.chunk.lemma);
@@ -555,7 +584,7 @@ export default function PracticePage() {
         navigate("/");
       } else if (mod && key === "z" && undoStack.current.length > 0) {
         e.preventDefault();
-        void undoDelete();
+        void undoLast();
       }
       return;
     }
@@ -565,7 +594,7 @@ export default function PracticePage() {
       const field = focusedTextField();
       if ((!field || field.value === "") && undoStack.current.length > 0) {
         e.preventDefault();
-        void undoDelete();
+        void undoLast();
       }
       return;
     }
@@ -577,6 +606,11 @@ export default function PracticePage() {
     if (mod && key === "d") {
       e.preventDefault();
       void deleteCurrent();
+      return;
+    }
+    if (mod && key === "k") {
+      e.preventDefault();
+      void markCurrentKnown();
       return;
     }
     if (mod && key === "p") {
@@ -596,20 +630,18 @@ export default function PracticePage() {
     }
     if (mod || e.altKey || !card) return;
 
-    if (key === "Enter") {
-      e.preventDefault();
-      if (finished(card)) void next();
-      else if (card.status === "typing" && card.mode !== "copy") void submit();
-      return;
-    }
     if (key === " " && finished(card)) {
       e.preventDefault();
       void next();
       return;
     }
-    if (key === "Tab") {
+    if (key === "Tab" || key === "Enter") {
       e.preventDefault();
-      reveal();
+      if (finished(card)) void next();
+      else if (card.status === "typing" && card.mode !== "copy") {
+        if (typed.trim()) void submit();
+        else if (key === "Tab") reveal();
+      }
     }
   };
   const onKeyRef = useRef(onKey);
@@ -648,7 +680,20 @@ export default function PracticePage() {
             </span>
           )}
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-1">
+          {card && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => void markCurrentKnown()}
+              aria-label="标记熟练"
+            >
+              <BadgeCheck size={14} />
+              熟练
+              <Kbd>{modLabel("K")}</Kbd>
+            </Button>
+          )}
           {view.kind !== "summary" && (
             <Button variant="ghost" size="sm" onClick={exit} aria-label="退出本轮">
               <X size={14} />
@@ -695,7 +740,7 @@ export default function PracticePage() {
         {toast && (
           <div
             role="status"
-            className="pointer-events-none fixed bottom-28 left-1/2 -translate-x-1/2 animate-rise rounded-xl bg-ink px-4 py-2 text-sm text-canvas shadow-float"
+            className="pointer-events-none fixed bottom-28 left-1/2 -translate-x-1/2 animate-pop rounded-xl bg-ink px-4 py-2 text-sm text-canvas shadow-float"
           >
             {toast}
           </div>
@@ -712,7 +757,7 @@ export default function PracticePage() {
                   <div className="h-1.5 overflow-hidden rounded-full bg-ink/8">
                     <div
                       className={cx(
-                        "h-full rounded-full transition-[width] duration-300",
+                        "h-full rounded-full transition-[width,background-color] duration-700 ease-out",
                         p.phase === currentPhase ? "bg-accent" : "bg-accent/45",
                       )}
                       style={{ width: `${p.total ? (p.done / p.total) * 100 : 0}%` }}
@@ -799,18 +844,18 @@ export default function PracticePage() {
 
 function ShortcutPanel() {
   const rows: Array<[string, string]> = [
-    ["Enter", "提交 / 下一题"],
-    ["空格", "答完后下一题"],
-    ["Tab", "看答案"],
+    ["空格", "下一题"],
+    ["Tab", "提交；没写时看答案"],
     [modLabel("Enter"), "我写的也对"],
     [modLabel("E"), "修改释义"],
-    [modLabel("D"), "删除句块"],
-    [modLabel("Z"), "撤销删除"],
+    [modLabel("K"), "标记熟练，跳过"],
+    [modLabel("D"), "删除短语"],
+    [modLabel("Z"), "撤销删除 / 熟练"],
     [modLabel("P"), "朗读"],
     ["Esc", "结束本轮"],
   ];
   return (
-    <div className="absolute right-0 bottom-10 z-20 w-56 animate-rise rounded-2xl bg-panel p-3 shadow-float ring-1 ring-line">
+    <div className="absolute right-0 bottom-10 z-20 w-56 origin-bottom-right animate-pop rounded-2xl bg-panel p-3 shadow-float ring-1 ring-line">
       {rows.map(([key, label]) => (
         <div
           key={key}
@@ -908,21 +953,24 @@ function CardView({
   else if (done)
     hint = (
       <>
-        <Kbd>Enter</Kbd> 或 <Kbd>空格</Kbd> 下一题
+        <Kbd>空格</Kbd> 下一题
       </>
     );
   else if (status === "wrong")
     hint = (
       <>
-        照着正确答案再打一遍 · <Kbd>{modLabel("Enter")}</Kbd> 我写的也对
+        照着打一遍 · <Kbd>{modLabel("Enter")}</Kbd> 我写的也对
       </>
     );
-  else if (status === "reveal") hint = <>照着答案打一遍</>;
-  else if (mode === "copy") hint = <>照着打一遍</>;
+  else if (status === "reveal" || mode === "copy") hint = <>照着打一遍</>;
   else
-    hint = (
+    hint = typed.trim() ? (
       <>
-        <Kbd>Enter</Kbd> 提交 · <Kbd>Tab</Kbd> 看答案
+        <Kbd>Tab</Kbd> 提交
+      </>
+    ) : (
+      <>
+        <Kbd>Tab</Kbd> 看答案
       </>
     );
 
@@ -943,11 +991,11 @@ function CardView({
   );
 
   return (
-    <section className="flex w-full flex-col items-center gap-7 text-center">
+    <section className="flex w-full animate-card flex-col items-center gap-7 text-center">
       {mode === "copy" && (
         <>
           <span className="rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-medium text-accent-ink">
-            新句块
+            新短语
           </span>
           <div className="-mt-3 flex items-center gap-2">
             {line}
@@ -1003,13 +1051,15 @@ function CardView({
       )}
 
       {(status === "wrong" || (status === "retyped" && card.marks)) && card.marks && (
-        <div className="w-full max-w-xl animate-rise space-y-1 rounded-2xl bg-bad-soft px-5 py-3 text-center">
+        <div className="w-full max-w-xl animate-pop space-y-1 rounded-2xl bg-bad-soft px-5 py-3 text-center">
           <div className="text-xs text-ink-soft">你写的是</div>
           <AnswerDiff marks={card.marks} className="text-xl" />
         </div>
       )}
 
-      {status === "correct" && card.overridden && <p className="text-sm text-good">已改判为正确</p>}
+      {status === "correct" && card.overridden && (
+        <p className="animate-pop text-sm text-good">已改判为正确</p>
+      )}
 
       {mode !== "copy" && answered && (
         <div className="flex w-full flex-col items-center gap-4">

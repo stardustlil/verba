@@ -74,7 +74,7 @@ function InputStep() {
   };
 
   return (
-    <Page title="导入文章" description="粘贴英文文字、粘贴网址，或把 txt / md 文件拖进窗口。">
+    <Page title="导入文章">
       <div className="flex min-h-0 flex-1 flex-col gap-5">
         {error && <Notice tone="error">{error}</Notice>}
 
@@ -106,7 +106,7 @@ function InputStep() {
           <textarea
             aria-label="英文文字"
             className={cx(textAreaStyle, "min-h-48 flex-1 resize-none")}
-            placeholder="在这里粘贴英文文字…"
+            placeholder="在这里粘贴英文文字，或把 txt / md 文件拖进窗口…"
             spellCheck={false}
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -168,7 +168,6 @@ function PreviewStep({ state }: { state: Extract<ImportState, { step: "preview" 
     return (
       <Page
         title="编辑正文"
-        description="段落之间空一行。完成后回到预览。"
         actions={
           <>
             <Button
@@ -205,7 +204,7 @@ function PreviewStep({ state }: { state: Extract<ImportState, { step: "preview" 
 
   const canExtract = hasKey && selected.size > 0;
   return (
-    <Page title="预览" description="检查清理后的正文，勾选要抽取句块的段落。">
+    <Page title="预览">
       <div className="flex min-h-0 flex-1 flex-col gap-4">
         {state.error && <Notice tone="error">{state.error}</Notice>}
 
@@ -282,17 +281,12 @@ function PreviewStep({ state }: { state: Extract<ImportState, { step: "preview" 
 
         {!apiKey.loading && !hasKey && (
           <Notice>
-            还没有填写 API key，文章会照常保存，但不会自动抽取句块。可以先到
+            还没有填写 API key，文章会照常保存，但不会自动抽取短语。可以先到
             <Link to="/settings" className="mx-1 font-medium text-accent underline">
               设置
             </Link>
             填写。
           </Notice>
-        )}
-        {hasKey && (
-          <p className="text-xs text-ink-soft">
-            抽取时，选中的段落会发送到你在设置中配置的 AI 服务。
-          </p>
         )}
 
         <div className="flex items-center justify-between">
@@ -310,7 +304,7 @@ function PreviewStep({ state }: { state: Extract<ImportState, { step: "preview" 
               disabled={state.saving || apiKey.loading || (hasKey && !canExtract)}
               onClick={() => void save(hasKey)}
             >
-              {hasKey ? "保存并抽取句块" : "保存文章"}
+              {hasKey ? "保存并抽取短语" : "保存文章"}
             </Button>
           </div>
         </div>
@@ -322,7 +316,7 @@ function PreviewStep({ state }: { state: Extract<ImportState, { step: "preview" 
 function RunningStep({ state }: { state: Extract<ImportState, { step: "running" }> }) {
   const percent = state.total === 0 ? 0 : Math.round((state.done / state.total) * 100);
   return (
-    <Page title="正在抽取句块" description={state.title}>
+    <Page title="正在抽取短语" description={state.title}>
       <div className="space-y-3">
         <div
           role="progressbar"
@@ -334,7 +328,7 @@ function RunningStep({ state }: { state: Extract<ImportState, { step: "running" 
           <div className="h-full bg-accent transition-all" style={{ width: `${percent}%` }} />
         </div>
         <p className="text-sm text-ink-soft">
-          已完成 {state.done} / {state.total} 部分。可以先去别的页面，抽取会在后台继续。
+          已完成 {state.done} / {state.total} 部分
         </p>
       </div>
     </Page>
@@ -354,10 +348,10 @@ function DoneStep({ state }: { state: Extract<ImportState, { step: "done" }> }) 
     <Page title="导入完成" description={state.title}>
       <div className="space-y-4">
         {summary === null ? (
-          <Notice tone="success">文章已保存，没有抽取句块。</Notice>
+          <Notice tone="success">文章已保存，没有抽取短语。</Notice>
         ) : allFailed ? null : (
           <Notice tone="success">
-            已添加 {summary.added} 个新句块，{summary.merged} 个合并为例句。
+            已添加 {summary.added} 个新短语，{summary.merged} 个合并为例句。
           </Notice>
         )}
         {summary !== null && summary.failedBatches > 0 && (

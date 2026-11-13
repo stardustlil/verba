@@ -95,7 +95,7 @@ const reviews = (db: Db) =>
   );
 
 describe("练习流程", () => {
-  it("新句块：跟写（错字母被卡住）→ 填空答错照抄 → 重出答对 → 默写看答案 → 重出 → 小结", async () => {
+  it("新短语：跟写（错字母被卡住）→ 填空答错照抄 → 重出答对 → 默写看答案 → 重出 → 小结", async () => {
     const db = holder.db!;
     await seed(db, [
       {
@@ -108,7 +108,7 @@ describe("练习流程", () => {
     renderPage();
 
     // 跟写：显示原形和释义，照着打
-    await screen.findByText("新句块");
+    await screen.findByText("新短语");
     expect(screen.getByText("引起广泛关注")).toBeTruthy();
     await user.type(input(), "drx");
     expect(input().value).toBe("drx");
@@ -119,36 +119,34 @@ describe("练习流程", () => {
     expect(await screen.findByText("下一题", { exact: false })).toBeTruthy();
     const [chunk] = await db.query<{ stage: string }>("SELECT stage FROM chunks");
     expect(chunk?.stage).toBe("cloze");
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
 
-    // 填空：在例句的空白处直接打字
+    // 填空：在例句的空白处直接打字，Tab 提交
     await screen.findByText("提示");
     await user.type(input(), "drawn widesprad attention");
-    await user.keyboard("{Enter}");
+    await user.keyboard("{Tab}");
     expect(await screen.findByText("你写的是")).toBeTruthy();
     expect(screen.getByTitle("应为 widespread")).toBeTruthy();
     // 照着正确答案再打一遍才能继续
-    await user.keyboard("{Enter}");
+    await user.keyboard("{Tab}");
     expect(screen.getByText("你写的是")).toBeTruthy();
     await user.type(input(), "drawn widespread attention");
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
 
-    // 本阶段重出
+    // 本阶段重出：写对的那一刻自动判对，不用按键提交
     await screen.findByText("重出");
-    await user.type(input(), "Drawn widespread attention.");
-    await user.keyboard("{Enter}");
+    await user.type(input(), "Drawn widespread attention");
     expect(await screen.findByText("下一题", { exact: false })).toBeTruthy();
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
 
-    // 默写：只显示中文；Tab 看答案后要照着打一遍
+    // 默写：只显示中文；没写时按 Tab 看答案，之后要照着打一遍
     await waitFor(() => expect(screen.queryByText("提示")).toBeNull());
     await user.keyboard("{Tab}");
-    expect(await screen.findByText("照着答案打一遍")).toBeTruthy();
+    expect(await screen.findByText("照着打一遍")).toBeTruthy();
     await user.type(input(), "draw widespread attention");
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
     await screen.findByText("重出");
     await user.type(input(), "draw widespread attention");
-    await user.keyboard("{Enter}");
     await user.keyboard(" ");
 
     expect(await screen.findByText("本轮完成")).toBeTruthy();
@@ -172,11 +170,11 @@ describe("练习流程", () => {
 
     await screen.findByText("引起注意");
     await user.type(input(), "attract attention");
-    await user.keyboard("{Enter}");
+    await user.keyboard("{Tab}");
     await screen.findByText("你写的是");
     await user.keyboard("{Control>}{Enter}{/Control}");
     expect(await screen.findByText("已改判为正确")).toBeTruthy();
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
     expect(await screen.findByText("本轮完成")).toBeTruthy();
     expect(screen.getByText("100%")).toBeTruthy();
 
@@ -217,7 +215,36 @@ describe("练习流程", () => {
     expect(await screen.findByText("回首页")).toBeTruthy();
   });
 
-  it("额外练习：只出新句块，不出到期复习，学过的不占每日额度", async () => {
+  it("标记熟练：跳过这个短语，撤销后回来", async () => {
+    const db = holder.db!;
+    await seed(db, [
+      { lemma: "heavy rain", surface: "heavy rain", meaning: "大雨" },
+      { lemma: "make a decision", surface: "make a decision", meaning: "做决定" },
+    ]);
+    const user = userEvent.setup();
+    renderPage();
+
+    await screen.findByText("大雨");
+    await user.keyboard("{Control>}k{/Control}");
+    expect(await screen.findByText("做决定")).toBeTruthy();
+    const [row] = await db.query<{ stage: string }>(
+      "SELECT stage FROM chunks WHERE lemma = 'heavy rain'",
+    );
+    expect(row?.stage).toBe("recall");
+
+    await user.keyboard("{Control>}z{/Control}");
+    expect(await screen.findByText("大雨")).toBeTruthy();
+    const [back] = await db.query<{ stage: string }>(
+      "SELECT stage FROM chunks WHERE lemma = 'heavy rain'",
+    );
+    expect(back?.stage).toBe("new");
+
+    // 顶栏按钮
+    await user.click(screen.getByLabelText("标记熟练"));
+    expect(await screen.findByText("做决定")).toBeTruthy();
+  });
+
+  it("额外练习：只出新短语，不出到期复习，学过的不占每日额度", async () => {
     const db = holder.db!;
     await seed(db, [
       { lemma: "heavy rain", surface: "heavy rain", meaning: "大雨" },
@@ -230,7 +257,7 @@ describe("练习流程", () => {
     const user = userEvent.setup();
     renderPage("/practice?extra=1");
 
-    await screen.findByText("新句块");
+    await screen.findByText("新短语");
     expect(screen.getByText("额外练习")).toBeTruthy();
     expect(screen.getByText("做决定")).toBeTruthy();
     await user.type(input(), "make a decision");
@@ -254,7 +281,7 @@ describe("打字音效", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByText("新句块");
+    await screen.findByText("新短语");
     expect(sound.setSoundEnabled).toHaveBeenLastCalledWith(true);
     await user.type(input(), "he");
     expect(sound.playKey).toHaveBeenCalledTimes(2);
@@ -263,12 +290,12 @@ describe("打字音效", () => {
     await user.type(input(), "{Backspace}avy rain");
     await screen.findByText("下一题", { exact: false });
     expect(sound.playCorrect).toHaveBeenCalledTimes(1);
-    await user.keyboard("{Enter}");
+    await user.keyboard(" ");
 
     // 填空答错
     await screen.findByText("提示");
     await user.type(input(), "heavy snow");
-    await user.keyboard("{Enter}");
+    await user.keyboard("{Tab}");
     await screen.findByText("你写的是");
     expect(sound.playWrong).toHaveBeenCalledTimes(1);
   });
@@ -279,7 +306,7 @@ describe("打字音效", () => {
     const user = userEvent.setup();
     renderPage();
 
-    await screen.findByText("新句块");
+    await screen.findByText("新短语");
     await user.click(screen.getByLabelText("打字音效"));
     expect(sound.setSoundEnabled).toHaveBeenLastCalledWith(false);
     await waitFor(async () => {
@@ -292,7 +319,7 @@ describe("打字音效", () => {
     cleanup();
     vi.clearAllMocks();
     renderPage();
-    await screen.findByText("新句块");
+    await screen.findByText("新短语");
     expect(sound.setSoundEnabled).toHaveBeenLastCalledWith(false);
   });
 });
