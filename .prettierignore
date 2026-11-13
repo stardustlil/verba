@@ -1,0 +1,9 @@
+dist
+node_modules
+src-tauri/target
+src-tauri/gen
+src/core/judge/spelling-data.json
+package-lock.json
+docs
+.claude
+eval/out

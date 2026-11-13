@@ -1,0 +1,1367 @@
+{
+  "id": "verb-phrases",
+  "title": "高频动词短语",
+  "description": "最常用的动词短语与动词搭配：give up、take advantage of、make up one's mind……日常交流与阅读中随处可见。",
+  "color": "violet",
+  "version": 1,
+  "entries": [
+    {
+      "lemma": "take advantage of",
+      "surface": "took advantage of",
+      "meaning": "利用（机会、条件）",
+      "example": "She took advantage of the quiet morning to finish her report.",
+      "translation": "她利用安静的早晨写完了报告。"
+    },
+    {
+      "lemma": "give up",
+      "surface": "gave up",
+      "meaning": "放弃",
+      "example": "He gave up smoking after his doctor's warning.",
+      "translation": "医生警告之后，他戒了烟。"
+    },
+    {
+      "lemma": "look forward to",
+      "surface": "looking forward to",
+      "meaning": "期待，盼望",
+      "example": "We are looking forward to the summer holiday.",
+      "translation": "我们都在盼着暑假。"
+    },
+    {
+      "lemma": "make up one's mind",
+      "surface": "made up her mind",
+      "meaning": "下定决心",
+      "example": "After weeks of thinking, she made up her mind to study abroad.",
+      "translation": "考虑了几周之后，她下定决心出国留学。"
+    },
+    {
+      "lemma": "put off",
+      "surface": "put off",
+      "meaning": "推迟，拖延",
+      "example": "They put off the meeting until next Friday.",
+      "translation": "他们把会议推迟到了下周五。"
+    },
+    {
+      "lemma": "carry out",
+      "surface": "carried out",
+      "meaning": "执行，实施",
+      "example": "The team carried out a survey of local residents.",
+      "translation": "团队对当地居民做了一次调查。"
+    },
+    {
+      "lemma": "figure out",
+      "surface": "figure out",
+      "meaning": "弄明白，想出",
+      "example": "I can't figure out how this machine works.",
+      "translation": "我弄不明白这台机器是怎么运转的。"
+    },
+    {
+      "lemma": "come up with",
+      "surface": "came up with",
+      "meaning": "想出（主意、办法）",
+      "example": "Our manager came up with a clever solution.",
+      "translation": "我们经理想出了一个巧妙的办法。"
+    },
+    {
+      "lemma": "look after",
+      "surface": "looks after",
+      "meaning": "照顾，照料",
+      "example": "Her grandmother looks after the children on weekdays.",
+      "translation": "工作日由她奶奶照看孩子们。"
+    },
+    {
+      "lemma": "look into",
+      "surface": "look into",
+      "meaning": "调查，研究",
+      "example": "The police promised to look into the matter.",
+      "translation": "警方承诺会调查此事。"
+    },
+    {
+      "lemma": "run into",
+      "surface": "ran into",
+      "meaning": "偶然遇到",
+      "example": "I ran into an old classmate at the station.",
+      "translation": "我在车站碰到了一位老同学。"
+    },
+    {
+      "lemma": "run out of",
+      "surface": "ran out of",
+      "meaning": "用完，耗尽",
+      "example": "We ran out of milk, so I went to the shop.",
+      "translation": "牛奶喝完了，所以我去了趟商店。"
+    },
+    {
+      "lemma": "set up",
+      "surface": "set up",
+      "meaning": "建立，创办",
+      "example": "She set up her own company at the age of thirty.",
+      "translation": "她三十岁时创办了自己的公司。"
+    },
+    {
+      "lemma": "turn down",
+      "surface": "turned down",
+      "meaning": "拒绝（请求、提议）",
+      "example": "He turned down the job offer because of the long commute.",
+      "translation": "因为通勤太远，他拒绝了那份工作。"
+    },
+    {
+      "lemma": "bring up",
+      "surface": "brought up",
+      "meaning": "提出（话题）；抚养",
+      "example": "She brought up an interesting point during the discussion.",
+      "translation": "她在讨论中提出了一个有意思的观点。"
+    },
+    {
+      "lemma": "point out",
+      "surface": "pointed out",
+      "meaning": "指出",
+      "example": "The teacher pointed out a few mistakes in my essay.",
+      "translation": "老师指出了我作文里的几处错误。"
+    },
+    {
+      "lemma": "deal with",
+      "surface": "deal with",
+      "meaning": "处理，应对",
+      "example": "Nurses have to deal with stressful situations every day.",
+      "translation": "护士每天都要应对紧张的局面。"
+    },
+    {
+      "lemma": "get along with",
+      "surface": "gets along with",
+      "meaning": "与……相处融洽",
+      "example": "She gets along with everyone in the office.",
+      "translation": "她和办公室里每个人都相处得很好。"
+    },
+    {
+      "lemma": "keep up with",
+      "surface": "keep up with",
+      "meaning": "跟上，赶上",
+      "example": "It is hard to keep up with the latest technology.",
+      "translation": "要跟上最新的技术并不容易。"
+    },
+    {
+      "lemma": "catch up with",
+      "surface": "catch up with",
+      "meaning": "追上，赶上",
+      "example": "Go ahead, and I'll catch up with you later.",
+      "translation": "你先走，我待会儿追上你。"
+    },
+    {
+      "lemma": "put up with",
+      "surface": "put up with",
+      "meaning": "忍受，容忍",
+      "example": "I can't put up with this noise any longer.",
+      "translation": "这噪音我再也受不了了。"
+    },
+    {
+      "lemma": "get rid of",
+      "surface": "get rid of",
+      "meaning": "摆脱，扔掉",
+      "example": "We need to get rid of these old boxes.",
+      "translation": "我们得把这些旧箱子处理掉。"
+    },
+    {
+      "lemma": "go through",
+      "surface": "went through",
+      "meaning": "经历（困难）；仔细检查",
+      "example": "The country went through a difficult period after the war.",
+      "translation": "战后这个国家经历了一段艰难时期。"
+    },
+    {
+      "lemma": "end up",
+      "surface": "ended up",
+      "meaning": "最终（处于某种状态）",
+      "example": "We got lost and ended up in a small village.",
+      "translation": "我们迷了路，最后到了一个小村子。"
+    },
+    {
+      "lemma": "turn out",
+      "surface": "turned out",
+      "meaning": "结果是，原来是",
+      "example": "The rumour turned out to be false.",
+      "translation": "那个传言原来是假的。"
+    },
+    {
+      "lemma": "work out",
+      "surface": "worked out",
+      "meaning": "想出，解决；结果是",
+      "example": "We finally worked out a plan that suited everyone.",
+      "translation": "我们终于想出了一个人人都满意的方案。"
+    },
+    {
+      "lemma": "call off",
+      "surface": "called off",
+      "meaning": "取消",
+      "example": "The match was called off because of heavy rain.",
+      "translation": "由于大雨，比赛取消了。"
+    },
+    {
+      "lemma": "break down",
+      "surface": "broke down",
+      "meaning": "（机器）出故障；（谈判）破裂",
+      "example": "Our car broke down on the way to the airport.",
+      "translation": "我们的车在去机场的路上抛锚了。"
+    },
+    {
+      "lemma": "break out",
+      "surface": "broke out",
+      "meaning": "（战争、火灾等）爆发",
+      "example": "A fire broke out in the kitchen last night.",
+      "translation": "昨晚厨房里起了火。"
+    },
+    {
+      "lemma": "show up",
+      "surface": "showed up",
+      "meaning": "出现，露面",
+      "example": "Only half of the guests showed up on time.",
+      "translation": "只有一半客人准时到场。"
+    },
+    {
+      "lemma": "hand in",
+      "surface": "hand in",
+      "meaning": "上交，提交",
+      "example": "Please hand in your homework before Monday.",
+      "translation": "请在周一前交作业。"
+    },
+    {
+      "lemma": "fill in",
+      "surface": "Fill in",
+      "meaning": "填写（表格）",
+      "example": "Fill in your name and address on this form.",
+      "translation": "在这张表上填写你的姓名和地址。"
+    },
+    {
+      "lemma": "find out",
+      "surface": "find out",
+      "meaning": "查明，发现",
+      "example": "I called the station to find out when the train leaves.",
+      "translation": "我给车站打电话，问火车什么时候开。"
+    },
+    {
+      "lemma": "take over",
+      "surface": "took over",
+      "meaning": "接管，接手",
+      "example": "A larger firm took over the company last year.",
+      "translation": "去年一家更大的公司收购了这家公司。"
+    },
+    {
+      "lemma": "take up",
+      "surface": "took up",
+      "meaning": "开始从事（爱好）；占用",
+      "example": "My father took up painting after he retired.",
+      "translation": "我父亲退休后开始学画画。"
+    },
+    {
+      "lemma": "take off",
+      "surface": "took off",
+      "meaning": "（飞机）起飞；迅速成功",
+      "example": "The plane took off half an hour late.",
+      "translation": "飞机晚了半小时起飞。"
+    },
+    {
+      "lemma": "pick up",
+      "surface": "picked up",
+      "meaning": "学会（技能）；接（人）",
+      "example": "She picked up some Spanish while travelling.",
+      "translation": "她在旅行中学会了一些西班牙语。"
+    },
+    {
+      "lemma": "let down",
+      "surface": "let you down",
+      "meaning": "使失望",
+      "example": "I promised to help, and I won't let you down.",
+      "translation": "我答应过帮忙，就不会让你失望。"
+    },
+    {
+      "lemma": "count on",
+      "surface": "count on",
+      "meaning": "依靠，指望",
+      "example": "You can always count on her in a crisis.",
+      "translation": "遇到危机时你总可以依靠她。"
+    },
+    {
+      "lemma": "rely on",
+      "surface": "rely on",
+      "meaning": "依赖，依靠",
+      "example": "Many farmers rely on rain for their crops.",
+      "translation": "许多农民靠天下雨来浇灌庄稼。"
+    },
+    {
+      "lemma": "cope with",
+      "surface": "cope with",
+      "meaning": "应付，处理",
+      "example": "She found it hard to cope with the pressure.",
+      "translation": "她觉得很难应付这种压力。"
+    },
+    {
+      "lemma": "stand for",
+      "surface": "stand for",
+      "meaning": "代表，象征",
+      "example": "The letters UN stand for United Nations.",
+      "translation": "字母 UN 代表联合国。"
+    },
+    {
+      "lemma": "stand out",
+      "surface": "stands out",
+      "meaning": "突出，显眼",
+      "example": "Her red coat stands out in the crowd.",
+      "translation": "她的红外套在人群中很显眼。"
+    },
+    {
+      "lemma": "hold on",
+      "surface": "Hold on",
+      "meaning": "稍等；坚持住",
+      "example": "Hold on, I need to find my keys.",
+      "translation": "等一下，我得找找钥匙。"
+    },
+    {
+      "lemma": "look up",
+      "surface": "looked up",
+      "meaning": "（在词典等中）查找",
+      "example": "I looked up the word in my dictionary.",
+      "translation": "我在词典里查了这个词。"
+    },
+    {
+      "lemma": "look down on",
+      "surface": "looks down on",
+      "meaning": "看不起，轻视",
+      "example": "He looks down on people who didn't go to university.",
+      "translation": "他看不起没上过大学的人。"
+    },
+    {
+      "lemma": "look up to",
+      "surface": "looked up to",
+      "meaning": "尊敬，仰慕",
+      "example": "As a boy, he looked up to his older brother.",
+      "translation": "小时候他很崇拜他的哥哥。"
+    },
+    {
+      "lemma": "make sense",
+      "surface": "makes sense",
+      "meaning": "有道理，讲得通",
+      "example": "Your explanation makes sense to me.",
+      "translation": "你的解释我觉得说得通。"
+    },
+    {
+      "lemma": "make sense of",
+      "surface": "make sense of",
+      "meaning": "理解，弄懂",
+      "example": "I couldn't make sense of the instructions.",
+      "translation": "我看不懂这份说明。"
+    },
+    {
+      "lemma": "pay attention to",
+      "surface": "Pay attention to",
+      "meaning": "注意，留心",
+      "example": "Pay attention to the road when you are driving.",
+      "translation": "开车时要注意路况。"
+    },
+    {
+      "lemma": "take part in",
+      "surface": "took part in",
+      "meaning": "参加，参与",
+      "example": "Over a thousand runners took part in the race.",
+      "translation": "一千多名选手参加了这场比赛。"
+    },
+    {
+      "lemma": "take place",
+      "surface": "took place",
+      "meaning": "发生，举行",
+      "example": "The wedding took place in a small church.",
+      "translation": "婚礼在一座小教堂里举行。"
+    },
+    {
+      "lemma": "take care of",
+      "surface": "take care of",
+      "meaning": "照顾；处理",
+      "example": "Don't worry about the bills; I'll take care of them.",
+      "translation": "账单别担心，我来处理。"
+    },
+    {
+      "lemma": "take into account",
+      "surface": "take into account",
+      "meaning": "考虑到，顾及",
+      "example": "You should take into account the cost of travel.",
+      "translation": "你应该把交通费用考虑进去。"
+    },
+    {
+      "lemma": "make a difference",
+      "surface": "makes a difference",
+      "meaning": "有影响，起作用",
+      "example": "A little kindness makes a difference.",
+      "translation": "一点点善意就能带来改变。"
+    },
+    {
+      "lemma": "make progress",
+      "surface": "made good progress",
+      "meaning": "取得进展",
+      "example": "The patient has made good progress since the operation.",
+      "translation": "手术后病人恢复得很好。"
+    },
+    {
+      "lemma": "make an effort",
+      "surface": "made an effort",
+      "meaning": "努力，尽力",
+      "example": "He made an effort to be friendly to the new staff.",
+      "translation": "他尽力对新员工友好一些。"
+    },
+    {
+      "lemma": "make a decision",
+      "surface": "make a decision",
+      "meaning": "做出决定",
+      "example": "We need to make a decision by tomorrow.",
+      "translation": "我们得在明天之前做出决定。"
+    },
+    {
+      "lemma": "make a mistake",
+      "surface": "made a mistake",
+      "meaning": "犯错",
+      "example": "I made a mistake in the last question.",
+      "translation": "最后一题我做错了。"
+    },
+    {
+      "lemma": "do one's best",
+      "surface": "did his best",
+      "meaning": "尽力而为",
+      "example": "He did his best, but he still lost the game.",
+      "translation": "他已经尽力了，但还是输了比赛。"
+    },
+    {
+      "lemma": "keep in touch",
+      "surface": "keep in touch",
+      "meaning": "保持联系",
+      "example": "Let's keep in touch after you move to Canada.",
+      "translation": "你搬去加拿大以后，我们保持联系吧。"
+    },
+    {
+      "lemma": "lose touch with",
+      "surface": "lost touch with",
+      "meaning": "与……失去联系",
+      "example": "I lost touch with most of my school friends.",
+      "translation": "我和大部分中学同学都断了联系。"
+    },
+    {
+      "lemma": "get used to",
+      "surface": "get used to",
+      "meaning": "习惯于",
+      "example": "It took me months to get used to the cold weather.",
+      "translation": "我花了好几个月才习惯这里的寒冷天气。"
+    },
+    {
+      "lemma": "get in touch with",
+      "surface": "get in touch with",
+      "meaning": "与……取得联系",
+      "example": "Please get in touch with us if you have any questions.",
+      "translation": "如有任何问题，请与我们联系。"
+    },
+    {
+      "lemma": "get on with",
+      "surface": "get on with",
+      "meaning": "继续做；与……相处",
+      "example": "Stop chatting and get on with your work.",
+      "translation": "别聊了，接着干活。"
+    },
+    {
+      "lemma": "get over",
+      "surface": "get over",
+      "meaning": "从（疾病、打击）中恢复",
+      "example": "It took her a long time to get over the loss.",
+      "translation": "她过了很久才从失去亲人的痛苦中走出来。"
+    },
+    {
+      "lemma": "get through",
+      "surface": "get through",
+      "meaning": "熬过，度过；打通电话",
+      "example": "Music helped him get through the hard times.",
+      "translation": "音乐帮他熬过了那段艰难的日子。"
+    },
+    {
+      "lemma": "give in",
+      "surface": "gave in",
+      "meaning": "屈服，让步",
+      "example": "After hours of argument, he finally gave in.",
+      "translation": "争论了几个小时后，他终于让步了。"
+    },
+    {
+      "lemma": "give away",
+      "surface": "gave away",
+      "meaning": "赠送；泄露",
+      "example": "She gave away most of her books when she moved.",
+      "translation": "搬家时她把大部分书都送人了。"
+    },
+    {
+      "lemma": "go on",
+      "surface": "went on",
+      "meaning": "继续；发生",
+      "example": "The meeting went on for three hours.",
+      "translation": "会议持续了三个小时。"
+    },
+    {
+      "lemma": "go over",
+      "surface": "go over",
+      "meaning": "仔细检查；复习",
+      "example": "Let's go over the plan once more.",
+      "translation": "我们再把计划过一遍。"
+    },
+    {
+      "lemma": "hang out",
+      "surface": "hang out",
+      "meaning": "闲逛，消磨时间",
+      "example": "We used to hang out at the café after class.",
+      "translation": "我们以前下课后常在那家咖啡馆待着。"
+    },
+    {
+      "lemma": "hold back",
+      "surface": "held back",
+      "meaning": "抑制，阻碍",
+      "example": "She held back her tears during the speech.",
+      "translation": "演讲时她忍住了眼泪。"
+    },
+    {
+      "lemma": "keep on",
+      "surface": "kept on",
+      "meaning": "继续，坚持",
+      "example": "He kept on asking the same question.",
+      "translation": "他一直问同一个问题。"
+    },
+    {
+      "lemma": "leave out",
+      "surface": "left out",
+      "meaning": "遗漏，省略",
+      "example": "You left out an important detail.",
+      "translation": "你漏掉了一个重要细节。"
+    },
+    {
+      "lemma": "live up to",
+      "surface": "live up to",
+      "meaning": "不辜负，达到（期望）",
+      "example": "The film didn't live up to my expectations.",
+      "translation": "这部电影没有达到我的期望。"
+    },
+    {
+      "lemma": "make up for",
+      "surface": "make up for",
+      "meaning": "弥补，补偿",
+      "example": "He bought her flowers to make up for being late.",
+      "translation": "他买了花给她，作为迟到的补偿。"
+    },
+    {
+      "lemma": "pass away",
+      "surface": "passed away",
+      "meaning": "去世",
+      "example": "His grandfather passed away last spring.",
+      "translation": "他的祖父去年春天去世了。"
+    },
+    {
+      "lemma": "pull over",
+      "surface": "pulled over",
+      "meaning": "（车辆）靠边停下",
+      "example": "The driver pulled over to check the map.",
+      "translation": "司机把车停到路边看地图。"
+    },
+    {
+      "lemma": "put forward",
+      "surface": "put forward",
+      "meaning": "提出（建议、计划）",
+      "example": "The committee put forward several new proposals.",
+      "translation": "委员会提出了几项新建议。"
+    },
+    {
+      "lemma": "put on",
+      "surface": "Put on",
+      "meaning": "穿上；增加（体重）",
+      "example": "Put on your coat; it's freezing outside.",
+      "translation": "穿上外套，外面冷极了。"
+    },
+    {
+      "lemma": "put out",
+      "surface": "put out",
+      "meaning": "扑灭（火）",
+      "example": "Firefighters quickly put out the fire.",
+      "translation": "消防员很快扑灭了大火。"
+    },
+    {
+      "lemma": "rule out",
+      "surface": "ruled out",
+      "meaning": "排除（可能性）",
+      "example": "The doctor ruled out a serious illness.",
+      "translation": "医生排除了患重病的可能。"
+    },
+    {
+      "lemma": "see off",
+      "surface": "see off",
+      "meaning": "送行",
+      "example": "We went to the airport to see off our cousin.",
+      "translation": "我们去机场给表哥送行。"
+    },
+    {
+      "lemma": "set off",
+      "surface": "set off",
+      "meaning": "出发，动身",
+      "example": "We set off early to avoid the traffic.",
+      "translation": "为了避开堵车，我们很早就出发了。"
+    },
+    {
+      "lemma": "settle down",
+      "surface": "settle down",
+      "meaning": "安顿下来；平静下来",
+      "example": "After years of travelling, they decided to settle down.",
+      "translation": "漂泊多年之后，他们决定安定下来。"
+    },
+    {
+      "lemma": "shut down",
+      "surface": "shut down",
+      "meaning": "关闭，停业",
+      "example": "The factory shut down after forty years.",
+      "translation": "这家工厂开了四十年后关门了。"
+    },
+    {
+      "lemma": "sort out",
+      "surface": "sort out",
+      "meaning": "整理；解决",
+      "example": "I need to sort out my papers before the trip.",
+      "translation": "出发前我得把文件整理好。"
+    },
+    {
+      "lemma": "speak up",
+      "surface": "speak up",
+      "meaning": "大声说；大胆说出意见",
+      "example": "Could you speak up? I can't hear you at the back.",
+      "translation": "你能大声点吗？我在后面听不见。"
+    },
+    {
+      "lemma": "stick to",
+      "surface": "stick to",
+      "meaning": "坚持（计划、原则）",
+      "example": "Try to stick to your budget this month.",
+      "translation": "这个月尽量按预算花钱。"
+    },
+    {
+      "lemma": "take after",
+      "surface": "takes after",
+      "meaning": "（外貌、性格）像（长辈）",
+      "example": "She takes after her mother in many ways.",
+      "translation": "她在很多方面都像她妈妈。"
+    },
+    {
+      "lemma": "think it over",
+      "surface": "think it over",
+      "meaning": "仔细考虑",
+      "example": "Don't answer now; think it over first.",
+      "translation": "现在先别回答，好好考虑一下。"
+    },
+    {
+      "lemma": "throw away",
+      "surface": "threw away",
+      "meaning": "扔掉",
+      "example": "He threw away all his old shoes.",
+      "translation": "他把旧鞋全扔了。"
+    },
+    {
+      "lemma": "try out",
+      "surface": "try out",
+      "meaning": "试用，试验",
+      "example": "You can try out the software for free.",
+      "translation": "这个软件你可以免费试用。"
+    },
+    {
+      "lemma": "turn up",
+      "surface": "turned up",
+      "meaning": "出现；调高（音量）",
+      "example": "He turned up at the party without warning.",
+      "translation": "他事先没打招呼就出现在了聚会上。"
+    },
+    {
+      "lemma": "use up",
+      "surface": "used up",
+      "meaning": "用完",
+      "example": "We have used up all the paper in the printer.",
+      "translation": "打印机里的纸都用完了。"
+    },
+    {
+      "lemma": "wake up",
+      "surface": "woke up",
+      "meaning": "醒来",
+      "example": "I woke up at six this morning.",
+      "translation": "我今天早上六点就醒了。"
+    },
+    {
+      "lemma": "watch out",
+      "surface": "Watch out",
+      "meaning": "当心，小心",
+      "example": "Watch out! There's a car coming.",
+      "translation": "小心！有车来了。"
+    },
+    {
+      "lemma": "wipe out",
+      "surface": "wiped out",
+      "meaning": "彻底消灭，摧毁",
+      "example": "The flood wiped out the entire harvest.",
+      "translation": "洪水毁掉了全部收成。"
+    },
+    {
+      "lemma": "work on",
+      "surface": "working on",
+      "meaning": "从事，致力于",
+      "example": "She is working on a new novel.",
+      "translation": "她正在写一部新小说。"
+    },
+    {
+      "lemma": "account for",
+      "surface": "accounts for",
+      "meaning": "占（比例）；解释",
+      "example": "Tourism accounts for a third of the city's income.",
+      "translation": "旅游业占这座城市收入的三分之一。"
+    },
+    {
+      "lemma": "add up",
+      "surface": "add up",
+      "meaning": "说得通；累积",
+      "example": "His story just doesn't add up.",
+      "translation": "他的说法根本讲不通。"
+    },
+    {
+      "lemma": "back up",
+      "surface": "back up",
+      "meaning": "支持；备份",
+      "example": "Make sure you back up your files every week.",
+      "translation": "记得每周备份一次文件。"
+    },
+    {
+      "lemma": "blow up",
+      "surface": "blew up",
+      "meaning": "爆炸；炸毁；发脾气",
+      "example": "The soldiers blew up the bridge to stop the enemy.",
+      "translation": "士兵们炸毁了桥，以阻止敌人前进。"
+    },
+    {
+      "lemma": "break into",
+      "surface": "broke into",
+      "meaning": "闯入",
+      "example": "Someone broke into our house while we were away.",
+      "translation": "我们不在家时，有人闯进了屋子。"
+    },
+    {
+      "lemma": "break up",
+      "surface": "broke up",
+      "meaning": "分手；解散",
+      "example": "The band broke up after their third album.",
+      "translation": "这支乐队在第三张专辑后解散了。"
+    },
+    {
+      "lemma": "bring about",
+      "surface": "brought about",
+      "meaning": "导致，带来",
+      "example": "The internet has brought about huge changes in education.",
+      "translation": "互联网给教育带来了巨大变化。"
+    },
+    {
+      "lemma": "bring back",
+      "surface": "brings back",
+      "meaning": "使回想起",
+      "example": "This song brings back memories of my childhood.",
+      "translation": "这首歌让我想起了童年。"
+    },
+    {
+      "lemma": "call for",
+      "surface": "calls for",
+      "meaning": "需要；呼吁",
+      "example": "This situation calls for immediate action.",
+      "translation": "这种情况需要立即采取行动。"
+    },
+    {
+      "lemma": "calm down",
+      "surface": "calm down",
+      "meaning": "平静下来",
+      "example": "Take a deep breath and calm down.",
+      "translation": "深呼吸，冷静下来。"
+    },
+    {
+      "lemma": "carry on",
+      "surface": "carry on",
+      "meaning": "继续",
+      "example": "Sorry to interrupt; please carry on.",
+      "translation": "抱歉打断了，请继续。"
+    },
+    {
+      "lemma": "check in",
+      "surface": "check in",
+      "meaning": "办理登记（入住、登机）",
+      "example": "You need to check in two hours before the flight.",
+      "translation": "你需要在航班起飞前两小时办理登机。"
+    },
+    {
+      "lemma": "cheer up",
+      "surface": "Cheer up",
+      "meaning": "振作起来，高兴起来",
+      "example": "Cheer up! Things will get better soon.",
+      "translation": "振作点！情况很快就会好起来的。"
+    },
+    {
+      "lemma": "come across",
+      "surface": "came across",
+      "meaning": "偶然发现",
+      "example": "I came across an old photo in the drawer.",
+      "translation": "我在抽屉里偶然发现了一张老照片。"
+    },
+    {
+      "lemma": "come up",
+      "surface": "came up",
+      "meaning": "（问题等）出现，被提出",
+      "example": "A few problems came up during the test.",
+      "translation": "测试中出现了几个问题。"
+    },
+    {
+      "lemma": "cut down on",
+      "surface": "cut down on",
+      "meaning": "减少（消耗）",
+      "example": "The doctor told him to cut down on sugar.",
+      "translation": "医生让他少吃糖。"
+    },
+    {
+      "lemma": "depend on",
+      "surface": "depends on",
+      "meaning": "取决于；依靠",
+      "example": "The price depends on the size of the room.",
+      "translation": "价格取决于房间大小。"
+    },
+    {
+      "lemma": "drop by",
+      "surface": "drop by",
+      "meaning": "顺便拜访",
+      "example": "Feel free to drop by if you are in the area.",
+      "translation": "如果你在附近，随时过来坐坐。"
+    },
+    {
+      "lemma": "drop out of",
+      "surface": "dropped out of",
+      "meaning": "退学，退出",
+      "example": "He dropped out of college to start a business.",
+      "translation": "他从大学退学去创业了。"
+    },
+    {
+      "lemma": "fall apart",
+      "surface": "fell apart",
+      "meaning": "崩溃，瓦解",
+      "example": "Their plans fell apart when the funding ran out.",
+      "translation": "资金用完后，他们的计划就泡汤了。"
+    },
+    {
+      "lemma": "fall behind",
+      "surface": "fell behind",
+      "meaning": "落后",
+      "example": "He fell behind in class after his illness.",
+      "translation": "生病之后他的功课落下了。"
+    },
+    {
+      "lemma": "get across",
+      "surface": "get across",
+      "meaning": "讲清楚，使被理解",
+      "example": "His speech failed to get across the main message.",
+      "translation": "他的演讲没能把主要意思讲清楚。"
+    },
+    {
+      "lemma": "get away with",
+      "surface": "got away with",
+      "meaning": "做坏事而未受惩罚",
+      "example": "He cheated on the test and got away with it.",
+      "translation": "他考试作弊，却没受到任何处罚。"
+    },
+    {
+      "lemma": "go ahead",
+      "surface": "Go ahead",
+      "meaning": "开始做；（表示允许）请便",
+      "example": "Go ahead and start eating; don't wait for me.",
+      "translation": "你们先吃吧，别等我。"
+    },
+    {
+      "lemma": "go off",
+      "surface": "went off",
+      "meaning": "（闹钟）响；（炸弹）爆炸",
+      "example": "My alarm went off at five o'clock.",
+      "translation": "我的闹钟五点就响了。"
+    },
+    {
+      "lemma": "go out of business",
+      "surface": "went out of business",
+      "meaning": "倒闭，停业",
+      "example": "The bookshop went out of business last year.",
+      "translation": "那家书店去年倒闭了。"
+    },
+    {
+      "lemma": "grow up",
+      "surface": "grew up",
+      "meaning": "长大",
+      "example": "She grew up in a small town by the sea.",
+      "translation": "她在海边的一个小镇长大。"
+    },
+    {
+      "lemma": "hand out",
+      "surface": "handed out",
+      "meaning": "分发",
+      "example": "The volunteers handed out water to the runners.",
+      "translation": "志愿者给跑步的人分发饮用水。"
+    },
+    {
+      "lemma": "head for",
+      "surface": "headed for",
+      "meaning": "前往，朝……走去",
+      "example": "After lunch, we headed for the beach.",
+      "translation": "午饭后，我们朝海滩走去。"
+    },
+    {
+      "lemma": "hold up",
+      "surface": "held up",
+      "meaning": "耽搁，延误",
+      "example": "Sorry I'm late; I was held up in traffic.",
+      "translation": "抱歉我来晚了，路上堵车耽搁了。"
+    },
+    {
+      "lemma": "join in",
+      "surface": "joined in",
+      "meaning": "参加（活动）",
+      "example": "When the music started, everyone joined in.",
+      "translation": "音乐一响，大家都加入了进来。"
+    },
+    {
+      "lemma": "keep away from",
+      "surface": "Keep away from",
+      "meaning": "远离",
+      "example": "Keep away from the edge of the cliff.",
+      "translation": "离悬崖边远一点。"
+    },
+    {
+      "lemma": "keep out",
+      "surface": "Keep out",
+      "meaning": "不让进入",
+      "example": "Keep out! This area is dangerous.",
+      "translation": "禁止入内！这里很危险。"
+    },
+    {
+      "lemma": "lay off",
+      "surface": "laid off",
+      "meaning": "解雇（因裁员）",
+      "example": "The company laid off two hundred workers.",
+      "translation": "公司裁掉了两百名员工。"
+    },
+    {
+      "lemma": "let in",
+      "surface": "let in",
+      "meaning": "让……进来",
+      "example": "Open the window to let in some fresh air.",
+      "translation": "打开窗户透透新鲜空气。"
+    },
+    {
+      "lemma": "log in",
+      "surface": "log in",
+      "meaning": "登录",
+      "example": "You need a password to log in.",
+      "translation": "登录需要密码。"
+    },
+    {
+      "lemma": "look out for",
+      "surface": "Look out for",
+      "meaning": "留意，提防",
+      "example": "Look out for pickpockets in the market.",
+      "translation": "在市场里要提防小偷。"
+    },
+    {
+      "lemma": "look through",
+      "surface": "looked through",
+      "meaning": "浏览，翻阅",
+      "example": "She looked through the report before the meeting.",
+      "translation": "开会前她把报告翻了一遍。"
+    },
+    {
+      "lemma": "make out",
+      "surface": "make out",
+      "meaning": "辨认出；理解",
+      "example": "I couldn't make out what he was saying.",
+      "translation": "我听不清他在说什么。"
+    },
+    {
+      "lemma": "mix up",
+      "surface": "mix up",
+      "meaning": "混淆，弄混",
+      "example": "I always mix up the twins' names.",
+      "translation": "我总是把这对双胞胎的名字弄混。"
+    },
+    {
+      "lemma": "move on",
+      "surface": "move on",
+      "meaning": "继续前进；开始新的事情",
+      "example": "It's time to forget the past and move on.",
+      "translation": "该忘掉过去，继续往前走了。"
+    },
+    {
+      "lemma": "narrow down",
+      "surface": "narrowed down",
+      "meaning": "缩小（范围）",
+      "example": "We narrowed down the list to three candidates.",
+      "translation": "我们把名单缩小到三名候选人。"
+    },
+    {
+      "lemma": "pass on",
+      "surface": "pass on",
+      "meaning": "传递，转告",
+      "example": "Please pass on my thanks to your team.",
+      "translation": "请代我向你的团队致谢。"
+    },
+    {
+      "lemma": "pay back",
+      "surface": "pay back",
+      "meaning": "偿还",
+      "example": "I'll pay back the money next week.",
+      "translation": "我下周还钱。"
+    },
+    {
+      "lemma": "pay off",
+      "surface": "paid off",
+      "meaning": "取得成功；还清",
+      "example": "All her hard work finally paid off.",
+      "translation": "她的努力终于有了回报。"
+    },
+    {
+      "lemma": "pick out",
+      "surface": "picked out",
+      "meaning": "挑选",
+      "example": "She picked out a blue dress for the party.",
+      "translation": "她为聚会挑了一条蓝裙子。"
+    },
+    {
+      "lemma": "put away",
+      "surface": "Put away",
+      "meaning": "收起来，放好",
+      "example": "Put away your toys before dinner.",
+      "translation": "吃饭前把玩具收好。"
+    },
+    {
+      "lemma": "put together",
+      "surface": "put together",
+      "meaning": "组装；汇集",
+      "example": "It took us two hours to put together the bookshelf.",
+      "translation": "我们花了两个小时才把书架装好。"
+    },
+    {
+      "lemma": "reach out to",
+      "surface": "reached out to",
+      "meaning": "主动联系，向……伸出援手",
+      "example": "The charity reached out to families in need.",
+      "translation": "这家慈善机构主动联系有困难的家庭。"
+    },
+    {
+      "lemma": "run away",
+      "surface": "ran away",
+      "meaning": "逃跑",
+      "example": "The dog ran away when it heard the thunder.",
+      "translation": "狗听到雷声就跑掉了。"
+    },
+    {
+      "lemma": "see through",
+      "surface": "see through",
+      "meaning": "识破，看穿",
+      "example": "It was easy to see through his excuse.",
+      "translation": "他的借口很容易被识破。"
+    },
+    {
+      "lemma": "sell out",
+      "surface": "sold out",
+      "meaning": "卖光，售罄",
+      "example": "The concert tickets sold out in ten minutes.",
+      "translation": "音乐会门票十分钟就卖光了。"
+    },
+    {
+      "lemma": "set aside",
+      "surface": "set aside",
+      "meaning": "留出，拨出（时间、钱）",
+      "example": "Try to set aside some money every month.",
+      "translation": "每个月尽量存一点钱。"
+    },
+    {
+      "lemma": "show off",
+      "surface": "show off",
+      "meaning": "炫耀",
+      "example": "He likes to show off his new car.",
+      "translation": "他喜欢炫耀他的新车。"
+    },
+    {
+      "lemma": "sign up for",
+      "surface": "signed up for",
+      "meaning": "报名参加",
+      "example": "I signed up for a cooking class.",
+      "translation": "我报了一个烹饪班。"
+    },
+    {
+      "lemma": "slow down",
+      "surface": "slow down",
+      "meaning": "减速，放慢",
+      "example": "Please slow down; you're driving too fast.",
+      "translation": "请慢一点，你开得太快了。"
+    },
+    {
+      "lemma": "speed up",
+      "surface": "speed up",
+      "meaning": "加速",
+      "example": "We need to speed up the process.",
+      "translation": "我们得加快进度。"
+    },
+    {
+      "lemma": "stay up",
+      "surface": "stayed up",
+      "meaning": "熬夜，不睡",
+      "example": "I stayed up late to watch the match.",
+      "translation": "我熬夜看了比赛。"
+    },
+    {
+      "lemma": "step down",
+      "surface": "stepped down",
+      "meaning": "辞职，下台",
+      "example": "The chairman stepped down after the scandal.",
+      "translation": "丑闻之后董事长辞职了。"
+    },
+    {
+      "lemma": "switch off",
+      "surface": "switch off",
+      "meaning": "关掉（电器）",
+      "example": "Remember to switch off the lights when you leave.",
+      "translation": "离开时记得关灯。"
+    },
+    {
+      "lemma": "take apart",
+      "surface": "took apart",
+      "meaning": "拆开",
+      "example": "He took apart the radio to see how it worked.",
+      "translation": "他把收音机拆开，想看看它是怎么工作的。"
+    },
+    {
+      "lemma": "take back",
+      "surface": "take back",
+      "meaning": "收回（说过的话）；退回",
+      "example": "I'm sorry; I take back what I said.",
+      "translation": "对不起，我收回刚才的话。"
+    },
+    {
+      "lemma": "talk someone into",
+      "surface": "talked my father into",
+      "meaning": "说服某人做某事",
+      "example": "I finally talked my father into buying a new phone.",
+      "translation": "我终于说服爸爸买了部新手机。"
+    },
+    {
+      "lemma": "talk someone out of",
+      "surface": "talked him out of",
+      "meaning": "劝说某人不做某事",
+      "example": "His friends talked him out of quitting his job.",
+      "translation": "朋友们劝他别辞职。"
+    },
+    {
+      "lemma": "tell apart",
+      "surface": "tell apart",
+      "meaning": "区分，辨别",
+      "example": "Can you tell apart the two sisters?",
+      "translation": "你分得清这对姐妹吗？"
+    },
+    {
+      "lemma": "think of",
+      "surface": "think of",
+      "meaning": "想到；认为",
+      "example": "I can't think of a good title for my essay.",
+      "translation": "我想不出作文的好标题。"
+    },
+    {
+      "lemma": "throw up",
+      "surface": "threw up",
+      "meaning": "呕吐",
+      "example": "The child threw up after eating too much candy.",
+      "translation": "那孩子吃了太多糖，吐了。"
+    },
+    {
+      "lemma": "tidy up",
+      "surface": "tidy up",
+      "meaning": "收拾，整理",
+      "example": "Let's tidy up the room before the guests arrive.",
+      "translation": "客人来之前我们把房间收拾一下。"
+    },
+    {
+      "lemma": "turn into",
+      "surface": "turned into",
+      "meaning": "变成",
+      "example": "The small café turned into a popular restaurant.",
+      "translation": "那家小咖啡馆变成了一家热门餐厅。"
+    },
+    {
+      "lemma": "turn to",
+      "surface": "turned to",
+      "meaning": "求助于；转向",
+      "example": "When she was in trouble, she turned to her teacher for help.",
+      "translation": "遇到麻烦时，她去找老师帮忙。"
+    },
+    {
+      "lemma": "warm up",
+      "surface": "warm up",
+      "meaning": "热身；变暖",
+      "example": "Always warm up before you go running.",
+      "translation": "跑步前一定要先热身。"
+    },
+    {
+      "lemma": "wear out",
+      "surface": "wore out",
+      "meaning": "穿坏，用坏；使筋疲力尽",
+      "example": "He wore out two pairs of shoes on the trip.",
+      "translation": "这次旅行他穿坏了两双鞋。"
+    },
+    {
+      "lemma": "write down",
+      "surface": "Write down",
+      "meaning": "写下，记下",
+      "example": "Write down the address so you don't forget it.",
+      "translation": "把地址记下来，免得忘了。"
+    },
+    {
+      "lemma": "burst into tears",
+      "surface": "burst into tears",
+      "meaning": "突然大哭",
+      "example": "When she heard the news, she burst into tears.",
+      "translation": "听到消息，她一下子哭了出来。"
+    },
+    {
+      "lemma": "catch one's breath",
+      "surface": "catch my breath",
+      "meaning": "喘口气，歇一歇",
+      "example": "Wait a moment; let me catch my breath.",
+      "translation": "等一下，让我喘口气。"
+    },
+    {
+      "lemma": "change one's mind",
+      "surface": "changed his mind",
+      "meaning": "改变主意",
+      "example": "He changed his mind at the last minute.",
+      "translation": "他在最后一刻改变了主意。"
+    },
+    {
+      "lemma": "come true",
+      "surface": "came true",
+      "meaning": "（梦想）实现",
+      "example": "Her dream of becoming a pilot finally came true.",
+      "translation": "她当飞行员的梦想终于实现了。"
+    },
+    {
+      "lemma": "draw a conclusion",
+      "surface": "draw a conclusion",
+      "meaning": "得出结论",
+      "example": "It is too early to draw a conclusion.",
+      "translation": "现在下结论还为时过早。"
+    },
+    {
+      "lemma": "fall asleep",
+      "surface": "fell asleep",
+      "meaning": "睡着",
+      "example": "I fell asleep in the middle of the film.",
+      "translation": "电影看到一半我就睡着了。"
+    },
+    {
+      "lemma": "fall in love with",
+      "surface": "fell in love with",
+      "meaning": "爱上",
+      "example": "They fell in love with the old house at first sight.",
+      "translation": "他们第一眼就爱上了这座老房子。"
+    },
+    {
+      "lemma": "get the hang of",
+      "surface": "getting the hang of",
+      "meaning": "掌握……的窍门",
+      "example": "I'm finally getting the hang of this new software.",
+      "translation": "我终于摸清这个新软件的用法了。"
+    },
+    {
+      "lemma": "give someone a hand",
+      "surface": "give me a hand",
+      "meaning": "帮某人一把",
+      "example": "Could you give me a hand with these bags?",
+      "translation": "你能帮我拿一下这些包吗？"
+    },
+    {
+      "lemma": "have a word with",
+      "surface": "have a word with",
+      "meaning": "和……谈一谈",
+      "example": "Can I have a word with you after the meeting?",
+      "translation": "会后我能和你谈谈吗？"
+    },
+    {
+      "lemma": "keep an eye on",
+      "surface": "keep an eye on",
+      "meaning": "照看，留意",
+      "example": "Could you keep an eye on my bag for a minute?",
+      "translation": "你能帮我看一下包吗？"
+    },
+    {
+      "lemma": "keep one's word",
+      "surface": "kept her word",
+      "meaning": "遵守诺言",
+      "example": "She promised to come, and she kept her word.",
+      "translation": "她答应过要来，她也说到做到了。"
+    },
+    {
+      "lemma": "lose one's temper",
+      "surface": "lost his temper",
+      "meaning": "发脾气",
+      "example": "He lost his temper when the train was cancelled again.",
+      "translation": "火车又一次取消时，他发火了。"
+    },
+    {
+      "lemma": "make friends with",
+      "surface": "made friends with",
+      "meaning": "和……交朋友",
+      "example": "She quickly made friends with her new neighbours.",
+      "translation": "她很快就和新邻居交上了朋友。"
+    },
+    {
+      "lemma": "make room for",
+      "surface": "make room for",
+      "meaning": "腾出地方给",
+      "example": "We moved the sofa to make room for the piano.",
+      "translation": "我们挪开沙发，给钢琴腾地方。"
+    },
+    {
+      "lemma": "make the most of",
+      "surface": "make the most of",
+      "meaning": "充分利用",
+      "example": "Let's make the most of the sunny weather.",
+      "translation": "我们好好利用这晴朗的天气吧。"
+    },
+    {
+      "lemma": "pull one's leg",
+      "surface": "pulling your leg",
+      "meaning": "开某人玩笑",
+      "example": "Don't worry; I'm just pulling your leg.",
+      "translation": "别担心，我只是跟你开个玩笑。"
+    },
+    {
+      "lemma": "run the risk of",
+      "surface": "run the risk of",
+      "meaning": "冒……的风险",
+      "example": "If you don't save your work, you run the risk of losing it.",
+      "translation": "不保存的话，你可能会丢掉所有内容。"
+    },
+    {
+      "lemma": "take a break",
+      "surface": "take a break",
+      "meaning": "休息一下",
+      "example": "Let's take a break and get some coffee.",
+      "translation": "我们休息一下，去喝杯咖啡吧。"
+    },
+    {
+      "lemma": "take it easy",
+      "surface": "take it easy",
+      "meaning": "放松，别紧张",
+      "example": "The doctor told him to take it easy for a few days.",
+      "translation": "医生让他这几天好好休息。"
+    },
+    {
+      "lemma": "lead the way",
+      "surface": "led the way",
+      "meaning": "带路；带头，走在前列",
+      "example": "Our school led the way in recycling.",
+      "translation": "我们学校在垃圾回收方面走在前列。"
+    }
+  ]
+}

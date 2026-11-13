@@ -1,0 +1,1346 @@
+{
+  "id": "prep-expressions",
+  "title": "介词短语与固定表达",
+  "description": "in the wake of、at the expense of、by and large……阅读和写作中高频出现、无法逐字直译的固定表达。",
+  "color": "amber",
+  "version": 1,
+  "entries": [
+    {
+      "lemma": "in the wake of",
+      "surface": "In the wake of",
+      "meaning": "在……之后（常指灾难、事件之后）",
+      "example": "In the wake of the storm, many roads were closed.",
+      "translation": "暴风雨过后，许多道路被封闭。"
+    },
+    {
+      "lemma": "at the expense of",
+      "surface": "at the expense of",
+      "meaning": "以……为代价",
+      "example": "He built his career at the expense of his health.",
+      "translation": "他以牺牲健康为代价成就了事业。"
+    },
+    {
+      "lemma": "on behalf of",
+      "surface": "on behalf of",
+      "meaning": "代表",
+      "example": "I'm writing on behalf of the whole class.",
+      "translation": "我代表全班同学写这封信。"
+    },
+    {
+      "lemma": "in terms of",
+      "surface": "In terms of",
+      "meaning": "就……而言",
+      "example": "In terms of price, this phone is the best choice.",
+      "translation": "就价格而言，这部手机是最佳选择。"
+    },
+    {
+      "lemma": "in spite of",
+      "surface": "in spite of",
+      "meaning": "尽管",
+      "example": "We went out in spite of the rain.",
+      "translation": "尽管下着雨，我们还是出门了。"
+    },
+    {
+      "lemma": "regardless of",
+      "surface": "regardless of",
+      "meaning": "不管，不顾",
+      "example": "Anyone can join, regardless of age.",
+      "translation": "不论年龄大小，任何人都可以参加。"
+    },
+    {
+      "lemma": "in addition to",
+      "surface": "In addition to",
+      "meaning": "除……之外（还）",
+      "example": "In addition to English, she speaks French and German.",
+      "translation": "除了英语，她还会说法语和德语。"
+    },
+    {
+      "lemma": "as a result of",
+      "surface": "as a result of",
+      "meaning": "由于，作为……的结果",
+      "example": "The flight was delayed as a result of the fog.",
+      "translation": "由于大雾，航班延误了。"
+    },
+    {
+      "lemma": "in favour of",
+      "surface": "in favour of",
+      "meaning": "支持，赞成",
+      "example": "Most members voted in favour of the plan.",
+      "translation": "大多数成员投票支持这个计划。"
+    },
+    {
+      "lemma": "in charge of",
+      "surface": "in charge of",
+      "meaning": "负责，主管",
+      "example": "Who is in charge of the project?",
+      "translation": "谁负责这个项目？"
+    },
+    {
+      "lemma": "in case of",
+      "surface": "In case of",
+      "meaning": "万一，如果发生",
+      "example": "In case of fire, use the stairs.",
+      "translation": "万一发生火灾，请走楼梯。"
+    },
+    {
+      "lemma": "in place of",
+      "surface": "in place of",
+      "meaning": "代替",
+      "example": "You can use honey in place of sugar.",
+      "translation": "你可以用蜂蜜代替糖。"
+    },
+    {
+      "lemma": "instead of",
+      "surface": "instead of",
+      "meaning": "代替，而不是",
+      "example": "Let's walk instead of taking the bus.",
+      "translation": "我们走路去吧，别坐公交了。"
+    },
+    {
+      "lemma": "due to",
+      "surface": "due to",
+      "meaning": "由于，因为",
+      "example": "The game was cancelled due to bad weather.",
+      "translation": "由于天气不好，比赛取消了。"
+    },
+    {
+      "lemma": "thanks to",
+      "surface": "Thanks to",
+      "meaning": "多亏，由于",
+      "example": "Thanks to your help, we finished on time.",
+      "translation": "多亏你的帮忙，我们按时完成了。"
+    },
+    {
+      "lemma": "according to",
+      "surface": "According to",
+      "meaning": "根据，按照",
+      "example": "According to the forecast, it will snow tomorrow.",
+      "translation": "根据天气预报，明天会下雪。"
+    },
+    {
+      "lemma": "apart from",
+      "surface": "Apart from",
+      "meaning": "除……之外",
+      "example": "Apart from a few typos, your essay is excellent.",
+      "translation": "除了几处笔误，你的文章写得很好。"
+    },
+    {
+      "lemma": "along with",
+      "surface": "along with",
+      "meaning": "与……一起",
+      "example": "She arrived along with her two children.",
+      "translation": "她带着两个孩子一起来了。"
+    },
+    {
+      "lemma": "by means of",
+      "surface": "by means of",
+      "meaning": "通过，借助",
+      "example": "They crossed the river by means of a small boat.",
+      "translation": "他们借助一条小船渡过了河。"
+    },
+    {
+      "lemma": "by way of",
+      "surface": "by way of",
+      "meaning": "经由；作为",
+      "example": "We travelled to Rome by way of Paris.",
+      "translation": "我们经巴黎去了罗马。"
+    },
+    {
+      "lemma": "for the sake of",
+      "surface": "for the sake of",
+      "meaning": "为了……的利益",
+      "example": "He quit smoking for the sake of his children.",
+      "translation": "他为了孩子戒了烟。"
+    },
+    {
+      "lemma": "in accordance with",
+      "surface": "in accordance with",
+      "meaning": "依照，与……一致",
+      "example": "The building was designed in accordance with safety rules.",
+      "translation": "这栋楼是按照安全规范设计的。"
+    },
+    {
+      "lemma": "in contrast to",
+      "surface": "In contrast to",
+      "meaning": "与……相反，与……对比",
+      "example": "In contrast to her sister, she is very quiet.",
+      "translation": "和她姐姐不同，她非常安静。"
+    },
+    {
+      "lemma": "in comparison with",
+      "surface": "in comparison with",
+      "meaning": "与……相比",
+      "example": "Our house is small in comparison with theirs.",
+      "translation": "跟他们家相比，我们的房子很小。"
+    },
+    {
+      "lemma": "in response to",
+      "surface": "in response to",
+      "meaning": "作为对……的回应",
+      "example": "The company lowered prices in response to complaints.",
+      "translation": "公司降价以回应投诉。"
+    },
+    {
+      "lemma": "in return for",
+      "surface": "in return for",
+      "meaning": "作为对……的回报",
+      "example": "I cooked him dinner in return for his help.",
+      "translation": "我做了顿晚饭，作为对他帮忙的回报。"
+    },
+    {
+      "lemma": "in search of",
+      "surface": "in search of",
+      "meaning": "寻找",
+      "example": "Many young people move to cities in search of work.",
+      "translation": "许多年轻人到城市里找工作。"
+    },
+    {
+      "lemma": "in the face of",
+      "surface": "in the face of",
+      "meaning": "面对（困难、危险）",
+      "example": "She stayed calm in the face of danger.",
+      "translation": "面对危险，她保持冷静。"
+    },
+    {
+      "lemma": "in the light of",
+      "surface": "In the light of",
+      "meaning": "鉴于，根据",
+      "example": "In the light of the new evidence, the case was reopened.",
+      "translation": "鉴于新证据，此案被重新审理。"
+    },
+    {
+      "lemma": "on account of",
+      "surface": "on account of",
+      "meaning": "因为，由于",
+      "example": "The school closed on account of the snow.",
+      "translation": "学校因为下雪停课了。"
+    },
+    {
+      "lemma": "on the basis of",
+      "surface": "on the basis of",
+      "meaning": "根据，以……为基础",
+      "example": "Students are selected on the basis of their grades.",
+      "translation": "学生按成绩选拔。"
+    },
+    {
+      "lemma": "with regard to",
+      "surface": "With regard to",
+      "meaning": "关于，至于",
+      "example": "With regard to your question, I will reply tomorrow.",
+      "translation": "关于你的问题，我明天回复。"
+    },
+    {
+      "lemma": "with respect to",
+      "surface": "with respect to",
+      "meaning": "关于，就……而言",
+      "example": "The two plans differ with respect to cost.",
+      "translation": "这两个方案在成本上有所不同。"
+    },
+    {
+      "lemma": "as for",
+      "surface": "As for",
+      "meaning": "至于",
+      "example": "As for me, I prefer tea.",
+      "translation": "至于我，我更喜欢喝茶。"
+    },
+    {
+      "lemma": "as well as",
+      "surface": "as well as",
+      "meaning": "以及，和……一样",
+      "example": "She plays the piano as well as the violin.",
+      "translation": "她既会弹钢琴，也会拉小提琴。"
+    },
+    {
+      "lemma": "prior to",
+      "surface": "prior to",
+      "meaning": "在……之前",
+      "example": "Please arrive ten minutes prior to the start.",
+      "translation": "请在开始前十分钟到场。"
+    },
+    {
+      "lemma": "in line with",
+      "surface": "in line with",
+      "meaning": "与……一致，符合",
+      "example": "Salaries will rise in line with inflation.",
+      "translation": "工资将随通胀同步上调。"
+    },
+    {
+      "lemma": "in the event of",
+      "surface": "In the event of",
+      "meaning": "万一，如果发生",
+      "example": "In the event of an emergency, call this number.",
+      "translation": "如遇紧急情况，请拨打这个号码。"
+    },
+    {
+      "lemma": "at the mercy of",
+      "surface": "at the mercy of",
+      "meaning": "任由……摆布",
+      "example": "The small boat was at the mercy of the waves.",
+      "translation": "小船任凭海浪摆布。"
+    },
+    {
+      "lemma": "at the cost of",
+      "surface": "at the cost of",
+      "meaning": "以……为代价",
+      "example": "They won the war at the cost of many lives.",
+      "translation": "他们以许多人的生命为代价赢得了战争。"
+    },
+    {
+      "lemma": "by virtue of",
+      "surface": "by virtue of",
+      "meaning": "凭借，由于",
+      "example": "She got the job by virtue of her experience.",
+      "translation": "她凭借经验得到了这份工作。"
+    },
+    {
+      "lemma": "in the middle of",
+      "surface": "in the middle of",
+      "meaning": "在……中间；正忙于",
+      "example": "The phone rang in the middle of the night.",
+      "translation": "电话在半夜响了起来。"
+    },
+    {
+      "lemma": "at the end of",
+      "surface": "At the end of",
+      "meaning": "在……的末尾",
+      "example": "At the end of the day, we were all exhausted.",
+      "translation": "一天结束时，我们都筋疲力尽。"
+    },
+    {
+      "lemma": "at the beginning of",
+      "surface": "at the beginning of",
+      "meaning": "在……的开始",
+      "example": "We met at the beginning of the term.",
+      "translation": "我们是在学期初认识的。"
+    },
+    {
+      "lemma": "on top of",
+      "surface": "On top of",
+      "meaning": "除……之外（还）；在……上面",
+      "example": "On top of everything else, it started to rain.",
+      "translation": "更糟的是，天还下起了雨。"
+    },
+    {
+      "lemma": "out of control",
+      "surface": "out of control",
+      "meaning": "失去控制",
+      "example": "The fire was soon out of control.",
+      "translation": "火势很快就失控了。"
+    },
+    {
+      "lemma": "out of date",
+      "surface": "out of date",
+      "meaning": "过时的",
+      "example": "This map is out of date.",
+      "translation": "这张地图已经过时了。"
+    },
+    {
+      "lemma": "out of order",
+      "surface": "out of order",
+      "meaning": "出故障",
+      "example": "The lift is out of order again.",
+      "translation": "电梯又坏了。"
+    },
+    {
+      "lemma": "out of reach",
+      "surface": "out of reach",
+      "meaning": "够不着",
+      "example": "Keep medicine out of reach of children.",
+      "translation": "药品要放在儿童够不着的地方。"
+    },
+    {
+      "lemma": "out of stock",
+      "surface": "out of stock",
+      "meaning": "缺货",
+      "example": "Sorry, that size is out of stock.",
+      "translation": "抱歉，那个尺码缺货了。"
+    },
+    {
+      "lemma": "out of the question",
+      "surface": "out of the question",
+      "meaning": "不可能的，不予考虑的",
+      "example": "Going out in this storm is out of the question.",
+      "translation": "这么大的暴风雨，出门是不可能的。"
+    },
+    {
+      "lemma": "under control",
+      "surface": "under control",
+      "meaning": "在控制之下",
+      "example": "Don't worry; everything is under control.",
+      "translation": "别担心，一切都在掌控之中。"
+    },
+    {
+      "lemma": "under pressure",
+      "surface": "under pressure",
+      "meaning": "承受压力",
+      "example": "She works well under pressure.",
+      "translation": "她在压力下也能把工作做好。"
+    },
+    {
+      "lemma": "under construction",
+      "surface": "under construction",
+      "meaning": "在建，施工中",
+      "example": "A new bridge is under construction.",
+      "translation": "一座新桥正在建设中。"
+    },
+    {
+      "lemma": "in danger",
+      "surface": "in danger",
+      "meaning": "处于危险中",
+      "example": "Many species are in danger because of climate change.",
+      "translation": "由于气候变化，许多物种濒临危险。"
+    },
+    {
+      "lemma": "in advance",
+      "surface": "in advance",
+      "meaning": "提前，预先",
+      "example": "Please book your tickets in advance.",
+      "translation": "请提前订票。"
+    },
+    {
+      "lemma": "in general",
+      "surface": "In general",
+      "meaning": "总的来说，一般而言",
+      "example": "In general, people here are very friendly.",
+      "translation": "总的来说，这里的人都很友好。"
+    },
+    {
+      "lemma": "in particular",
+      "surface": "in particular",
+      "meaning": "尤其，特别",
+      "example": "I love fruit, and mangoes in particular.",
+      "translation": "我爱吃水果，尤其是芒果。"
+    },
+    {
+      "lemma": "in public",
+      "surface": "in public",
+      "meaning": "公开地，当众",
+      "example": "He doesn't like speaking in public.",
+      "translation": "他不喜欢在公众场合讲话。"
+    },
+    {
+      "lemma": "in person",
+      "surface": "in person",
+      "meaning": "亲自，本人",
+      "example": "You must apply for a passport in person.",
+      "translation": "申请护照必须本人到场。"
+    },
+    {
+      "lemma": "in time",
+      "surface": "in time",
+      "meaning": "及时；最终",
+      "example": "We arrived just in time for the show.",
+      "translation": "我们正好赶上了演出。"
+    },
+    {
+      "lemma": "on time",
+      "surface": "on time",
+      "meaning": "准时",
+      "example": "The train left on time.",
+      "translation": "火车准时开出。"
+    },
+    {
+      "lemma": "on purpose",
+      "surface": "on purpose",
+      "meaning": "故意地",
+      "example": "I'm sure he broke the window on purpose.",
+      "translation": "我肯定他是故意打破窗户的。"
+    },
+    {
+      "lemma": "by accident",
+      "surface": "by accident",
+      "meaning": "偶然地，意外地",
+      "example": "I found the letter by accident.",
+      "translation": "我偶然发现了那封信。"
+    },
+    {
+      "lemma": "by chance",
+      "surface": "by chance",
+      "meaning": "碰巧",
+      "example": "We met by chance at a bookshop.",
+      "translation": "我们在一家书店偶然相遇。"
+    },
+    {
+      "lemma": "by heart",
+      "surface": "by heart",
+      "meaning": "凭记忆，熟记",
+      "example": "She learned the poem by heart.",
+      "translation": "她把那首诗背了下来。"
+    },
+    {
+      "lemma": "by and large",
+      "surface": "By and large",
+      "meaning": "大体上，总的来说",
+      "example": "By and large, the trip was a success.",
+      "translation": "总的来说，这次旅行很成功。"
+    },
+    {
+      "lemma": "at first sight",
+      "surface": "at first sight",
+      "meaning": "乍一看；一见（就）",
+      "example": "It was love at first sight.",
+      "translation": "那是一见钟情。"
+    },
+    {
+      "lemma": "at least",
+      "surface": "at least",
+      "meaning": "至少",
+      "example": "It will take at least two hours.",
+      "translation": "这至少要两个小时。"
+    },
+    {
+      "lemma": "at most",
+      "surface": "at most",
+      "meaning": "至多",
+      "example": "The repair will cost fifty dollars at most.",
+      "translation": "修理费最多五十美元。"
+    },
+    {
+      "lemma": "at once",
+      "surface": "at once",
+      "meaning": "立刻；同时",
+      "example": "Come here at once!",
+      "translation": "马上过来！"
+    },
+    {
+      "lemma": "at random",
+      "surface": "at random",
+      "meaning": "随机地",
+      "example": "The winners were chosen at random.",
+      "translation": "获奖者是随机选出的。"
+    },
+    {
+      "lemma": "at risk",
+      "surface": "at risk",
+      "meaning": "有危险",
+      "example": "Children who don't sleep enough are at risk of poor health.",
+      "translation": "睡眠不足的孩子有健康受损的风险。"
+    },
+    {
+      "lemma": "at a loss",
+      "surface": "at a loss",
+      "meaning": "不知所措",
+      "example": "I was at a loss for words.",
+      "translation": "我一时不知道说什么好。"
+    },
+    {
+      "lemma": "at ease",
+      "surface": "at ease",
+      "meaning": "自在，放松",
+      "example": "She always makes her guests feel at ease.",
+      "translation": "她总能让客人感到自在。"
+    },
+    {
+      "lemma": "on the contrary",
+      "surface": "On the contrary",
+      "meaning": "正相反",
+      "example": "It isn't boring. On the contrary, it's fascinating.",
+      "translation": "这一点也不无聊，恰恰相反，非常有意思。"
+    },
+    {
+      "lemma": "on the other hand",
+      "surface": "on the other hand",
+      "meaning": "另一方面",
+      "example": "The job pays well; on the other hand, the hours are long.",
+      "translation": "这份工作薪水不错，但另一方面，工作时间很长。"
+    },
+    {
+      "lemma": "on the whole",
+      "surface": "On the whole",
+      "meaning": "总的来说",
+      "example": "On the whole, I enjoyed the course.",
+      "translation": "总的来说，我挺喜欢这门课。"
+    },
+    {
+      "lemma": "on the way",
+      "surface": "on the way",
+      "meaning": "在路上；即将到来",
+      "example": "I bought some bread on the way home.",
+      "translation": "我在回家路上买了些面包。"
+    },
+    {
+      "lemma": "on the spot",
+      "surface": "on the spot",
+      "meaning": "当场",
+      "example": "He was offered the job on the spot.",
+      "translation": "他当场就被录用了。"
+    },
+    {
+      "lemma": "on sale",
+      "surface": "on sale",
+      "meaning": "出售；打折出售",
+      "example": "These shoes are on sale this week.",
+      "translation": "这双鞋本周打折。"
+    },
+    {
+      "lemma": "on duty",
+      "surface": "on duty",
+      "meaning": "值班",
+      "example": "Which doctor is on duty tonight?",
+      "translation": "今晚哪位医生值班？"
+    },
+    {
+      "lemma": "on average",
+      "surface": "On average",
+      "meaning": "平均",
+      "example": "On average, I sleep seven hours a night.",
+      "translation": "我平均每晚睡七个小时。"
+    },
+    {
+      "lemma": "for good",
+      "surface": "for good",
+      "meaning": "永远",
+      "example": "She left the country for good.",
+      "translation": "她永远地离开了这个国家。"
+    },
+    {
+      "lemma": "for sure",
+      "surface": "for sure",
+      "meaning": "肯定，确定",
+      "example": "I don't know for sure when he will come.",
+      "translation": "我不确定他什么时候来。"
+    },
+    {
+      "lemma": "for instance",
+      "surface": "for instance",
+      "meaning": "例如",
+      "example": "Some animals, for instance bats, sleep during the day.",
+      "translation": "有些动物白天睡觉，比如蝙蝠。"
+    },
+    {
+      "lemma": "for the time being",
+      "surface": "for the time being",
+      "meaning": "暂时，眼下",
+      "example": "You can stay with us for the time being.",
+      "translation": "你暂时可以住在我们家。"
+    },
+    {
+      "lemma": "from time to time",
+      "surface": "from time to time",
+      "meaning": "不时，偶尔",
+      "example": "We still meet for lunch from time to time.",
+      "translation": "我们还会时不时一起吃午饭。"
+    },
+    {
+      "lemma": "all of a sudden",
+      "surface": "All of a sudden",
+      "meaning": "突然",
+      "example": "All of a sudden, the lights went out.",
+      "translation": "突然，灯全灭了。"
+    },
+    {
+      "lemma": "as a matter of fact",
+      "surface": "As a matter of fact",
+      "meaning": "事实上",
+      "example": "As a matter of fact, I've never been to London.",
+      "translation": "事实上，我从没去过伦敦。"
+    },
+    {
+      "lemma": "as a rule",
+      "surface": "As a rule",
+      "meaning": "通常，一般来说",
+      "example": "As a rule, I don't drink coffee after six.",
+      "translation": "我一般六点后不喝咖啡。"
+    },
+    {
+      "lemma": "as usual",
+      "surface": "as usual",
+      "meaning": "像往常一样",
+      "example": "He was late as usual.",
+      "translation": "他像往常一样又迟到了。"
+    },
+    {
+      "lemma": "as soon as possible",
+      "surface": "as soon as possible",
+      "meaning": "尽快",
+      "example": "Please reply as soon as possible.",
+      "translation": "请尽快回复。"
+    },
+    {
+      "lemma": "in other words",
+      "surface": "In other words",
+      "meaning": "换句话说",
+      "example": "In other words, we need more time.",
+      "translation": "换句话说，我们需要更多时间。"
+    },
+    {
+      "lemma": "in the long run",
+      "surface": "in the long run",
+      "meaning": "从长远来看",
+      "example": "Exercise will save you money in the long run.",
+      "translation": "从长远来看，锻炼能帮你省钱。"
+    },
+    {
+      "lemma": "in the meantime",
+      "surface": "In the meantime",
+      "meaning": "与此同时；在此期间",
+      "example": "The doctor will be here soon. In the meantime, please wait here.",
+      "translation": "医生马上就到，在此期间请在这里等候。"
+    },
+    {
+      "lemma": "in no time",
+      "surface": "in no time",
+      "meaning": "立刻，很快",
+      "example": "The kids finished the pizza in no time.",
+      "translation": "孩子们一下子就把比萨吃光了。"
+    },
+    {
+      "lemma": "in a hurry",
+      "surface": "in a hurry",
+      "meaning": "匆忙",
+      "example": "He left in a hurry and forgot his phone.",
+      "translation": "他走得匆忙，把手机落下了。"
+    },
+    {
+      "lemma": "in a way",
+      "surface": "In a way",
+      "meaning": "在某种程度上",
+      "example": "In a way, losing the job was good for him.",
+      "translation": "在某种程度上，丢了那份工作对他是件好事。"
+    },
+    {
+      "lemma": "in common",
+      "surface": "in common",
+      "meaning": "共同的，相同的",
+      "example": "The two brothers have little in common.",
+      "translation": "这两兄弟没什么共同之处。"
+    },
+    {
+      "lemma": "in detail",
+      "surface": "in detail",
+      "meaning": "详细地",
+      "example": "She explained the plan in detail.",
+      "translation": "她详细解释了这个计划。"
+    },
+    {
+      "lemma": "in fact",
+      "surface": "In fact",
+      "meaning": "事实上",
+      "example": "In fact, the test was easier than I expected.",
+      "translation": "事实上，考试比我预想的容易。"
+    },
+    {
+      "lemma": "in short",
+      "surface": "In short",
+      "meaning": "简而言之",
+      "example": "In short, we need a better strategy.",
+      "translation": "简而言之，我们需要更好的策略。"
+    },
+    {
+      "lemma": "in turn",
+      "surface": "in turn",
+      "meaning": "依次，轮流；反过来",
+      "example": "The students answered the questions in turn.",
+      "translation": "学生们依次回答问题。"
+    },
+    {
+      "lemma": "in vain",
+      "surface": "in vain",
+      "meaning": "徒劳，白费",
+      "example": "They searched for the ring in vain.",
+      "translation": "他们找那枚戒指，结果白费力气。"
+    },
+    {
+      "lemma": "in need",
+      "surface": "in need",
+      "meaning": "在困难中，需要帮助的",
+      "example": "The charity gives food to families in need.",
+      "translation": "这家慈善机构给困难家庭提供食物。"
+    },
+    {
+      "lemma": "in progress",
+      "surface": "in progress",
+      "meaning": "正在进行中",
+      "example": "Please be quiet; an exam is in progress.",
+      "translation": "请安静，考试正在进行。"
+    },
+    {
+      "lemma": "in stock",
+      "surface": "in stock",
+      "meaning": "有现货",
+      "example": "Is this jacket in stock in a larger size?",
+      "translation": "这件夹克有大一号的现货吗？"
+    },
+    {
+      "lemma": "in shape",
+      "surface": "in shape",
+      "meaning": "身体健康，状态好",
+      "example": "She swims every morning to stay in shape.",
+      "translation": "她每天早上游泳以保持身材。"
+    },
+    {
+      "lemma": "in tears",
+      "surface": "in tears",
+      "meaning": "流着泪",
+      "example": "The film left the audience in tears.",
+      "translation": "这部电影让观众热泪盈眶。"
+    },
+    {
+      "lemma": "in trouble",
+      "surface": "in trouble",
+      "meaning": "陷入困境",
+      "example": "The company has been in trouble for years.",
+      "translation": "这家公司多年来一直陷于困境。"
+    },
+    {
+      "lemma": "in the end",
+      "surface": "In the end",
+      "meaning": "最后，最终",
+      "example": "In the end, we decided to stay at home.",
+      "translation": "最后，我们决定待在家里。"
+    },
+    {
+      "lemma": "in the first place",
+      "surface": "in the first place",
+      "meaning": "首先；当初",
+      "example": "Why did you agree to it in the first place?",
+      "translation": "你当初为什么要答应？"
+    },
+    {
+      "lemma": "in a sense",
+      "surface": "In a sense",
+      "meaning": "从某种意义上说",
+      "example": "In a sense, we are all teachers.",
+      "translation": "从某种意义上说，我们都是老师。"
+    },
+    {
+      "lemma": "in no way",
+      "surface": "in no way",
+      "meaning": "决不，一点也不",
+      "example": "This is in no way your fault.",
+      "translation": "这绝对不是你的错。"
+    },
+    {
+      "lemma": "in that case",
+      "surface": "In that case",
+      "meaning": "既然那样，那样的话",
+      "example": "It's raining? In that case, let's take a taxi.",
+      "translation": "下雨了？那我们打车吧。"
+    },
+    {
+      "lemma": "on the one hand",
+      "surface": "On the one hand",
+      "meaning": "一方面",
+      "example": "On the one hand, the city is exciting; on the other, it's expensive.",
+      "translation": "一方面，城市很有活力；另一方面，生活成本很高。"
+    },
+    {
+      "lemma": "on and off",
+      "surface": "on and off",
+      "meaning": "断断续续地",
+      "example": "It rained on and off all day.",
+      "translation": "雨断断续续下了一整天。"
+    },
+    {
+      "lemma": "on the edge of",
+      "surface": "on the edge of",
+      "meaning": "在……的边缘",
+      "example": "They live on the edge of the forest.",
+      "translation": "他们住在森林边上。"
+    },
+    {
+      "lemma": "on the verge of",
+      "surface": "on the verge of",
+      "meaning": "濒于，即将",
+      "example": "The species is on the verge of extinction.",
+      "translation": "这个物种濒临灭绝。"
+    },
+    {
+      "lemma": "on board",
+      "surface": "on board",
+      "meaning": "在船（飞机、火车）上",
+      "example": "There were two hundred passengers on board.",
+      "translation": "机上有两百名乘客。"
+    },
+    {
+      "lemma": "on foot",
+      "surface": "on foot",
+      "meaning": "步行",
+      "example": "We went to the park on foot.",
+      "translation": "我们步行去了公园。"
+    },
+    {
+      "lemma": "on fire",
+      "surface": "on fire",
+      "meaning": "着火",
+      "example": "The house next door was on fire.",
+      "translation": "隔壁的房子着火了。"
+    },
+    {
+      "lemma": "on hold",
+      "surface": "on hold",
+      "meaning": "暂停，搁置",
+      "example": "The project is on hold until next year.",
+      "translation": "这个项目暂时搁置到明年。"
+    },
+    {
+      "lemma": "on the road",
+      "surface": "on the road",
+      "meaning": "在旅途中",
+      "example": "The band spent six months on the road.",
+      "translation": "乐队在外巡演了六个月。"
+    },
+    {
+      "lemma": "on the rise",
+      "surface": "on the rise",
+      "meaning": "在上升，在增加",
+      "example": "House prices are on the rise again.",
+      "translation": "房价又在上涨了。"
+    },
+    {
+      "lemma": "out of breath",
+      "surface": "out of breath",
+      "meaning": "上气不接下气",
+      "example": "He was out of breath after climbing the stairs.",
+      "translation": "爬完楼梯，他上气不接下气。"
+    },
+    {
+      "lemma": "out of work",
+      "surface": "out of work",
+      "meaning": "失业",
+      "example": "My uncle has been out of work since March.",
+      "translation": "我叔叔从三月起就失业了。"
+    },
+    {
+      "lemma": "out of sight",
+      "surface": "out of sight",
+      "meaning": "看不见",
+      "example": "The plane soon flew out of sight.",
+      "translation": "飞机很快就飞得看不见了。"
+    },
+    {
+      "lemma": "out of place",
+      "surface": "out of place",
+      "meaning": "不合适，格格不入",
+      "example": "I felt out of place at the formal dinner.",
+      "translation": "在那场正式晚宴上，我感到格格不入。"
+    },
+    {
+      "lemma": "under the impression that",
+      "surface": "under the impression that",
+      "meaning": "以为，误以为",
+      "example": "I was under the impression that the meeting was cancelled.",
+      "translation": "我还以为会议取消了。"
+    },
+    {
+      "lemma": "under way",
+      "surface": "under way",
+      "meaning": "在进行中",
+      "example": "Repairs are already under way.",
+      "translation": "维修工作已经在进行中。"
+    },
+    {
+      "lemma": "beyond doubt",
+      "surface": "beyond doubt",
+      "meaning": "毋庸置疑",
+      "example": "Her talent is beyond doubt.",
+      "translation": "她的才华毋庸置疑。"
+    },
+    {
+      "lemma": "beyond one's control",
+      "surface": "beyond our control",
+      "meaning": "超出某人控制",
+      "example": "The delay was due to circumstances beyond our control.",
+      "translation": "这次延误是由我们无法控制的情况造成的。"
+    },
+    {
+      "lemma": "within reach",
+      "surface": "within reach",
+      "meaning": "在可及范围内",
+      "example": "Keep a torch within reach in case of a power cut.",
+      "translation": "把手电筒放在手边，以防停电。"
+    },
+    {
+      "lemma": "without doubt",
+      "surface": "without doubt",
+      "meaning": "毫无疑问",
+      "example": "She is without doubt the best player on the team.",
+      "translation": "她无疑是队里最好的球员。"
+    },
+    {
+      "lemma": "at the same time",
+      "surface": "at the same time",
+      "meaning": "同时；然而",
+      "example": "They both started talking at the same time.",
+      "translation": "他们俩同时开始说话。"
+    },
+    {
+      "lemma": "at all costs",
+      "surface": "at all costs",
+      "meaning": "不惜一切代价",
+      "example": "We must avoid another delay at all costs.",
+      "translation": "我们必须不惜一切代价避免再次延误。"
+    },
+    {
+      "lemma": "at first",
+      "surface": "At first",
+      "meaning": "起初",
+      "example": "At first, I didn't like the city.",
+      "translation": "起初我并不喜欢这座城市。"
+    },
+    {
+      "lemma": "at last",
+      "surface": "At last",
+      "meaning": "最后，终于",
+      "example": "At last, the bus arrived.",
+      "translation": "公交车终于来了。"
+    },
+    {
+      "lemma": "at present",
+      "surface": "At present",
+      "meaning": "目前",
+      "example": "At present, she is working in Berlin.",
+      "translation": "目前她在柏林工作。"
+    },
+    {
+      "lemma": "at times",
+      "surface": "At times",
+      "meaning": "有时",
+      "example": "At times, the work can be very stressful.",
+      "translation": "这份工作有时压力很大。"
+    },
+    {
+      "lemma": "at hand",
+      "surface": "at hand",
+      "meaning": "在手边；即将到来",
+      "example": "Help is at hand.",
+      "translation": "援助就在身边。"
+    },
+    {
+      "lemma": "at a glance",
+      "surface": "at a glance",
+      "meaning": "一眼就（看出）",
+      "example": "I could tell at a glance that something was wrong.",
+      "translation": "我一眼就看出有些不对劲。"
+    },
+    {
+      "lemma": "at short notice",
+      "surface": "at short notice",
+      "meaning": "临时通知地",
+      "example": "The concert was cancelled at short notice.",
+      "translation": "音乐会临时取消了。"
+    },
+    {
+      "lemma": "at the moment",
+      "surface": "at the moment",
+      "meaning": "此刻，目前",
+      "example": "I'm busy at the moment; can I call you back?",
+      "translation": "我现在正忙，可以稍后回电吗？"
+    },
+    {
+      "lemma": "by no means",
+      "surface": "by no means",
+      "meaning": "决不，一点也不",
+      "example": "The task is by no means easy.",
+      "translation": "这项任务一点也不容易。"
+    },
+    {
+      "lemma": "by far",
+      "surface": "by far",
+      "meaning": "（与最高级连用）显然，……得多",
+      "example": "This is by far the best restaurant in town.",
+      "translation": "这显然是城里最好的餐馆。"
+    },
+    {
+      "lemma": "by the way",
+      "surface": "By the way",
+      "meaning": "顺便说一下",
+      "example": "By the way, have you seen my keys?",
+      "translation": "顺便问一下，你看到我的钥匙了吗？"
+    },
+    {
+      "lemma": "by hand",
+      "surface": "by hand",
+      "meaning": "手工，用手",
+      "example": "These carpets are made by hand.",
+      "translation": "这些地毯是手工织的。"
+    },
+    {
+      "lemma": "for a while",
+      "surface": "for a while",
+      "meaning": "一会儿，一段时间",
+      "example": "Let's sit here for a while.",
+      "translation": "我们在这儿坐一会儿吧。"
+    },
+    {
+      "lemma": "for free",
+      "surface": "for free",
+      "meaning": "免费",
+      "example": "Children can visit the museum for free.",
+      "translation": "儿童可以免费参观博物馆。"
+    },
+    {
+      "lemma": "for fear of",
+      "surface": "for fear of",
+      "meaning": "生怕，以免",
+      "example": "She whispered for fear of waking the baby.",
+      "translation": "她小声说话，生怕吵醒宝宝。"
+    },
+    {
+      "lemma": "from scratch",
+      "surface": "from scratch",
+      "meaning": "从零开始",
+      "example": "We had to rebuild the website from scratch.",
+      "translation": "我们只好从头重建网站。"
+    },
+    {
+      "lemma": "from now on",
+      "surface": "From now on",
+      "meaning": "从现在起",
+      "example": "From now on, I'll go to bed earlier.",
+      "translation": "从现在起，我要早点睡觉。"
+    },
+    {
+      "lemma": "to some extent",
+      "surface": "To some extent",
+      "meaning": "在某种程度上",
+      "example": "To some extent, I agree with you.",
+      "translation": "在某种程度上，我同意你的看法。"
+    },
+    {
+      "lemma": "to the point",
+      "surface": "to the point",
+      "meaning": "中肯，切题",
+      "example": "His speech was short and to the point.",
+      "translation": "他的发言简短而切题。"
+    },
+    {
+      "lemma": "to one's surprise",
+      "surface": "To our surprise",
+      "meaning": "令某人惊讶的是",
+      "example": "To our surprise, the shy boy won the speech contest.",
+      "translation": "令我们惊讶的是，那个害羞的男孩赢了演讲比赛。"
+    },
+    {
+      "lemma": "up to date",
+      "surface": "up to date",
+      "meaning": "最新的",
+      "example": "Keep your software up to date.",
+      "translation": "让你的软件保持最新。"
+    },
+    {
+      "lemma": "up to now",
+      "surface": "Up to now",
+      "meaning": "到目前为止",
+      "example": "Up to now, we have received fifty applications.",
+      "translation": "到目前为止，我们已收到五十份申请。"
+    },
+    {
+      "lemma": "with the exception of",
+      "surface": "with the exception of",
+      "meaning": "除……之外",
+      "example": "Everyone came, with the exception of Tom.",
+      "translation": "除了汤姆，大家都来了。"
+    },
+    {
+      "lemma": "with the help of",
+      "surface": "With the help of",
+      "meaning": "在……的帮助下",
+      "example": "With the help of a map, we found the hotel.",
+      "translation": "借助地图，我们找到了旅馆。"
+    },
+    {
+      "lemma": "next to",
+      "surface": "next to",
+      "meaning": "紧挨着；几乎",
+      "example": "The bank is next to the post office.",
+      "translation": "银行就在邮局旁边。"
+    },
+    {
+      "lemma": "close to",
+      "surface": "Close to",
+      "meaning": "接近；靠近",
+      "example": "Close to a hundred people attended the talk.",
+      "translation": "将近一百人参加了讲座。"
+    },
+    {
+      "lemma": "far from",
+      "surface": "far from",
+      "meaning": "远非，完全不",
+      "example": "The problem is far from solved.",
+      "translation": "问题远没有解决。"
+    },
+    {
+      "lemma": "such as",
+      "surface": "such as",
+      "meaning": "例如，像……这样的",
+      "example": "She likes outdoor sports such as hiking and cycling.",
+      "translation": "她喜欢徒步、骑行这类户外运动。"
+    },
+    {
+      "lemma": "rather than",
+      "surface": "rather than",
+      "meaning": "而不是",
+      "example": "I'd prefer to walk rather than drive.",
+      "translation": "我宁愿走路，也不想开车。"
+    },
+    {
+      "lemma": "no longer",
+      "surface": "no longer",
+      "meaning": "不再",
+      "example": "He no longer lives here.",
+      "translation": "他已经不住在这里了。"
+    },
+    {
+      "lemma": "as long as",
+      "surface": "as long as",
+      "meaning": "只要",
+      "example": "You can borrow my bike as long as you return it today.",
+      "translation": "只要你今天还，我的自行车就可以借给你。"
+    },
+    {
+      "lemma": "as far as I know",
+      "surface": "As far as I know",
+      "meaning": "据我所知",
+      "example": "As far as I know, the shop opens at nine.",
+      "translation": "据我所知，那家店九点开门。"
+    },
+    {
+      "lemma": "as a whole",
+      "surface": "as a whole",
+      "meaning": "整体上",
+      "example": "The country as a whole is getting richer.",
+      "translation": "这个国家整体上越来越富裕。"
+    },
+    {
+      "lemma": "as opposed to",
+      "surface": "as opposed to",
+      "meaning": "而不是，与……相对",
+      "example": "I prefer working in the morning, as opposed to late at night.",
+      "translation": "我更喜欢上午工作，而不是熬夜。"
+    },
+    {
+      "lemma": "even though",
+      "surface": "even though",
+      "meaning": "即使，尽管",
+      "example": "She went to work even though she was ill.",
+      "translation": "尽管生病了，她还是去上班了。"
+    },
+    {
+      "lemma": "so far",
+      "surface": "So far",
+      "meaning": "到目前为止",
+      "example": "So far, the new system has worked well.",
+      "translation": "到目前为止，新系统运行良好。"
+    },
+    {
+      "lemma": "sooner or later",
+      "surface": "Sooner or later",
+      "meaning": "迟早",
+      "example": "Sooner or later, he will find out the truth.",
+      "translation": "他迟早会知道真相的。"
+    },
+    {
+      "lemma": "more or less",
+      "surface": "more or less",
+      "meaning": "差不多，大约",
+      "example": "The work is more or less finished.",
+      "translation": "工作差不多完成了。"
+    },
+    {
+      "lemma": "once in a while",
+      "surface": "once in a while",
+      "meaning": "偶尔",
+      "example": "We eat out once in a while.",
+      "translation": "我们偶尔出去吃饭。"
+    },
+    {
+      "lemma": "over and over again",
+      "surface": "over and over again",
+      "meaning": "一再，反复",
+      "example": "He read the letter over and over again.",
+      "translation": "他把那封信读了一遍又一遍。"
+    },
+    {
+      "lemma": "step by step",
+      "surface": "step by step",
+      "meaning": "一步一步地",
+      "example": "The guide explains the process step by step.",
+      "translation": "这份指南一步步讲解了整个过程。"
+    },
+    {
+      "lemma": "little by little",
+      "surface": "Little by little",
+      "meaning": "逐渐地",
+      "example": "Little by little, her English improved.",
+      "translation": "她的英语一点点进步了。"
+    },
+    {
+      "lemma": "side by side",
+      "surface": "side by side",
+      "meaning": "并排，肩并肩",
+      "example": "They walked side by side along the beach.",
+      "translation": "他们并肩沿着海滩散步。"
+    },
+    {
+      "lemma": "day after day",
+      "surface": "day after day",
+      "meaning": "日复一日",
+      "example": "He did the same job day after day.",
+      "translation": "他日复一日做着同样的工作。"
+    },
+    {
+      "lemma": "face to face",
+      "surface": "face to face",
+      "meaning": "面对面",
+      "example": "I'd rather talk about this face to face.",
+      "translation": "这件事我更想当面谈。"
+    },
+    {
+      "lemma": "first of all",
+      "surface": "First of all",
+      "meaning": "首先",
+      "example": "First of all, let me introduce myself.",
+      "translation": "首先，请允许我自我介绍一下。"
+    },
+    {
+      "lemma": "last but not least",
+      "surface": "last but not least",
+      "meaning": "最后但同样重要的是",
+      "example": "And last but not least, thank you all for coming.",
+      "translation": "最后但同样重要的是，感谢各位的到来。"
+    },
+    {
+      "lemma": "needless to say",
+      "surface": "Needless to say",
+      "meaning": "不用说",
+      "example": "Needless to say, we were very tired after the trip.",
+      "translation": "不用说，旅行结束后我们都很累。"
+    },
+    {
+      "lemma": "to be honest",
+      "surface": "To be honest",
+      "meaning": "说实话",
+      "example": "To be honest, I didn't enjoy the film.",
+      "translation": "说实话，我不喜欢那部电影。"
+    },
+    {
+      "lemma": "generally speaking",
+      "surface": "Generally speaking",
+      "meaning": "一般来说",
+      "example": "Generally speaking, the weather here is mild.",
+      "translation": "一般来说，这里的气候很温和。"
+    },
+    {
+      "lemma": "in a word",
+      "surface": "In a word",
+      "meaning": "总之，一句话",
+      "example": "In a word, the holiday was perfect.",
+      "translation": "一句话，这个假期太完美了。"
+    },
+    {
+      "lemma": "in the long term",
+      "surface": "in the long term",
+      "meaning": "从长期来看",
+      "example": "The policy will benefit the economy in the long term.",
+      "translation": "从长期来看，这项政策将有利于经济。"
+    },
+    {
+      "lemma": "in the short term",
+      "surface": "In the short term",
+      "meaning": "在短期内",
+      "example": "In the short term, prices may rise.",
+      "translation": "短期内价格可能上涨。"
+    }
+  ]
+}

@@ -1,0 +1,1395 @@
+{
+  "id": "writing-collocations",
+  "title": "写作常用搭配",
+  "description": "play a key role in、pose a threat to、raise awareness of……议论文与考试写作中最实用的搭配。",
+  "color": "emerald",
+  "version": 1,
+  "entries": [
+    {
+      "lemma": "play a key role in",
+      "surface": "plays a key role in",
+      "meaning": "在……中起关键作用",
+      "example": "Education plays a key role in reducing poverty.",
+      "translation": "教育在减少贫困方面起着关键作用。"
+    },
+    {
+      "lemma": "draw attention to",
+      "surface": "drew attention to",
+      "meaning": "引起对……的注意",
+      "example": "The report drew attention to the lack of clean water.",
+      "translation": "这份报告让人们关注到缺乏清洁用水的问题。"
+    },
+    {
+      "lemma": "raise awareness of",
+      "surface": "raise awareness of",
+      "meaning": "提高对……的认识",
+      "example": "The campaign aims to raise awareness of mental health.",
+      "translation": "这项活动旨在提高人们对心理健康的认识。"
+    },
+    {
+      "lemma": "pose a threat to",
+      "surface": "poses a threat to",
+      "meaning": "对……构成威胁",
+      "example": "Plastic waste poses a threat to marine life.",
+      "translation": "塑料垃圾对海洋生物构成威胁。"
+    },
+    {
+      "lemma": "have an impact on",
+      "surface": "has an impact on",
+      "meaning": "对……产生影响",
+      "example": "Social media has an impact on how we communicate.",
+      "translation": "社交媒体影响着我们的交流方式。"
+    },
+    {
+      "lemma": "have a negative effect on",
+      "surface": "has a negative effect on",
+      "meaning": "对……有负面影响",
+      "example": "Lack of sleep has a negative effect on memory.",
+      "translation": "睡眠不足对记忆力有负面影响。"
+    },
+    {
+      "lemma": "lay the foundation for",
+      "surface": "laid the foundation for",
+      "meaning": "为……打下基础",
+      "example": "His early research laid the foundation for modern genetics.",
+      "translation": "他早期的研究为现代遗传学奠定了基础。"
+    },
+    {
+      "lemma": "shed light on",
+      "surface": "sheds light on",
+      "meaning": "阐明，揭示",
+      "example": "The study sheds light on how children learn languages.",
+      "translation": "这项研究揭示了儿童如何学习语言。"
+    },
+    {
+      "lemma": "give rise to",
+      "surface": "gave rise to",
+      "meaning": "引起，导致",
+      "example": "The new law gave rise to heated debate.",
+      "translation": "新法律引发了激烈的争论。"
+    },
+    {
+      "lemma": "lead to",
+      "surface": "lead to",
+      "meaning": "导致",
+      "example": "Too much stress can lead to illness.",
+      "translation": "压力过大可能导致疾病。"
+    },
+    {
+      "lemma": "result in",
+      "surface": "resulted in",
+      "meaning": "导致，造成",
+      "example": "The accident resulted in two deaths.",
+      "translation": "这起事故造成两人死亡。"
+    },
+    {
+      "lemma": "result from",
+      "surface": "results from",
+      "meaning": "由……引起",
+      "example": "Much of the damage results from poor planning.",
+      "translation": "大部分损失源于规划不当。"
+    },
+    {
+      "lemma": "contribute to",
+      "surface": "contributes to",
+      "meaning": "有助于；是……的原因之一",
+      "example": "Regular exercise contributes to good health.",
+      "translation": "经常锻炼有益于健康。"
+    },
+    {
+      "lemma": "be responsible for",
+      "surface": "is responsible for",
+      "meaning": "对……负责；是……的原因",
+      "example": "Who is responsible for the mistake?",
+      "translation": "谁该为这个错误负责？"
+    },
+    {
+      "lemma": "be aware of",
+      "surface": "are aware of",
+      "meaning": "意识到，知道",
+      "example": "Most people are aware of the risks of smoking.",
+      "translation": "大多数人都知道吸烟的危害。"
+    },
+    {
+      "lemma": "be committed to",
+      "surface": "is committed to",
+      "meaning": "致力于",
+      "example": "The company is committed to reducing waste.",
+      "translation": "公司致力于减少浪费。"
+    },
+    {
+      "lemma": "be likely to",
+      "surface": "are likely to",
+      "meaning": "很可能",
+      "example": "Prices are likely to rise next year.",
+      "translation": "明年物价很可能上涨。"
+    },
+    {
+      "lemma": "be subject to",
+      "surface": "are subject to",
+      "meaning": "受……支配；易遭受",
+      "example": "All flights are subject to delay in bad weather.",
+      "translation": "天气不好时所有航班都可能延误。"
+    },
+    {
+      "lemma": "be associated with",
+      "surface": "is associated with",
+      "meaning": "与……有关",
+      "example": "Heavy drinking is associated with heart disease.",
+      "translation": "酗酒与心脏病有关。"
+    },
+    {
+      "lemma": "be related to",
+      "surface": "is related to",
+      "meaning": "与……相关",
+      "example": "His success is related to his hard work.",
+      "translation": "他的成功与他的努力有关。"
+    },
+    {
+      "lemma": "be based on",
+      "surface": "is based on",
+      "meaning": "以……为基础",
+      "example": "The film is based on a true story.",
+      "translation": "这部电影根据真实故事改编。"
+    },
+    {
+      "lemma": "be faced with",
+      "surface": "are faced with",
+      "meaning": "面临",
+      "example": "Many cities are faced with a housing shortage.",
+      "translation": "许多城市面临住房短缺。"
+    },
+    {
+      "lemma": "be concerned about",
+      "surface": "are concerned about",
+      "meaning": "担心，关心",
+      "example": "Parents are concerned about their children's safety online.",
+      "translation": "家长们担心孩子的上网安全。"
+    },
+    {
+      "lemma": "be involved in",
+      "surface": "was involved in",
+      "meaning": "参与，卷入",
+      "example": "She was involved in the planning of the festival.",
+      "translation": "她参与了节日活动的策划。"
+    },
+    {
+      "lemma": "be known as",
+      "surface": "is known as",
+      "meaning": "被称为",
+      "example": "The city is known as the capital of fashion.",
+      "translation": "这座城市被称为时尚之都。"
+    },
+    {
+      "lemma": "be known for",
+      "surface": "is known for",
+      "meaning": "因……而出名",
+      "example": "The region is known for its fine wine.",
+      "translation": "这个地区以出产优质葡萄酒闻名。"
+    },
+    {
+      "lemma": "be devoted to",
+      "surface": "is devoted to",
+      "meaning": "致力于，专心于",
+      "example": "The museum is devoted to modern art.",
+      "translation": "这座博物馆专门展出现代艺术。"
+    },
+    {
+      "lemma": "be capable of",
+      "surface": "is capable of",
+      "meaning": "有能力做",
+      "example": "The new robot is capable of climbing stairs.",
+      "translation": "这款新机器人能爬楼梯。"
+    },
+    {
+      "lemma": "be essential to",
+      "surface": "is essential to",
+      "meaning": "对……必不可少",
+      "example": "Water is essential to all living things.",
+      "translation": "水对一切生物都必不可少。"
+    },
+    {
+      "lemma": "be beneficial to",
+      "surface": "is beneficial to",
+      "meaning": "对……有益",
+      "example": "Reading aloud is beneficial to young children.",
+      "translation": "朗读对幼儿有益。"
+    },
+    {
+      "lemma": "be harmful to",
+      "surface": "is harmful to",
+      "meaning": "对……有害",
+      "example": "Too much sugar is harmful to your teeth.",
+      "translation": "吃太多糖对牙齿有害。"
+    },
+    {
+      "lemma": "be accustomed to",
+      "surface": "is accustomed to",
+      "meaning": "习惯于",
+      "example": "She is accustomed to working long hours.",
+      "translation": "她习惯了长时间工作。"
+    },
+    {
+      "lemma": "be bound to",
+      "surface": "is bound to",
+      "meaning": "必然会，一定会",
+      "example": "Without support, the plan is bound to fail.",
+      "translation": "没有支持，这个计划注定会失败。"
+    },
+    {
+      "lemma": "a growing number of",
+      "surface": "A growing number of",
+      "meaning": "越来越多的",
+      "example": "A growing number of people work from home.",
+      "translation": "越来越多的人在家办公。"
+    },
+    {
+      "lemma": "a wide range of",
+      "surface": "a wide range of",
+      "meaning": "各种各样的",
+      "example": "The shop sells a wide range of products.",
+      "translation": "这家店出售各种各样的商品。"
+    },
+    {
+      "lemma": "a great deal of",
+      "surface": "a great deal of",
+      "meaning": "大量的",
+      "example": "The project required a great deal of time.",
+      "translation": "这个项目耗费了大量时间。"
+    },
+    {
+      "lemma": "a variety of",
+      "surface": "a variety of",
+      "meaning": "各种各样的",
+      "example": "Students can choose from a variety of courses.",
+      "translation": "学生可以从各种课程中选择。"
+    },
+    {
+      "lemma": "the vast majority of",
+      "surface": "The vast majority of",
+      "meaning": "绝大多数",
+      "example": "The vast majority of voters supported the plan.",
+      "translation": "绝大多数选民支持这项计划。"
+    },
+    {
+      "lemma": "an increasing number of",
+      "surface": "An increasing number of",
+      "meaning": "越来越多的",
+      "example": "An increasing number of students study abroad.",
+      "translation": "越来越多的学生出国留学。"
+    },
+    {
+      "lemma": "a sharp increase in",
+      "surface": "a sharp increase in",
+      "meaning": "……的急剧增长",
+      "example": "There has been a sharp increase in food prices.",
+      "translation": "食品价格急剧上涨。"
+    },
+    {
+      "lemma": "a steady decline in",
+      "surface": "a steady decline in",
+      "meaning": "……的持续下降",
+      "example": "The town has seen a steady decline in population.",
+      "translation": "这个镇的人口持续下降。"
+    },
+    {
+      "lemma": "a significant impact",
+      "surface": "a significant impact",
+      "meaning": "重大影响",
+      "example": "The new rules had a significant impact on small businesses.",
+      "translation": "新规定对小企业产生了重大影响。"
+    },
+    {
+      "lemma": "a major concern",
+      "surface": "a major concern",
+      "meaning": "一个主要问题",
+      "example": "Air pollution is a major concern in big cities.",
+      "translation": "空气污染是大城市的一大问题。"
+    },
+    {
+      "lemma": "a heated debate",
+      "surface": "a heated debate",
+      "meaning": "激烈的辩论",
+      "example": "The proposal sparked a heated debate.",
+      "translation": "这项提议引发了激烈的辩论。"
+    },
+    {
+      "lemma": "a vicious circle",
+      "surface": "a vicious circle",
+      "meaning": "恶性循环",
+      "example": "Poverty and poor health can form a vicious circle.",
+      "translation": "贫困与疾病可能形成恶性循环。"
+    },
+    {
+      "lemma": "a turning point",
+      "surface": "a turning point",
+      "meaning": "转折点",
+      "example": "The war was a turning point in the country's history.",
+      "translation": "这场战争是这个国家历史上的转折点。"
+    },
+    {
+      "lemma": "a double-edged sword",
+      "surface": "a double-edged sword",
+      "meaning": "双刃剑",
+      "example": "Technology is a double-edged sword.",
+      "translation": "科技是一把双刃剑。"
+    },
+    {
+      "lemma": "a means of",
+      "surface": "a means of",
+      "meaning": "一种……的手段",
+      "example": "Art can be a means of expressing feelings.",
+      "translation": "艺术可以是一种表达情感的方式。"
+    },
+    {
+      "lemma": "the key to",
+      "surface": "the key to",
+      "meaning": "……的关键",
+      "example": "Practice is the key to success.",
+      "translation": "练习是成功的关键。"
+    },
+    {
+      "lemma": "the root cause of",
+      "surface": "the root cause of",
+      "meaning": "……的根本原因",
+      "example": "We must find the root cause of the problem.",
+      "translation": "我们必须找到问题的根源。"
+    },
+    {
+      "lemma": "the pros and cons",
+      "surface": "the pros and cons",
+      "meaning": "利与弊",
+      "example": "Let's weigh the pros and cons before deciding.",
+      "translation": "做决定前我们权衡一下利弊。"
+    },
+    {
+      "lemma": "the general public",
+      "surface": "The general public",
+      "meaning": "公众，普通大众",
+      "example": "The general public has a right to know.",
+      "translation": "公众有知情权。"
+    },
+    {
+      "lemma": "the younger generation",
+      "surface": "The younger generation",
+      "meaning": "年轻一代",
+      "example": "The younger generation spends more time online.",
+      "translation": "年轻一代上网时间更长。"
+    },
+    {
+      "lemma": "the cost of living",
+      "surface": "The cost of living",
+      "meaning": "生活成本",
+      "example": "The cost of living in this city is very high.",
+      "translation": "这座城市的生活成本很高。"
+    },
+    {
+      "lemma": "quality of life",
+      "surface": "quality of life",
+      "meaning": "生活质量",
+      "example": "Parks improve the quality of life in cities.",
+      "translation": "公园提高了城市的生活质量。"
+    },
+    {
+      "lemma": "economic growth",
+      "surface": "economic growth",
+      "meaning": "经济增长",
+      "example": "Tourism has driven economic growth in the region.",
+      "translation": "旅游业推动了该地区的经济增长。"
+    },
+    {
+      "lemma": "public health",
+      "surface": "public health",
+      "meaning": "公共卫生",
+      "example": "Smoking is a serious public health problem.",
+      "translation": "吸烟是一个严重的公共卫生问题。"
+    },
+    {
+      "lemma": "climate change",
+      "surface": "Climate change",
+      "meaning": "气候变化",
+      "example": "Climate change affects every country.",
+      "translation": "气候变化影响着每一个国家。"
+    },
+    {
+      "lemma": "renewable energy",
+      "surface": "renewable energy",
+      "meaning": "可再生能源",
+      "example": "The country plans to rely more on renewable energy.",
+      "translation": "这个国家计划更多地依靠可再生能源。"
+    },
+    {
+      "lemma": "natural resources",
+      "surface": "natural resources",
+      "meaning": "自然资源",
+      "example": "We must protect our natural resources.",
+      "translation": "我们必须保护自然资源。"
+    },
+    {
+      "lemma": "traffic congestion",
+      "surface": "traffic congestion",
+      "meaning": "交通拥堵",
+      "example": "The new subway line will ease traffic congestion.",
+      "translation": "新地铁线将缓解交通拥堵。"
+    },
+    {
+      "lemma": "job opportunities",
+      "surface": "job opportunities",
+      "meaning": "就业机会",
+      "example": "The factory created many job opportunities.",
+      "translation": "这家工厂创造了许多就业机会。"
+    },
+    {
+      "lemma": "higher education",
+      "surface": "higher education",
+      "meaning": "高等教育",
+      "example": "The government is investing more in higher education.",
+      "translation": "政府正加大对高等教育的投入。"
+    },
+    {
+      "lemma": "mental health",
+      "surface": "mental health",
+      "meaning": "心理健康",
+      "example": "Exercise is good for your mental health.",
+      "translation": "锻炼有益于心理健康。"
+    },
+    {
+      "lemma": "peer pressure",
+      "surface": "peer pressure",
+      "meaning": "同龄人的压力",
+      "example": "Teenagers often give in to peer pressure.",
+      "translation": "青少年常常屈从于同伴压力。"
+    },
+    {
+      "lemma": "work-life balance",
+      "surface": "work-life balance",
+      "meaning": "工作与生活的平衡",
+      "example": "Flexible hours help employees keep a good work-life balance.",
+      "translation": "弹性工作时间帮助员工保持工作与生活的平衡。"
+    },
+    {
+      "lemma": "heavy rain",
+      "surface": "Heavy rain",
+      "meaning": "大雨",
+      "example": "Heavy rain caused flooding in the north.",
+      "translation": "大雨在北部造成了洪水。"
+    },
+    {
+      "lemma": "strong wind",
+      "surface": "strong wind",
+      "meaning": "大风",
+      "example": "A strong wind blew the tent away.",
+      "translation": "一阵大风把帐篷刮跑了。"
+    },
+    {
+      "lemma": "heavy traffic",
+      "surface": "heavy traffic",
+      "meaning": "交通繁忙",
+      "example": "We were stuck in heavy traffic for an hour.",
+      "translation": "我们在拥堵的车流中堵了一个小时。"
+    },
+    {
+      "lemma": "a heavy smoker",
+      "surface": "a heavy smoker",
+      "meaning": "烟瘾很大的人",
+      "example": "My uncle was a heavy smoker for twenty years.",
+      "translation": "我叔叔抽了二十年烟，烟瘾很大。"
+    },
+    {
+      "lemma": "a close friend",
+      "surface": "a close friend",
+      "meaning": "密友",
+      "example": "She is a close friend of mine.",
+      "translation": "她是我的好朋友。"
+    },
+    {
+      "lemma": "a narrow escape",
+      "surface": "a narrow escape",
+      "meaning": "死里逃生",
+      "example": "The driver had a narrow escape when his car caught fire.",
+      "translation": "汽车着火时，司机侥幸逃生。"
+    },
+    {
+      "lemma": "a tough decision",
+      "surface": "a tough decision",
+      "meaning": "艰难的决定",
+      "example": "Leaving home was a tough decision.",
+      "translation": "离开家是一个艰难的决定。"
+    },
+    {
+      "lemma": "common sense",
+      "surface": "common sense",
+      "meaning": "常识",
+      "example": "It's common sense to lock your door at night.",
+      "translation": "晚上锁门是常识。"
+    },
+    {
+      "lemma": "first impression",
+      "surface": "first impression",
+      "meaning": "第一印象",
+      "example": "Your first impression of a person is often wrong.",
+      "translation": "你对一个人的第一印象常常是错的。"
+    },
+    {
+      "lemma": "deep sleep",
+      "surface": "deep sleep",
+      "meaning": "熟睡，深度睡眠",
+      "example": "The baby fell into a deep sleep.",
+      "translation": "宝宝沉沉睡去。"
+    },
+    {
+      "lemma": "bitter cold",
+      "surface": "bitter cold",
+      "meaning": "严寒，刺骨的寒冷",
+      "example": "The bitter cold kept everyone indoors.",
+      "translation": "刺骨的寒冷让大家都待在屋里。"
+    },
+    {
+      "lemma": "broad daylight",
+      "surface": "broad daylight",
+      "meaning": "光天化日",
+      "example": "The robbery happened in broad daylight.",
+      "translation": "抢劫发生在光天化日之下。"
+    },
+    {
+      "lemma": "golden opportunity",
+      "surface": "golden opportunity",
+      "meaning": "绝佳机会",
+      "example": "This job is a golden opportunity for you.",
+      "translation": "这份工作对你来说是绝佳的机会。"
+    },
+    {
+      "lemma": "fierce competition",
+      "surface": "fierce competition",
+      "meaning": "激烈的竞争",
+      "example": "There is fierce competition for places at the university.",
+      "translation": "这所大学的入学竞争很激烈。"
+    },
+    {
+      "lemma": "take measures",
+      "surface": "take measures",
+      "meaning": "采取措施",
+      "example": "The government must take measures to reduce pollution.",
+      "translation": "政府必须采取措施减少污染。"
+    },
+    {
+      "lemma": "take action",
+      "surface": "take action",
+      "meaning": "采取行动",
+      "example": "It's time to take action on climate change.",
+      "translation": "是时候在气候变化问题上采取行动了。"
+    },
+    {
+      "lemma": "take responsibility for",
+      "surface": "take responsibility for",
+      "meaning": "对……负责",
+      "example": "Parents should take responsibility for their children's behaviour.",
+      "translation": "父母应对孩子的行为负责。"
+    },
+    {
+      "lemma": "take steps to",
+      "surface": "taking steps to",
+      "meaning": "采取步骤（做某事）",
+      "example": "The school is taking steps to stop bullying.",
+      "translation": "学校正在采取措施制止欺凌。"
+    },
+    {
+      "lemma": "meet the needs of",
+      "surface": "meet the needs of",
+      "meaning": "满足……的需要",
+      "example": "The city needs more schools to meet the needs of families.",
+      "translation": "城市需要更多学校来满足家庭的需求。"
+    },
+    {
+      "lemma": "meet the demand for",
+      "surface": "meet the demand for",
+      "meaning": "满足对……的需求",
+      "example": "Farmers struggle to meet the demand for fresh vegetables.",
+      "translation": "农民难以满足对新鲜蔬菜的需求。"
+    },
+    {
+      "lemma": "solve a problem",
+      "surface": "solve a problem",
+      "meaning": "解决问题",
+      "example": "Talking openly can help solve a problem early.",
+      "translation": "坦诚沟通有助于及早解决问题。"
+    },
+    {
+      "lemma": "reach an agreement",
+      "surface": "reached an agreement",
+      "meaning": "达成协议",
+      "example": "The two sides finally reached an agreement.",
+      "translation": "双方最终达成了协议。"
+    },
+    {
+      "lemma": "reach a consensus",
+      "surface": "reach a consensus",
+      "meaning": "达成共识",
+      "example": "The committee failed to reach a consensus.",
+      "translation": "委员会未能达成共识。"
+    },
+    {
+      "lemma": "achieve one's goal",
+      "surface": "achieve her goal",
+      "meaning": "实现目标",
+      "example": "She worked hard to achieve her goal.",
+      "translation": "她努力实现自己的目标。"
+    },
+    {
+      "lemma": "gain experience",
+      "surface": "gain experience",
+      "meaning": "积累经验",
+      "example": "Internships help students gain experience.",
+      "translation": "实习帮助学生积累经验。"
+    },
+    {
+      "lemma": "broaden one's horizons",
+      "surface": "broaden your horizons",
+      "meaning": "开阔眼界",
+      "example": "Travelling can broaden your horizons.",
+      "translation": "旅行可以开阔眼界。"
+    },
+    {
+      "lemma": "acquire knowledge",
+      "surface": "acquire knowledge",
+      "meaning": "获取知识",
+      "example": "Reading is the best way to acquire knowledge.",
+      "translation": "阅读是获取知识的最好方式。"
+    },
+    {
+      "lemma": "conduct research",
+      "surface": "conducted research",
+      "meaning": "进行研究",
+      "example": "Scientists conducted research on sleep patterns.",
+      "translation": "科学家对睡眠模式进行了研究。"
+    },
+    {
+      "lemma": "carry out an experiment",
+      "surface": "carried out an experiment",
+      "meaning": "做实验",
+      "example": "The students carried out an experiment on plant growth.",
+      "translation": "学生们做了一个关于植物生长的实验。"
+    },
+    {
+      "lemma": "collect data",
+      "surface": "collect data",
+      "meaning": "收集数据",
+      "example": "Researchers collect data from thousands of patients.",
+      "translation": "研究人员从数千名患者那里收集数据。"
+    },
+    {
+      "lemma": "provide evidence",
+      "surface": "provides evidence",
+      "meaning": "提供证据",
+      "example": "The study provides evidence that exercise improves mood.",
+      "translation": "这项研究提供了运动能改善情绪的证据。"
+    },
+    {
+      "lemma": "reach a conclusion",
+      "surface": "reached the conclusion",
+      "meaning": "得出结论",
+      "example": "The scientists reached the conclusion that the water was safe.",
+      "translation": "科学家们得出结论：水是安全的。"
+    },
+    {
+      "lemma": "express concern about",
+      "surface": "expressed concern about",
+      "meaning": "对……表示担忧",
+      "example": "Doctors have expressed concern about rising obesity rates.",
+      "translation": "医生们对肥胖率上升表示担忧。"
+    },
+    {
+      "lemma": "express one's opinion",
+      "surface": "express their opinions",
+      "meaning": "表达观点",
+      "example": "Students should feel free to express their opinions in class.",
+      "translation": "学生应能在课堂上自由表达观点。"
+    },
+    {
+      "lemma": "hold the view that",
+      "surface": "hold the view that",
+      "meaning": "持……的观点",
+      "example": "Some experts hold the view that homework should be banned.",
+      "translation": "一些专家认为应该取消家庭作业。"
+    },
+    {
+      "lemma": "make a contribution to",
+      "surface": "made a great contribution to",
+      "meaning": "对……做出贡献",
+      "example": "She made a great contribution to medical science.",
+      "translation": "她对医学做出了巨大贡献。"
+    },
+    {
+      "lemma": "make use of",
+      "surface": "make use of",
+      "meaning": "利用",
+      "example": "We should make use of every chance to practise.",
+      "translation": "我们应该利用每一个练习的机会。"
+    },
+    {
+      "lemma": "make full use of",
+      "surface": "make full use of",
+      "meaning": "充分利用",
+      "example": "Students should make full use of the library.",
+      "translation": "学生应充分利用图书馆。"
+    },
+    {
+      "lemma": "put pressure on",
+      "surface": "put pressure on",
+      "meaning": "给……施加压力",
+      "example": "Rising costs put pressure on small businesses.",
+      "translation": "成本上升给小企业带来了压力。"
+    },
+    {
+      "lemma": "put emphasis on",
+      "surface": "put more emphasis on",
+      "meaning": "重视，强调",
+      "example": "Schools should put more emphasis on practical skills.",
+      "translation": "学校应更加重视实践技能。"
+    },
+    {
+      "lemma": "place a high value on",
+      "surface": "place a high value on",
+      "meaning": "高度重视",
+      "example": "Many families place a high value on education.",
+      "translation": "许多家庭非常重视教育。"
+    },
+    {
+      "lemma": "attach importance to",
+      "surface": "attach great importance to",
+      "meaning": "重视",
+      "example": "Chinese parents attach great importance to their children's studies.",
+      "translation": "中国家长非常重视孩子的学业。"
+    },
+    {
+      "lemma": "set a good example",
+      "surface": "set a good example",
+      "meaning": "树立好榜样",
+      "example": "Parents should set a good example for their children.",
+      "translation": "父母应该给孩子树立好榜样。"
+    },
+    {
+      "lemma": "strike a balance between",
+      "surface": "strike a balance between",
+      "meaning": "在……之间取得平衡",
+      "example": "It's hard to strike a balance between work and family.",
+      "translation": "在工作和家庭之间取得平衡很难。"
+    },
+    {
+      "lemma": "bridge the gap between",
+      "surface": "bridge the gap between",
+      "meaning": "缩小……之间的差距",
+      "example": "The program aims to bridge the gap between rich and poor.",
+      "translation": "该项目旨在缩小贫富差距。"
+    },
+    {
+      "lemma": "widen the gap",
+      "surface": "widen the gap",
+      "meaning": "扩大差距",
+      "example": "Expensive tutoring may widen the gap between students.",
+      "translation": "昂贵的辅导可能扩大学生之间的差距。"
+    },
+    {
+      "lemma": "cut costs",
+      "surface": "cut costs",
+      "meaning": "削减成本",
+      "example": "The airline cut costs by reducing staff.",
+      "translation": "这家航空公司通过裁员削减成本。"
+    },
+    {
+      "lemma": "boost the economy",
+      "surface": "boost the economy",
+      "meaning": "提振经济",
+      "example": "Lower taxes may boost the economy.",
+      "translation": "降低税收可能提振经济。"
+    },
+    {
+      "lemma": "create jobs",
+      "surface": "create jobs",
+      "meaning": "创造就业",
+      "example": "The new factory will create jobs for local people.",
+      "translation": "新工厂将为当地人创造就业机会。"
+    },
+    {
+      "lemma": "protect the environment",
+      "surface": "protect the environment",
+      "meaning": "保护环境",
+      "example": "We all have a duty to protect the environment.",
+      "translation": "我们都有保护环境的义务。"
+    },
+    {
+      "lemma": "reduce pollution",
+      "surface": "reduce pollution",
+      "meaning": "减少污染",
+      "example": "Electric buses help reduce pollution.",
+      "translation": "电动公交车有助于减少污染。"
+    },
+    {
+      "lemma": "save energy",
+      "surface": "save energy",
+      "meaning": "节约能源",
+      "example": "Turning off lights is an easy way to save energy.",
+      "translation": "随手关灯是节约能源的简单方法。"
+    },
+    {
+      "lemma": "waste time",
+      "surface": "wasted time",
+      "meaning": "浪费时间",
+      "example": "I wasted time watching videos instead of studying.",
+      "translation": "我把时间浪费在看视频上，没有学习。"
+    },
+    {
+      "lemma": "spend time with",
+      "surface": "spend time with",
+      "meaning": "和……共度时光",
+      "example": "I try to spend time with my parents every weekend.",
+      "translation": "我每个周末都尽量陪父母。"
+    },
+    {
+      "lemma": "face a challenge",
+      "surface": "face a challenge",
+      "meaning": "面临挑战",
+      "example": "Small farms face a challenge from large companies.",
+      "translation": "小农场面临大公司的挑战。"
+    },
+    {
+      "lemma": "overcome difficulties",
+      "surface": "overcome difficulties",
+      "meaning": "克服困难",
+      "example": "With patience, we can overcome difficulties together.",
+      "translation": "只要有耐心，我们就能一起克服困难。"
+    },
+    {
+      "lemma": "seize the opportunity",
+      "surface": "seized the opportunity",
+      "meaning": "抓住机会",
+      "example": "She seized the opportunity to work abroad.",
+      "translation": "她抓住了出国工作的机会。"
+    },
+    {
+      "lemma": "fulfil one's potential",
+      "surface": "fulfil their potential",
+      "meaning": "充分发挥潜力",
+      "example": "Good teachers help students fulfil their potential.",
+      "translation": "好老师帮助学生充分发挥潜力。"
+    },
+    {
+      "lemma": "keep pace with",
+      "surface": "kept pace with",
+      "meaning": "与……齐步，跟上",
+      "example": "Wages have not kept pace with rising prices.",
+      "translation": "工资没有跟上物价上涨的步伐。"
+    },
+    {
+      "lemma": "adapt to",
+      "surface": "adapt to",
+      "meaning": "适应",
+      "example": "It took the children a while to adapt to the new school.",
+      "translation": "孩子们过了一段时间才适应新学校。"
+    },
+    {
+      "lemma": "benefit from",
+      "surface": "benefit from",
+      "meaning": "从……中受益",
+      "example": "Everyone can benefit from regular exercise.",
+      "translation": "每个人都能从经常锻炼中受益。"
+    },
+    {
+      "lemma": "suffer from",
+      "surface": "suffers from",
+      "meaning": "患（病）；受……之苦",
+      "example": "Her father suffers from back pain.",
+      "translation": "她父亲患有背痛。"
+    },
+    {
+      "lemma": "focus on",
+      "surface": "focus on",
+      "meaning": "集中于，专注于",
+      "example": "Let's focus on the most important issues.",
+      "translation": "我们集中讨论最重要的问题。"
+    },
+    {
+      "lemma": "concentrate on",
+      "surface": "concentrate on",
+      "meaning": "集中注意力于",
+      "example": "I can't concentrate on my work with all this noise.",
+      "translation": "这么吵，我没法专心工作。"
+    },
+    {
+      "lemma": "consist of",
+      "surface": "consists of",
+      "meaning": "由……组成",
+      "example": "The team consists of five engineers.",
+      "translation": "这个团队由五名工程师组成。"
+    },
+    {
+      "lemma": "differ from",
+      "surface": "differs from",
+      "meaning": "与……不同",
+      "example": "British English differs from American English in spelling.",
+      "translation": "英式英语和美式英语在拼写上有所不同。"
+    },
+    {
+      "lemma": "lead a healthy life",
+      "surface": "lead a healthy life",
+      "meaning": "过健康的生活",
+      "example": "Eating well helps you lead a healthy life.",
+      "translation": "合理饮食帮助你过上健康的生活。"
+    },
+    {
+      "lemma": "make a living",
+      "surface": "makes a living",
+      "meaning": "谋生",
+      "example": "He makes a living as a taxi driver.",
+      "translation": "他靠开出租车谋生。"
+    },
+    {
+      "lemma": "earn a living",
+      "surface": "earn a living",
+      "meaning": "谋生",
+      "example": "It's hard to earn a living as an artist.",
+      "translation": "当艺术家很难谋生。"
+    },
+    {
+      "lemma": "make ends meet",
+      "surface": "make ends meet",
+      "meaning": "收支相抵，勉强维持生计",
+      "example": "Many families struggle to make ends meet.",
+      "translation": "许多家庭勉强维持生计。"
+    },
+    {
+      "lemma": "pay the price for",
+      "surface": "paying the price for",
+      "meaning": "为……付出代价",
+      "example": "We are now paying the price for years of neglect.",
+      "translation": "我们正在为多年的忽视付出代价。"
+    },
+    {
+      "lemma": "come into effect",
+      "surface": "came into effect",
+      "meaning": "生效",
+      "example": "The new law came into effect in January.",
+      "translation": "新法律于一月生效。"
+    },
+    {
+      "lemma": "come to the conclusion",
+      "surface": "came to the conclusion",
+      "meaning": "得出结论",
+      "example": "We came to the conclusion that the plan wouldn't work.",
+      "translation": "我们得出结论：这个计划行不通。"
+    },
+    {
+      "lemma": "come to terms with",
+      "surface": "came to terms with",
+      "meaning": "接受，适应（不愉快的事）",
+      "example": "She slowly came to terms with her illness.",
+      "translation": "她慢慢接受了自己生病的事实。"
+    },
+    {
+      "lemma": "bear in mind",
+      "surface": "Bear in mind",
+      "meaning": "记住，考虑到",
+      "example": "Bear in mind that the shop closes early on Sundays.",
+      "translation": "记住，那家店周日关门早。"
+    },
+    {
+      "lemma": "make a comparison",
+      "surface": "make a comparison",
+      "meaning": "进行比较",
+      "example": "It's hard to make a comparison between the two cities.",
+      "translation": "很难对这两座城市进行比较。"
+    },
+    {
+      "lemma": "draw a distinction between",
+      "surface": "draw a distinction between",
+      "meaning": "区分",
+      "example": "We should draw a distinction between facts and opinions.",
+      "translation": "我们应该区分事实和观点。"
+    },
+    {
+      "lemma": "there is no doubt that",
+      "surface": "There is no doubt that",
+      "meaning": "毫无疑问",
+      "example": "There is no doubt that smoking damages health.",
+      "translation": "毫无疑问，吸烟有害健康。"
+    },
+    {
+      "lemma": "it is widely believed that",
+      "surface": "It is widely believed that",
+      "meaning": "人们普遍认为",
+      "example": "It is widely believed that reading improves vocabulary.",
+      "translation": "人们普遍认为阅读能扩大词汇量。"
+    },
+    {
+      "lemma": "it goes without saying that",
+      "surface": "It goes without saying that",
+      "meaning": "不言而喻",
+      "example": "It goes without saying that safety comes first.",
+      "translation": "不言而喻，安全第一。"
+    },
+    {
+      "lemma": "play an important part in",
+      "surface": "plays an important part in",
+      "meaning": "在……中起重要作用",
+      "example": "Diet plays an important part in staying healthy.",
+      "translation": "饮食在保持健康方面起着重要作用。"
+    },
+    {
+      "lemma": "have access to",
+      "surface": "have access to",
+      "meaning": "能够获得，可以使用",
+      "example": "Not all students have access to a computer.",
+      "translation": "并不是所有学生都能用上电脑。"
+    },
+    {
+      "lemma": "have difficulty in",
+      "surface": "have difficulty in",
+      "meaning": "在……方面有困难",
+      "example": "Some children have difficulty in reading.",
+      "translation": "有些孩子在阅读上有困难。"
+    },
+    {
+      "lemma": "have a tendency to",
+      "surface": "has a tendency to",
+      "meaning": "有……的倾向",
+      "example": "He has a tendency to exaggerate.",
+      "translation": "他说话有夸大的倾向。"
+    },
+    {
+      "lemma": "on a large scale",
+      "surface": "on a large scale",
+      "meaning": "大规模地",
+      "example": "The crop is grown on a large scale in the south.",
+      "translation": "这种作物在南方大规模种植。"
+    },
+    {
+      "lemma": "in recent years",
+      "surface": "In recent years",
+      "meaning": "近年来",
+      "example": "In recent years, online shopping has grown rapidly.",
+      "translation": "近年来，网购迅速发展。"
+    },
+    {
+      "lemma": "in the modern world",
+      "surface": "in the modern world",
+      "meaning": "在现代社会",
+      "example": "English is widely used in the modern world.",
+      "translation": "英语在现代社会使用广泛。"
+    },
+    {
+      "lemma": "from a global perspective",
+      "surface": "From a global perspective",
+      "meaning": "从全球视角来看",
+      "example": "From a global perspective, water shortage is a serious issue.",
+      "translation": "从全球视角来看，缺水是一个严重问题。"
+    },
+    {
+      "lemma": "for the benefit of",
+      "surface": "for the benefit of",
+      "meaning": "为了……的利益",
+      "example": "The park was built for the benefit of local residents.",
+      "translation": "这个公园是为当地居民修建的。"
+    },
+    {
+      "lemma": "at the heart of",
+      "surface": "at the heart of",
+      "meaning": "在……的核心",
+      "example": "Trust is at the heart of any good relationship.",
+      "translation": "信任是任何良好关系的核心。"
+    },
+    {
+      "lemma": "in harmony with",
+      "surface": "in harmony with",
+      "meaning": "与……和谐相处",
+      "example": "The villagers live in harmony with nature.",
+      "translation": "村民们与自然和谐相处。"
+    },
+    {
+      "lemma": "with the development of",
+      "surface": "With the development of",
+      "meaning": "随着……的发展",
+      "example": "With the development of technology, life has become easier.",
+      "translation": "随着科技的发展，生活变得更加便利。"
+    },
+    {
+      "lemma": "a good source of",
+      "surface": "a good source of",
+      "meaning": "……的来源",
+      "example": "Fish is a good source of protein.",
+      "translation": "鱼是蛋白质的良好来源。"
+    },
+    {
+      "lemma": "a lack of",
+      "surface": "a lack of",
+      "meaning": "缺乏",
+      "example": "The project failed because of a lack of money.",
+      "translation": "这个项目因缺乏资金而失败。"
+    },
+    {
+      "lemma": "a shortage of",
+      "surface": "a shortage of",
+      "meaning": "……的短缺",
+      "example": "There is a shortage of nurses in many hospitals.",
+      "translation": "许多医院护士短缺。"
+    },
+    {
+      "lemma": "a sense of belonging",
+      "surface": "a sense of belonging",
+      "meaning": "归属感",
+      "example": "Clubs give students a sense of belonging.",
+      "translation": "社团给学生带来归属感。"
+    },
+    {
+      "lemma": "a sense of responsibility",
+      "surface": "a sense of responsibility",
+      "meaning": "责任感",
+      "example": "Pets can teach children a sense of responsibility.",
+      "translation": "养宠物可以培养孩子的责任感。"
+    },
+    {
+      "lemma": "an essential part of",
+      "surface": "an essential part of",
+      "meaning": "……的重要组成部分",
+      "example": "Music is an essential part of our culture.",
+      "translation": "音乐是我们文化的重要组成部分。"
+    },
+    {
+      "lemma": "a matter of time",
+      "surface": "a matter of time",
+      "meaning": "迟早的事",
+      "example": "It's only a matter of time before prices go up.",
+      "translation": "涨价只是时间问题。"
+    },
+    {
+      "lemma": "the main reason for",
+      "surface": "The main reason for",
+      "meaning": "……的主要原因",
+      "example": "The main reason for the delay was the weather.",
+      "translation": "延误的主要原因是天气。"
+    },
+    {
+      "lemma": "the advantages and disadvantages of",
+      "surface": "the advantages and disadvantages of",
+      "meaning": "……的优缺点",
+      "example": "We discussed the advantages and disadvantages of online learning.",
+      "translation": "我们讨论了网上学习的优缺点。"
+    },
+    {
+      "lemma": "on the decline",
+      "surface": "on the decline",
+      "meaning": "在下降",
+      "example": "The number of smokers is on the decline.",
+      "translation": "吸烟人数在下降。"
+    },
+    {
+      "lemma": "pave the way for",
+      "surface": "paved the way for",
+      "meaning": "为……铺平道路",
+      "example": "Early computers paved the way for the internet.",
+      "translation": "早期的计算机为互联网的出现铺平了道路。"
+    },
+    {
+      "lemma": "open up opportunities",
+      "surface": "opens up opportunities",
+      "meaning": "带来机会",
+      "example": "Learning English opens up opportunities around the world.",
+      "translation": "学英语能带来遍及世界的机会。"
+    },
+    {
+      "lemma": "stand a chance of",
+      "surface": "stand a chance of",
+      "meaning": "有……的可能",
+      "example": "Without practice, you don't stand a chance of winning.",
+      "translation": "不练习的话，你根本没有获胜的可能。"
+    },
+    {
+      "lemma": "take for granted",
+      "surface": "take for granted",
+      "meaning": "认为……理所当然",
+      "example": "Many things we take for granted were luxuries a century ago.",
+      "translation": "许多我们视为理所当然的东西，一百年前都是奢侈品。"
+    },
+    {
+      "lemma": "stay healthy",
+      "surface": "stay healthy",
+      "meaning": "保持健康",
+      "example": "Walking every day helps older people stay healthy.",
+      "translation": "每天散步有助于老年人保持健康。"
+    },
+    {
+      "lemma": "raise money for",
+      "surface": "raised money for",
+      "meaning": "为……筹款",
+      "example": "The students raised money for the local hospital.",
+      "translation": "学生们为当地医院筹集了善款。"
+    },
+    {
+      "lemma": "run a business",
+      "surface": "runs a business",
+      "meaning": "经营企业",
+      "example": "My aunt runs a business selling handmade soap.",
+      "translation": "我姑姑经营着一家卖手工皂的小店。"
+    },
+    {
+      "lemma": "do research on",
+      "surface": "doing research on",
+      "meaning": "研究",
+      "example": "She is doing research on childhood memory.",
+      "translation": "她正在研究童年记忆。"
+    },
+    {
+      "lemma": "do harm to",
+      "surface": "do harm to",
+      "meaning": "对……有害",
+      "example": "A little rain won't do harm to the plants.",
+      "translation": "下点雨不会对植物有害。"
+    },
+    {
+      "lemma": "do damage to",
+      "surface": "did serious damage to",
+      "meaning": "对……造成损害",
+      "example": "The storm did serious damage to the roof.",
+      "translation": "暴风雨严重损坏了屋顶。"
+    },
+    {
+      "lemma": "be in danger of",
+      "surface": "is in danger of",
+      "meaning": "有……的危险",
+      "example": "The old theatre is in danger of being knocked down.",
+      "translation": "那座老剧院面临被拆除的危险。"
+    },
+    {
+      "lemma": "make a profit",
+      "surface": "made a profit",
+      "meaning": "盈利",
+      "example": "The shop made a profit in its first year.",
+      "translation": "这家店第一年就实现了盈利。"
+    },
+    {
+      "lemma": "meet a deadline",
+      "surface": "meet the deadline",
+      "meaning": "赶上截止日期",
+      "example": "We worked all night to meet the deadline.",
+      "translation": "我们通宵工作，才赶上了截止日期。"
+    },
+    {
+      "lemma": "take a risk",
+      "surface": "took a risk",
+      "meaning": "冒险",
+      "example": "He took a risk by investing all his savings.",
+      "translation": "他把全部积蓄都拿去投资，冒了个险。"
+    },
+    {
+      "lemma": "follow the rules",
+      "surface": "follow the rules",
+      "meaning": "遵守规则",
+      "example": "Players must follow the rules of the game.",
+      "translation": "选手必须遵守比赛规则。"
+    },
+    {
+      "lemma": "break the law",
+      "surface": "broke the law",
+      "meaning": "违法",
+      "example": "The company broke the law by dumping waste in the river.",
+      "translation": "这家公司把废物倒进河里，触犯了法律。"
+    },
+    {
+      "lemma": "set a goal",
+      "surface": "set a goal",
+      "meaning": "设定目标",
+      "example": "It helps to set a goal for each week.",
+      "translation": "每周设定一个目标会很有帮助。"
+    },
+    {
+      "lemma": "make an appointment",
+      "surface": "made an appointment",
+      "meaning": "预约",
+      "example": "I made an appointment with the dentist for Monday.",
+      "translation": "我约了周一看牙医。"
+    },
+    {
+      "lemma": "keep a balance",
+      "surface": "keep a balance",
+      "meaning": "保持平衡",
+      "example": "It's important to keep a balance between study and rest.",
+      "translation": "保持学习和休息的平衡很重要。"
+    },
+    {
+      "lemma": "gain popularity",
+      "surface": "gained popularity",
+      "meaning": "受欢迎，流行起来",
+      "example": "Electric cars have gained popularity in recent years.",
+      "translation": "近年来电动汽车越来越受欢迎。"
+    },
+    {
+      "lemma": "lose weight",
+      "surface": "lose weight",
+      "meaning": "减肥",
+      "example": "He cycles to work to lose weight.",
+      "translation": "他骑车上班来减肥。"
+    },
+    {
+      "lemma": "catch a cold",
+      "surface": "caught a cold",
+      "meaning": "感冒",
+      "example": "I caught a cold after getting wet in the rain.",
+      "translation": "我淋了雨，感冒了。"
+    },
+    {
+      "lemma": "take medicine",
+      "surface": "take medicine",
+      "meaning": "吃药",
+      "example": "Remember to take medicine after meals.",
+      "translation": "记得饭后吃药。"
+    },
+    {
+      "lemma": "give a speech",
+      "surface": "gave a speech",
+      "meaning": "发表演讲",
+      "example": "The mayor gave a speech at the opening ceremony.",
+      "translation": "市长在开幕式上发表了讲话。"
+    },
+    {
+      "lemma": "hold a meeting",
+      "surface": "held a meeting",
+      "meaning": "召开会议",
+      "example": "The managers held a meeting to discuss the budget.",
+      "translation": "经理们开会讨论预算。"
+    },
+    {
+      "lemma": "make a complaint",
+      "surface": "made a complaint",
+      "meaning": "投诉",
+      "example": "She made a complaint about the noisy neighbours.",
+      "translation": "她投诉了吵闹的邻居。"
+    },
+    {
+      "lemma": "draw up a plan",
+      "surface": "drew up a plan",
+      "meaning": "制订计划",
+      "example": "The council drew up a plan to improve the roads.",
+      "translation": "市议会制订了改善道路的计划。"
+    },
+    {
+      "lemma": "fall short of",
+      "surface": "fell short of",
+      "meaning": "未达到（期望、目标）",
+      "example": "Sales fell short of our expectations.",
+      "translation": "销售额没有达到我们的预期。"
+    },
+    {
+      "lemma": "weigh up",
+      "surface": "weigh up",
+      "meaning": "权衡，斟酌",
+      "example": "You need to weigh up the costs before buying a car.",
+      "translation": "买车前你需要权衡一下花费。"
+    },
+    {
+      "lemma": "in the hope of",
+      "surface": "in the hope of",
+      "meaning": "怀着……的希望",
+      "example": "He moved to the city in the hope of finding work.",
+      "translation": "他搬到城里，希望找到工作。"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* 暗色由 html 上的 .dark 控制，这样“跟随系统”之外还能手动指定 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- 设计令牌 ---------- */
+:root {
+  --canvas: #f4f3f0;
+  --panel: #ffffff;
+  --panel-muted: #f8f7f5;
+  --line: #e6e3de;
+  --line-strong: #d6d2cb;
+  --ink: #1d1b19;
+  --ink-soft: #5c5752;
+  --ink-faint: #a19b94;
+  --accent: #6d4aff;
+  --accent-strong: #5b36f2;
+  --accent-soft: #efeaff;
+  --accent-ink: #4a2bc9;
+  --good: #0f9f6e;
+  --good-soft: #e3f6ee;
+  --bad: #e0434b;
+  --bad-soft: #fde9ea;
+  --warn: #c27a0e;
+  --warn-soft: #fdf3e1;
+  --mark: #fff0b8;
+}
+
+.dark {
+  --canvas: #111114;
+  --panel: #19191d;
+  --panel-muted: #1f1f24;
+  --line: #2a2a31;
+  --line-strong: #383840;
+  --ink: #f2f1ef;
+  --ink-soft: #a7a4a0;
+  --ink-faint: #6b6965;
+  --accent: #9d86ff;
+  --accent-strong: #b3a1ff;
+  --accent-soft: rgb(157 134 255 / 0.14);
+  --accent-ink: #c6b8ff;
+  --good: #3ccf98;
+  --good-soft: rgb(60 207 152 / 0.12);
+  --bad: #ff6b72;
+  --bad-soft: rgb(255 107 114 / 0.12);
+  --warn: #f0b35a;
+  --warn-soft: rgb(240 179 90 / 0.12);
+  --mark: rgb(255 214 102 / 0.22);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-panel-muted: var(--panel-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-mark: var(--mark);
+}
+
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Microsoft YaHei",
+    "Noto Sans CJK SC", sans-serif;
+  /* 英文展示字体：系统自带的衬线体，无需联网 */
+  --font-display:
+    "New York", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Songti SC",
+    "Noto Serif CJK SC", serif;
+  --font-mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --shadow-card: 0 1px 2px rgb(28 25 23 / 0.04), 0 6px 24px -8px rgb(28 25 23 / 0.08);
+  --shadow-float: 0 12px 40px -12px rgb(28 25 23 / 0.25);
+
+  --animate-blink: blink 1.05s step-end infinite;
+  --animate-shake: shake 0.28s ease-in-out;
+  --animate-rise: rise 0.22s ease-out;
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes shake {
+    20%,
+    60% {
+      transform: translateX(-3px);
+    }
+    40%,
+    80% {
+      transform: translateX(3px);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
