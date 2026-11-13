@@ -32,7 +32,13 @@
 
 ## 安装
 
-从 [GitHub Actions](https://github.com/stardustlil/verba/actions/workflows/ci.yml) 的构建产物下载安装包（macOS `.dmg`，Windows `.msi` / `.exe`，Linux `.deb` / `.rpm` / `.AppImage`）。
+从 [Releases](https://github.com/stardustlil/verba/releases/latest) 下载对应系统的安装包：
+
+| 系统    | 安装包                                    |
+| ------- | ----------------------------------------- |
+| macOS   | `.dmg`（通用版，支持 Apple 芯片和 Intel） |
+| Windows | `.msi` 或 `-setup.exe`                    |
+| Linux   | `.deb`、`.rpm` 或 `.AppImage`             |
 
 安装包没有代码签名。macOS 第一次打开被拦截时，到“系统设置 → 隐私与安全性”点“仍要打开”；Windows 在 SmartScreen 提示中点“更多信息 → 仍要运行”。
 
@@ -63,11 +69,13 @@ npm test              # 单元测试
 npm run tauri build   # 构建安装包
 ```
 
+发布新版本：把 `package.json`、`src-tauri/tauri.conf.json`、`src-tauri/Cargo.toml` 中的版本号改成新版本，在 [CHANGELOG.md](CHANGELOG.md) 写上这个版本的说明，提交后推送 `v` 开头的标签（如 `git tag v0.2.0 && git push origin v0.2.0`），CI 会自动构建三个系统的安装包并发布到 Releases。
+
 业务规则（判分、评级、复习调度）都在 `src/core`，是带单元测试的纯函数；Rust 端只负责 SQLite、网络请求和保管 API key。内置词书由 [scripts/books](scripts/books/README.md) 生成。
 
 ## 致谢
 
-交互参考了 [TypeWords](https://github.com/zyronon/TypeWords)（只借鉴思路，未使用代码）。复习调度使用 [FSRS](https://github.com/open-spaced-repetition)；词书数据来自 [ECDICT](https://github.com/skywind3000/ECDICT) 和 [Tatoeba](https://tatoeba.org)；英美拼写数据来自 [VarCon](https://github.com/en-wl/wordlist)。
+交互参考了 [TypeWords](https://github.com/zyronon/TypeWords)。复习调度使用 [FSRS](https://github.com/open-spaced-repetition)；词书数据来自 [ECDICT](https://github.com/skywind3000/ECDICT) 和 [Tatoeba](https://tatoeba.org)；英美拼写数据来自 [VarCon](https://github.com/en-wl/wordlist)。
 
 ## 许可证
 

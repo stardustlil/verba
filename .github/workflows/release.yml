@@ -1,0 +1,132 @@
+# 发布新版本：推送 v 开头的标签（如 v0.2.0）即触发。
+#
+# 1. 检查标签与 package.json、tauri.conf.json、Cargo.toml 中的版本号一致，
+#    从 CHANGELOG.md 取出这个版本的说明，建一个草稿 Release
+# 2. 在 macOS（通用版，同时支持 Apple 芯片和 Intel）、Windows、Linux 上构建安装包并上传
+# 3. 全部上传成功后正式发布
+#
+# 中途失败时修好再重新运行失败的任务即可；已存在的草稿和同名文件会被复用、覆盖。
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: release-${{ github.ref }}
+
+permissions:
+  contents: write
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  TAG: ${{ github.ref_name }}
+
+jobs:
+  prepare:
+    name: 准备 Release
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: 检查版本号
+        run: |
+          version="${TAG#v}"
+          pkg=$(jq -r .version package.json)
+          conf=$(jq -r .version src-tauri/tauri.conf.json)
+          cargo=$(sed -n 's/^version = "\(.*\)"/\1/p' src-tauri/Cargo.toml | head -1)
+          echo "标签 $version / package.json $pkg / tauri.conf.json $conf / Cargo.toml $cargo"
+          if [ "$pkg" != "$version" ] || [ "$conf" != "$version" ] || [ "$cargo" != "$version" ]; then
+            echo "::error::版本号与标签 $TAG 不一致"
+            exit 1
+          fi
+
+      - name: 取出更新说明
+        run: |
+          version="${TAG#v}"
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > notes.md
+          if ! grep -q '[^[:space:]]' notes.md; then
+            echo "::error::CHANGELOG.md 中没有 $version 的说明"
+            exit 1
+          fi
+          cat notes.md
+
+      - name: 建草稿 Release
+        run: |
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Release $TAG 已存在，复用"
+          else
+            gh release create "$TAG" --draft --verify-tag --title "Verba ${TAG#v}" --notes-file notes.md
+          fi
+
+  build:
+    name: 构建（${{ matrix.name }}）
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: macOS
+            platform: macos-latest
+            args: --target universal-apple-darwin
+            rust-targets: aarch64-apple-darwin,x86_64-apple-darwin
+          - name: Windows
+            platform: windows-latest
+            args: ""
+            rust-targets: ""
+          - name: Linux
+            platform: ubuntu-22.04
+            args: ""
+            rust-targets: ""
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: 安装 Linux 系统依赖
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust-targets }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri -> target
+
+      - run: npm ci
+
+      - name: 构建安装包
+        run: npm run tauri build -- ${{ matrix.args }}
+
+      - name: 上传到 Release
+        shell: bash
+        run: |
+          files=$(find src-tauri/target -path '*/release/bundle/*' -type f \
+            \( -name '*.dmg' -o -name '*.msi' -o -name '*-setup.exe' -o -name '*.deb' \
+               -o -name '*.rpm' -o -name '*.AppImage' \))
+          if [ -z "$files" ]; then
+            echo "::error::没有找到安装包"
+            exit 1
+          fi
+          echo "$files"
+          echo "$files" | while IFS= read -r f; do gh release upload "$TAG" "$f" --clobber; done
+
+  publish:
+    name: 发布
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 正式发布
+        run: gh release edit "$TAG" --repo "${{ github.repository }}" --draft=false --latest
