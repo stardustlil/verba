@@ -14,11 +14,11 @@ export function endOfDay(day: string): number {
   return dayStart(addDays(day, 1));
 }
 
-/** 某天到期的复习：已认识且到期，或认识后还没做过第一次语境填空。参数为 endOfDay(day) */
 /** 当天跟写完成、占用每日额度的句块（参数为学习日）；额外练习中学的不算 */
 export const INTRODUCED_IN_QUOTA =
   "deleted_at IS NULL AND introduced_day = ? AND introduced_extra = 0";
 
+/** 某天到期的复习：已认识且到期，或认识后还没做过第一次语境填空。参数为 endOfDay(day) */
 export const DUE_CONDITION = "deleted_at IS NULL AND stage != 'new' AND (due IS NULL OR due < ?)";
 
 /** 记下这一天开始时已到期的复习。已经记过的不再重记。 */
@@ -148,7 +148,7 @@ export interface DayRecord {
   answered: number;
 }
 
-/** 以今天为最后一天的连续 n 天记录，用于首页的本周打卡 */
+/** 以今天为最后一天的连续 n 天记录，用于首页的练习热图 */
 export async function recentDays(db: Db, now: number, n = 7): Promise<DayRecord[]> {
   const today = studyDay(now);
   const days = Array.from({ length: n }, (_, i) => addDays(today, i - n + 1));

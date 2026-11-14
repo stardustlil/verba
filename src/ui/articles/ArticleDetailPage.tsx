@@ -294,7 +294,7 @@ function ArticleText({
   return (
     <div
       ref={containerRef}
-      className="space-y-4 font-serif text-lg leading-relaxed text-ink"
+      className="space-y-4 font-display text-lg leading-relaxed text-ink"
       onMouseUp={onSelect}
       onKeyUp={onSelect}
     >

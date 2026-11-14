@@ -1,6 +1,6 @@
 /** 一轮练习结束时的小结（需求 5.7） */
 import { CheckCircle2, Clock, Home, RotateCcw, Sparkles, Target } from "lucide-react";
-import { Button, cx } from "../components";
+import { Button } from "../components";
 import { useCountUp } from "../motion";
 
 export interface RoundStats {
@@ -155,7 +155,7 @@ export function Summary({
           </div>
         )}
 
-        <div className={cx("mt-8 flex justify-center gap-3")}>
+        <div className="mt-8 flex justify-center gap-3">
           {moreCount > 0 && (
             <Button variant="primary" size="lg" autoFocus onClick={onMore}>
               <Sparkles size={16} />

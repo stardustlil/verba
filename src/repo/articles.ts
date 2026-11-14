@@ -135,13 +135,19 @@ export async function pendingBatches(db: Db, articleId: string): Promise<Pending
   }));
 }
 
+/**
+ * “只属于这篇文章的句块”：有来自这篇文章的例句，没有别处的例句，也不在任何词书里。
+ * 词书例句的 article_id 为 NULL，所以要用 IS NOT 比较（NULL != ? 的结果不是真）。
+ * 句块表的别名为 c，两个参数都是文章编号。
+ */
+const ONLY_IN_ARTICLE = `EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = c.id AND e.article_id = ?)
+       AND NOT EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = c.id AND e.article_id IS NOT ?)
+       AND NOT EXISTS (SELECT 1 FROM book_chunks bc WHERE bc.chunk_id = c.id)`;
+
 /** 删除文章时会一并删除的句块数：只属于这篇文章的句块（需求 7.3） */
 export async function countChunksOnlyIn(db: Db, articleId: string): Promise<number> {
   const [row] = await db.query<{ n: number }>(
-    `SELECT COUNT(*) AS n FROM chunks c
-     WHERE c.deleted_at IS NULL
-       AND EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = c.id AND e.article_id = ?)
-       AND NOT EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = c.id AND e.article_id != ?)`,
+    `SELECT COUNT(*) AS n FROM chunks c WHERE c.deleted_at IS NULL AND ${ONLY_IN_ARTICLE}`,
     [articleId, articleId],
   );
   return row?.n ?? 0;
@@ -149,14 +155,12 @@ export async function countChunksOnlyIn(db: Db, articleId: string): Promise<numb
 
 /**
  * 删除文章（需求 7.3）：只属于这篇文章的句块一并删除；
- * 与其他文章合并过的句块保留，只删除来自这篇文章的例句。
+ * 与其他文章合并过的句块、词书里的句块保留，只删除来自这篇文章的例句。
  */
 export async function deleteArticle(db: Db, articleId: string): Promise<void> {
   await db.transaction([
     {
-      sql: `DELETE FROM chunks
-            WHERE EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = chunks.id AND e.article_id = ?)
-              AND NOT EXISTS (SELECT 1 FROM examples e WHERE e.chunk_id = chunks.id AND e.article_id != ?)`,
+      sql: `DELETE FROM chunks WHERE id IN (SELECT c.id FROM chunks c WHERE ${ONLY_IN_ARTICLE})`,
       params: [articleId, articleId],
     },
     // 句子、例句、抽取批次随文章级联删除

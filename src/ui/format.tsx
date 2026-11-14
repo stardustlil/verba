@@ -44,10 +44,6 @@ const STATUS_STYLE: Record<ChunkStatus, string> = {
   mastered: "bg-good-soft text-good",
 };
 
-export function statusLabel(status: ChunkStatus): string {
-  return STATUS_LABEL[status];
-}
-
 export function StatusBadge({ status }: { status: ChunkStatus }) {
   return (
     <span

@@ -14,6 +14,7 @@ const MIGRATIONS: &[&str] = &[
     include_str!("../migrations/001_init.sql"),
     include_str!("../migrations/002_books.sql"),
     include_str!("../migrations/003_extra.sql"),
+    include_str!("../migrations/004_dedupe_book_examples.sql"),
 ];
 
 pub struct Db(pub Mutex<Connection>);
@@ -31,7 +32,11 @@ pub fn open(path: &Path) -> rusqlite::Result<Connection> {
     Ok(conn)
 }
 
+/// 语句缓存的条数：略多于前端数据层里不同的 SQL 条数
+const STATEMENT_CACHE: usize = 128;
+
 fn configure(conn: &mut Connection) -> rusqlite::Result<()> {
+    conn.set_prepared_statement_cache_capacity(STATEMENT_CACHE);
     conn.pragma_update(None, "journal_mode", "WAL")?;
     conn.pragma_update(None, "foreign_keys", "ON")?;
     migrate(conn)
@@ -111,8 +116,9 @@ pub fn query(
     params: &[Value],
 ) -> Result<Vec<Map<String, Value>>, String> {
     let bound = bind(params)?;
-    let mut stmt = conn.prepare(sql).map_err(|e| e.to_string())?;
-    let names: Vec<String> = stmt.column_names().into_iter().map(|s| s.to_string()).collect();
+    // 前端的查询语句是固定的那几十条，编译结果留在缓存里重复使用
+    let mut stmt = conn.prepare_cached(sql).map_err(|e| e.to_string())?;
+    let names: Vec<String> = stmt.column_names().map(|s| s.to_string()).collect();
     let mut rows = stmt
         .query(params_from_iter(bound))
         .map_err(|e| e.to_string())?;
@@ -135,8 +141,10 @@ pub fn transaction(conn: &mut Connection, statements: &[Statement]) -> Result<Ve
     let mut changes = Vec::with_capacity(statements.len());
     for statement in statements {
         let bound = bind(&statement.params)?;
+        // 写入词书时同一条语句会连续执行上千次，用缓存避免每次重新编译
         let changed = tx
-            .execute(&statement.sql, params_from_iter(bound))
+            .prepare_cached(&statement.sql)
+            .and_then(|mut stmt| stmt.execute(params_from_iter(bound)))
             .map_err(|e| format!("{e}（语句：{}）", statement.sql))?;
         changes.push(changed);
     }
@@ -315,6 +323,37 @@ mod tests {
         conn.execute("DELETE FROM chunks WHERE id = 'c'", []).unwrap();
         let n = query(&conn, "SELECT (SELECT COUNT(*) FROM examples) + (SELECT COUNT(*) FROM reviews) AS n", &[]).unwrap();
         assert_eq!(n[0]["n"], json!(0));
+    }
+
+    #[test]
+    fn migration_004_removes_duplicate_book_examples() {
+        let mut conn = Connection::open_in_memory().unwrap();
+        conn.pragma_update(None, "foreign_keys", "ON").unwrap();
+        for sql in &MIGRATIONS[..3] {
+            conn.execute_batch(sql).unwrap();
+        }
+        conn.pragma_update(None, "user_version", 3).unwrap();
+        conn.execute_batch(
+            "INSERT INTO books (id, title, created_at) VALUES ('b', '书', 0), ('b2', '另一本', 0);
+             INSERT INTO chunks (id, lemma, lemma_key, meaning, origin, created_at, sort_time, sort_sentence, sort_offset) VALUES ('c', 'give up', 'give up', '放弃', 'book', 0, 0, 0, 0);
+             INSERT INTO examples (id, chunk_id, book_id, sentence_text, surface, start_in_sentence, created_at) VALUES
+               ('first', 'c', 'b', 'He gave up.', 'gave up', 3, 1000),
+               ('dup', 'c', 'b', 'He gave up.', 'gave up', 3, 1001),
+               ('other-sentence', 'c', 'b', 'Never give up.', 'give up', 6, 1000),
+               ('other-book', 'c', 'b2', 'He gave up.', 'gave up', 3, 1000);
+             INSERT INTO reviews (id, chunk_id, example_id, mode, answered_at, study_day, input, rating, counted, duration_ms) VALUES
+               ('r1', 'c', 'dup', 'cloze', 0, '2026-11-13', 'gave up', 'good', 1, 1000),
+               ('r2', 'c', 'other-sentence', 'cloze', 1, '2026-11-13', 'give up', 'good', 0, 1000);",
+        )
+        .unwrap();
+        migrate(&mut conn).unwrap();
+
+        let ids = query(&conn, "SELECT id FROM examples ORDER BY id", &[]).unwrap();
+        let ids: Vec<&str> = ids.iter().map(|r| r["id"].as_str().unwrap()).collect();
+        assert_eq!(ids, ["first", "other-book", "other-sentence"]);
+        let reviews = query(&conn, "SELECT example_id FROM reviews ORDER BY id", &[]).unwrap();
+        assert_eq!(reviews[0]["example_id"], json!("first"));
+        assert_eq!(reviews[1]["example_id"], json!("other-sentence"));
     }
 
     #[test]

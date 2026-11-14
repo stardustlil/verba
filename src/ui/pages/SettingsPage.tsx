@@ -30,7 +30,7 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
   );
 }
 
-/** 失去焦点或按 Enter 时保存的输入框 */
+/** 失去焦点或按 Enter 时保存的输入框。onSave 返回 false 表示没有接受，输入框恢复原值 */
 function SavedInput({
   label,
   value,
@@ -39,7 +39,7 @@ function SavedInput({
 }: {
   label: string;
   value: string;
-  onSave: (value: string) => void;
+  onSave: (value: string) => boolean | void;
   type?: string;
   min?: number;
   max?: number;
@@ -49,7 +49,7 @@ function SavedInput({
   const [draft, setDraft] = useState(value);
   useEffect(() => setDraft(value), [value]);
   const commit = () => {
-    if (draft !== value) onSave(draft);
+    if (draft !== value && onSave(draft) === false) setDraft(value);
   };
   return (
     <TextInput
@@ -92,10 +92,10 @@ export default function SettingsPage() {
     const value = Number(raw);
     if (!Number.isInteger(value) || value < 1 || value > max) {
       setError(`请输入 1 到 ${max} 之间的整数`);
-      settings.reload();
-      return;
+      return false;
     }
     void update({ [name]: value });
+    return true;
   };
 
   const saveKey = async (key: string) => {

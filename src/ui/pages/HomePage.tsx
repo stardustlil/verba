@@ -30,9 +30,9 @@ async function load() {
   };
 }
 
-function minutes(ms: number): string {
-  if (ms <= 0) return "0";
-  return String(Math.max(1, Math.round(ms / 60000)));
+/** 不足 1 分钟的算 1 分钟 */
+function minutes(ms: number): number {
+  return ms <= 0 ? 0 : Math.max(1, Math.round(ms / 60000));
 }
 
 /** 今日任务的环形进度 */
@@ -262,7 +262,7 @@ export default function HomePage() {
             <Stat
               icon={<Clock size={15} />}
               label="今日学习"
-              value={today ? Number(minutes(today.studyMs)) : undefined}
+              value={today ? minutes(today.studyMs) : undefined}
               unit="分钟"
             />
             <Stat icon={<Flame size={15} />} label="连续学习" value={s?.streak} unit="天" />

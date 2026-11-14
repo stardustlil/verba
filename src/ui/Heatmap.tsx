@@ -17,7 +17,14 @@ export function heatLevel(answered: number): number {
   return 4;
 }
 
-const LEVEL_STYLE = ["bg-ink/[0.06]", "bg-accent/25", "bg-accent/50", "bg-accent/75", "bg-accent"];
+/** 等级 0–4 对应的颜色，说明页的图例也用它 */
+export const HEAT_LEVEL_STYLE = [
+  "bg-ink/[0.06]",
+  "bg-accent/25",
+  "bg-accent/50",
+  "bg-accent/75",
+  "bg-accent",
+];
 
 /** 星期一为 0 */
 function weekdayIndex(day: string): number {
@@ -115,7 +122,7 @@ export function Heatmap({ days }: { days: DayRecord[] }) {
                     onMouseEnter={() => setHover(d)}
                     className={cx(
                       "animate-cell rounded-[3px] transition-transform duration-300 ease-spring hover:scale-[1.35]",
-                      LEVEL_STYLE[heatLevel(d.answered)],
+                      HEAT_LEVEL_STYLE[heatLevel(d.answered)],
                       d.day === today && "ring-2 ring-accent/60 ring-offset-1 ring-offset-panel",
                     )}
                     style={{
@@ -133,7 +140,7 @@ export function Heatmap({ days }: { days: DayRecord[] }) {
           <span className="min-h-4 truncate">{hover ? label(hover) : ""}</span>
           <span className="flex shrink-0 items-center gap-1 text-ink-faint">
             少
-            {LEVEL_STYLE.map((s, i) => (
+            {HEAT_LEVEL_STYLE.map((s, i) => (
               <span key={i} className={cx("size-[11px] rounded-[3px]", s)} />
             ))}
             多

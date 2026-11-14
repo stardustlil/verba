@@ -1,5 +1,5 @@
 """第二步：为每个保留的短语挑例句、写释义、校对翻译。"""
-import json, sys, re, concurrent.futures as cf
+import json, sys, concurrent.futures as cf
 from llm import chat
 
 SYSTEM = """你是英语教学专家，正在为中国的中级英语学习者（四六级到考研、雅思水平）编写短语书。每个短语要配一个例句，用于“语境填空”练习：学习者看着例句和中文释义，在空白处写出短语。

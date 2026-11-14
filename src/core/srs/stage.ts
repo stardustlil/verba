@@ -18,11 +18,6 @@ export interface StageState {
   clozeStreak: number;
 }
 
-/** 认识之后进入语境填空 */
-export function afterIntro(): StageState {
-  return { stage: "cloze", clozeStreak: 0 };
-}
-
 export function afterCountedAnswer(
   state: StageState,
   mode: QuestionMode,
@@ -40,11 +35,6 @@ export function afterCountedAnswer(
   return streak >= CLOZE_STREAK_TO_PROMOTE
     ? { stage: "recall", clozeStreak: streak }
     : { stage: "cloze", clozeStreak: streak };
-}
-
-/** 当前阶段出什么题。尚未认识的句块没有题型。 */
-export function questionMode(stage: Stage): QuestionMode | null {
-  return stage === "new" ? null : stage;
 }
 
 export function chunkStatus(stage: Stage, scheduledDays: number): ChunkStatus {

@@ -193,6 +193,8 @@ export default function PracticePage() {
   const lastLemma = useRef<string | null>(null);
   /** 本轮是否中途退出（还有题没做完） */
   const exitedEarly = useRef(false);
+  /** 已经到小结了：窗口重新获得焦点时不再恢复本轮计时 */
+  const roundOver = useRef(false);
   const stats = useRef<RoundStats>(emptyStats());
   /** 已评过分的“短语:阶段”，以及其中第一次答错的 */
   const graded = useRef(new Set<string>());
@@ -220,6 +222,7 @@ export default function PracticePage() {
         queue.current = rest;
         const [head] = rest;
         if (!head) {
+          roundOver.current = true;
           sessionWatch.current.pause();
           stats.current.durationMs = sessionWatch.current.elapsed();
           await saveTime();
@@ -234,6 +237,7 @@ export default function PracticePage() {
         }
         const example = pickExample(chunk.examples, chunk.progress.exampleCursor);
         const mode = modeFor(head, chunk, example);
+        roundOver.current = false;
         sessionWatch.current.resume();
         setTyped("");
         setEditing(null);
@@ -257,6 +261,7 @@ export default function PracticePage() {
       deletedIds.current = new Set();
       lastLemma.current = null;
       exitedEarly.current = false;
+      roundOver.current = false;
       sessionWatch.current.reset();
       sessionWatch.current.start();
       savedMs.current = 0;
@@ -304,7 +309,7 @@ export default function PracticePage() {
     };
     const resume = () => {
       answerWatch.current.resume();
-      sessionWatch.current.resume();
+      if (!roundOver.current) sessionWatch.current.resume();
     };
     window.addEventListener("blur", pause);
     window.addEventListener("focus", resume);

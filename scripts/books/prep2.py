@@ -1,4 +1,4 @@
-import json, re
+import collections, json, re
 pre = json.load(open('pre.json'))
 s1 = json.load(open('stage1.json'))
 groups = {}
@@ -22,5 +22,4 @@ for k, v in s1.items():
         seen = {e['en'] for e in g['plain']}
         g['plain'] += [e for e in x['plain'] if e['en'] not in seen]
 json.dump(groups, open('stage2_in.json', 'w'), ensure_ascii=False)
-import collections
 print(len(groups), collections.Counter(g['book'] for g in groups.values()))

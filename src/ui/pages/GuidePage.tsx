@@ -20,6 +20,7 @@ import {
 import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { cx } from "../components";
+import { HEAT_LEVEL_STYLE } from "../Heatmap";
 import { modLabel } from "../keys";
 import { Kbd } from "../practice/parts";
 
@@ -266,8 +267,8 @@ const SECTIONS: Section[] = [
         <H3>判分规则</H3>
         <P>
           宽容但严格：大小写、标点不计较；英美拼写（colour / color）、缩写（don&apos;t / do
-          not）视为相同；原形里的 someone / one&apos;s / oneself，写成任意人称代词或 sb / sth
-          都算对。
+          not）视为相同；原形里的 someone / one&apos;s / oneself，写成对应的人称代词都算对，someone
+          也可以写作 somebody / sb。
         </P>
       </>
     ),
@@ -363,11 +364,9 @@ const SECTIONS: Section[] = [
               "练习记录",
               <span key="heat" className="inline-flex flex-wrap items-center gap-1.5">
                 首页的热图，一格一天，颜色越深练得越多
-                {["bg-ink/[0.06]", "bg-accent/25", "bg-accent/50", "bg-accent/75", "bg-accent"].map(
-                  (c) => (
-                    <span key={c} className={cx("inline-block size-3 rounded-[3px]", c)} />
-                  ),
-                )}
+                {HEAT_LEVEL_STYLE.map((c) => (
+                  <span key={c} className={cx("inline-block size-3 rounded-[3px]", c)} />
+                ))}
               </span>,
             ],
           ]}

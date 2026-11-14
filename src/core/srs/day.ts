@@ -37,8 +37,3 @@ export function addDays(day: string, n: number): string {
   date.setDate(date.getDate() + n);
   return format(date);
 }
-
-/** 句块在某个学习日是否到期：按天计，不看具体钟点 */
-export function isDueOn(due: number, day: string): boolean {
-  return studyDay(due) <= day;
-}

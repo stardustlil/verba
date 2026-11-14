@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { expandContraction } from "./contractions";
 import { clozeTargets, isCorrect, recallTargets } from "./judge";
-import { countWords, lemmaKey, tokenize } from "./normalize";
+import { countWords, displayTokens, lemmaKey } from "./normalize";
 import { canonicalSpelling } from "./spelling";
 
 const cloze = (input: string, surface: string) => isCorrect(input, clozeTargets(surface));
@@ -137,8 +137,8 @@ describe("视为错误", () => {
 });
 
 describe("normalize", () => {
-  it("tokenize", () => {
-    expect(tokenize("  Well-known,  “Facts”. ")).toEqual(["well", "known", '"facts"']);
+  it("displayTokens：去掉逗号和句末标点，连字符当作空格，保留大小写", () => {
+    expect(displayTokens("  Well-known,  “Facts”. ")).toEqual(["Well", "known", '"Facts"']);
   });
 
   it("countWords：连字符连接的算一个词", () => {

@@ -1,12 +1,11 @@
 """ECDICT 短语 × Tatoeba 英文句子：统计每个短语在句库中出现的句子数，并收集候选例句。"""
-import csv, re, sys, json, collections, pickle
+import csv, re, sys, json, collections
 DL = sys.argv[1]; OUT = sys.argv[2]
 
 SLOT_MAP = {'sb':'someone','sb.':'someone','somebody':'someone','someone':'someone',
             'sth':'something','sth.':'something','something':'something',
             "sb's":"someone's","somebody's":"someone's","someone's":"someone's",
             "one's":"one's",'oneself':'oneself','doing':'doing','do':None}
-PARTICLES = set('about above across after against along around as at away back behind below between beyond by down for forth from in into of off on onto out over past round through to together toward towards under up upon with within without apart aside ahead'.split())
 
 def norm_lemma(w):
     w = w.replace('’', "'").strip()

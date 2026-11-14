@@ -52,6 +52,9 @@ export function bookChunkId(bookId: string, lemma: string): string {
   return `book:${bookId}:${lemmaKey(lemma)}`;
 }
 
+/** 每个库上正在进行（或最近一次）的词书写入，后来的排在它后面 */
+const seeding = new WeakMap<Db, Promise<void>>();
+
 /**
  * 把内置词书写进数据库。每本书只在版本变化时处理一次：
  * - 新增尚未在书中的条目；原形在忽略名单里的跳过（用户删过的不会复活）；
@@ -60,11 +63,20 @@ export function bookChunkId(bookId: string, lemma: string): string {
  * - 新版里去掉的条目：没学过的直接删除（别的书还收录的只解除关联）；
  *   学过的保留在书末，复习进度不受影响
  */
-export async function seedBuiltinBooks(
+export function seedBuiltinBooks(
   db: Db,
   books: readonly BookData[],
   now: number = Date.now(),
 ): Promise<void> {
+  // 同一个库上的写入排队执行。两次写入同时进行时，后一次读到的还是写入前的状态，
+  // 会把每个例句再插一遍（开发模式下 React 会把启动流程执行两遍，正好触发）。
+  const previous = seeding.get(db) ?? Promise.resolve();
+  const next = previous.catch(() => undefined).then(() => seedBooks(db, books, now));
+  seeding.set(db, next);
+  return next;
+}
+
+async function seedBooks(db: Db, books: readonly BookData[], now: number): Promise<void> {
   const meta = await db.query<{ key: string; value: string }>(
     "SELECT key, value FROM meta WHERE key LIKE 'book_version:%'",
   );

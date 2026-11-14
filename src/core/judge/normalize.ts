@@ -26,11 +26,6 @@ export function displayTokens(text: string): string[] {
   return cleaned.length === 0 ? [] : cleaned.split(/\s+/);
 }
 
-/** 用于比较的词：在展示词的基础上转小写 */
-export function tokenize(text: string): string[] {
-  return displayTokens(text).map((token) => token.toLowerCase());
-}
-
 /** 词数（句块长度校验用）：按空白切分，连字符连接的算一个词 */
 export function countWords(text: string): number {
   const trimmed = text.trim();

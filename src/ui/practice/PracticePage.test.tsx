@@ -215,6 +215,29 @@ describe("练习流程", () => {
     expect(await screen.findByText("回首页")).toBeTruthy();
   });
 
+  it("到了小结之后，切走再切回窗口不会继续累计学习时长", async () => {
+    const db = holder.db!;
+    await seed(db, [{ lemma: "heavy rain", surface: "heavy rain", meaning: "大雨" }]);
+    const user = userEvent.setup();
+    const view = renderPage();
+    await screen.findByText("大雨");
+    await user.keyboard("{Escape}");
+    await screen.findByText("回首页");
+    const studyMs = async () =>
+      (await db.query<{ ms: number }>("SELECT COALESCE(SUM(study_ms), 0) AS ms FROM days"))[0]!.ms;
+    const atSummary = await studyMs();
+
+    window.dispatchEvent(new Event("blur"));
+    window.dispatchEvent(new Event("focus"));
+    // 在小结页停了十分钟才离开
+    const later = performance.now() + 10 * 60 * 1000;
+    const clock = vi.spyOn(performance, "now").mockReturnValue(later);
+    view.unmount();
+    clock.mockRestore();
+    await new Promise((resolve) => setTimeout(resolve, 20));
+    expect(await studyMs()).toBe(atSummary);
+  });
+
   it("标记熟练：跳过这个短语，撤销后回来", async () => {
     const db = holder.db!;
     await seed(db, [

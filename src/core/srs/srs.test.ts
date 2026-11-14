@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { addDays, dayStart, isDueOn, studyDay } from "./day";
+import { addDays, dayStart, studyDay } from "./day";
 import { rate } from "./rating";
 import { MASTERED_INTERVAL_DAYS, schedule } from "./scheduler";
 import {
@@ -10,7 +10,7 @@ import {
   phaseProgress,
   withoutChunk,
 } from "./session";
-import { afterCountedAnswer, afterIntro, chunkStatus, questionMode } from "./stage";
+import { type StageState, afterCountedAnswer, chunkStatus } from "./stage";
 import { computeStreak, isDayComplete } from "./streak";
 
 const at = (y: number, m: number, d: number, h = 12, min = 0) =>
@@ -37,13 +37,6 @@ describe("学习日（凌晨 4 点分界）", () => {
   it("addDays", () => {
     expect(addDays("2026-11-30", 1)).toBe("2026-12-01");
     expect(addDays("2026-03-01", -1)).toBe("2026-02-28");
-  });
-
-  it("到期按天计：当天晚些时候才到点的也算当天到期", () => {
-    const due = at(2026, 11, 13, 23);
-    expect(isDueOn(due, "2026-11-12")).toBe(false);
-    expect(isDueOn(due, "2026-11-13")).toBe(true);
-    expect(isDueOn(due, "2026-11-20")).toBe(true);
   });
 });
 
@@ -120,14 +113,11 @@ describe("FSRS 调度", () => {
 });
 
 describe("题型升降级", () => {
-  it("认识之后进入语境填空", () => {
-    expect(afterIntro()).toEqual({ stage: "cloze", clozeStreak: 0 });
-    expect(questionMode("new")).toBeNull();
-    expect(questionMode("cloze")).toBe("cloze");
-  });
+  /** 跟写完成后的状态：进入语境填空，连续答对次数为 0 */
+  const introduced: StageState = { stage: "cloze", clozeStreak: 0 };
 
   it("语境填空连续答对 2 次（好或一般）后升级为纯中文默写", () => {
-    let state = afterIntro();
+    let state = introduced;
     state = afterCountedAnswer(state, "cloze", "good");
     expect(state).toEqual({ stage: "cloze", clozeStreak: 1 });
     state = afterCountedAnswer(state, "cloze", "hard");
@@ -135,7 +125,7 @@ describe("题型升降级", () => {
   });
 
   it("语境填空答错后连续次数清零", () => {
-    let state = afterCountedAnswer(afterIntro(), "cloze", "good");
+    let state = afterCountedAnswer(introduced, "cloze", "good");
     state = afterCountedAnswer(state, "cloze", "again");
     expect(state).toEqual({ stage: "cloze", clozeStreak: 0 });
     state = afterCountedAnswer(state, "cloze", "good");

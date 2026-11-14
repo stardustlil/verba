@@ -1,7 +1,7 @@
 import { DatabaseSync } from "node:sqlite";
 import { beforeEach, describe, expect, it } from "vitest";
 import { BUILTIN_BOOKS } from "../data/books";
-import { createArticle } from "./articles";
+import { countChunksOnlyIn, createArticle, deleteArticle } from "./articles";
 import {
   type BookData,
   MY_BOOK,
@@ -186,6 +186,50 @@ describe("写入内置词书", () => {
     const ordered = await listChunks(db, { bookId: "verbs", sort: "book" });
     expect(ordered.map((c) => c.lemma)).toEqual(VERBS.entries.map((e) => e.lemma));
   });
+
+  it("同时启动两次（开发模式下 React 会把启动流程执行两遍）不会写出重复的例句", async () => {
+    await Promise.all([
+      seedBuiltinBooks(db, [VERBS, PREPS], 1000),
+      seedBuiltinBooks(db, [VERBS, PREPS], 1001),
+    ]);
+    const [row] = await db.query<{ examples: number; chunks: number; links: number }>(
+      `SELECT (SELECT COUNT(*) FROM examples) AS examples, (SELECT COUNT(*) FROM chunks) AS chunks,
+              (SELECT COUNT(*) FROM book_chunks) AS links`,
+    );
+    expect(row).toEqual({ examples: 5, chunks: 4, links: 5 });
+  });
+
+  it("删除文章不会连带删掉词书里的短语：文章例句并入词书短语后，只删这篇的例句", async () => {
+    await seedBuiltinBooks(db, [VERBS], 1000);
+    const { articleId } = await createArticle(
+      db,
+      {
+        title: "文章",
+        sourceType: "paste",
+        sourceRef: null,
+        text: "They gave up early.",
+        selectedParagraphs: new Set(),
+      },
+      2000,
+    );
+    const [s] = await db.query<{ id: string }>("SELECT id FROM sentences");
+    const [giveUp] = await listChunks(db, { bookId: "verbs", search: "give up" });
+    await addManualChunk(db, {
+      articleId,
+      sentenceId: s!.id,
+      surface: "gave up",
+      startInSentence: 5,
+      lemma: "give up",
+      meaning: "",
+      mergeInto: giveUp!.id,
+    });
+    expect((await chunkDetail(db, giveUp!.id))?.examples).toHaveLength(2);
+
+    expect(await countChunksOnlyIn(db, articleId)).toBe(0);
+    await deleteArticle(db, articleId);
+    expect((await chunkDetail(db, giveUp!.id))?.examples).toHaveLength(1);
+    expect(await listChunks(db, { bookId: "verbs" })).toHaveLength(3);
+  });
 });
 
 describe("内置的三本书", () => {
@@ -253,5 +297,65 @@ describe("迁移", () => {
     });
     expect(chunk?.reviews).toHaveLength(1);
     expect(chunk?.stage).toBe("cloze");
+  });
+
+  it("004：旧版本同时写入两次留下的重复词书例句被清掉，文章例句和复习记录不受影响", async () => {
+    const database = new DatabaseSync(":memory:");
+    migrateNodeDb(database, 3);
+    const old = wrapNodeDb(database);
+    await createArticle(
+      old,
+      {
+        title: "文章",
+        sourceType: "paste",
+        sourceRef: null,
+        text: "They gave up early.",
+        selectedParagraphs: new Set(),
+      },
+      500,
+    );
+    const [article] = await old.query<{ id: string }>("SELECT id FROM articles");
+    const [s] = await old.query<{ id: string }>("SELECT id FROM sentences");
+    // 旧版本的写法：两次写入各自读到写入前的状态，书里的每个例句都插了两份
+    const entries = [...VERBS.entries, ...PREPS.entries];
+    const insert = database.prepare(
+      `INSERT INTO examples (id, chunk_id, book_id, sentence_text, translation, surface, start_in_sentence, created_at)
+       VALUES (?, ?, ?, ?, '例句翻译。', ?, 0, ?)`,
+    );
+    database.exec(`
+      INSERT INTO books (id, title, created_at) VALUES ('verbs', '动词短语', 0), ('preps', '介词短语', 0);
+    `);
+    const chunkOf = (lemma: string) => `book:verbs:${lemma}`;
+    for (const lemma of new Set(entries.map((e) => e.lemma))) {
+      database
+        .prepare(
+          `INSERT INTO chunks (id, lemma, lemma_key, meaning, origin, created_at, sort_time, sort_sentence, sort_offset)
+           VALUES (?, ?, ?, '意思', 'book', 0, 0, 0, 0)`,
+        )
+        .run(chunkOf(lemma), lemma, lemma);
+    }
+    for (const round of [0, 1]) {
+      for (const [i, e] of VERBS.entries.entries())
+        insert.run(`v${i}-${round}`, chunkOf(e.lemma), "verbs", e.example, e.surface, 1000 + round);
+      for (const [i, e] of PREPS.entries.entries())
+        insert.run(`p${i}-${round}`, chunkOf(e.lemma), "preps", e.example, e.surface, 1000 + round);
+    }
+    database.exec(`
+      INSERT INTO examples (id, chunk_id, sentence_id, article_id, sentence_text, surface, start_in_sentence, created_at)
+        VALUES ('mine', '${chunkOf("give up")}', '${s!.id}', '${article!.id}', 'They gave up early.', 'gave up', 5, 2000);
+      INSERT INTO reviews (id, chunk_id, example_id, mode, answered_at, study_day, input, rating, counted, duration_ms)
+        VALUES ('r', '${chunkOf("give up")}', 'v1-1', 'cloze', 0, '2026-11-13', 'gave up', 'good', 1, 1000);
+    `);
+    expect(await old.query("SELECT id FROM examples")).toHaveLength(11);
+
+    migrateNodeDb(database);
+    const upgraded = wrapNodeDb(database);
+    const left = await upgraded.query<{ id: string }>("SELECT id FROM examples ORDER BY id");
+    expect(left.map((r) => r.id)).toEqual(["mine", "p0-0", "p1-0", "v0-0", "v1-0", "v2-0"]);
+    // give up：verbs 和 preps 各一个例句，加上文章里的一个
+    const giveUp = await chunkDetail(upgraded, chunkOf("give up"));
+    expect(giveUp?.examples).toHaveLength(3);
+    const [review] = await upgraded.query<{ example_id: string }>("SELECT example_id FROM reviews");
+    expect(review?.example_id).toBe("v1-0");
   });
 });
